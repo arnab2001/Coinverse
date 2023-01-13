@@ -11,7 +11,7 @@ const { Title } = Typography
 
 
 const Homepage = () => {
-  const { data, isFetching } = useGetCryptosQuery()
+  const { data, isFetching } = useGetCryptosQuery(10)
  
   // const globalStats = data.data.stats;
   const globalStats = data?.data?.stats;
@@ -42,7 +42,7 @@ const Homepage = () => {
         <Title level={2} className="home-title">Latest Crypto News</Title>
         <Title level={3} className="show-more"><Link to="/news">Show More</Link></Title>
       </div>
-      <News simplified/>
+      <News simplified/> {/* simplified is a prop that we pass to the News component  */}
       
     </>
   )
