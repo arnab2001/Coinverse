@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # Coinverse
+=======
+>>>>>>> 46ce78e51a28d544a233417cc31e1be2d8511822
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
