@@ -22,7 +22,7 @@ const Homepage = () => {
   return (
     <>
       <Title level={2} className="heading">
-        Global Crypto Stats
+        Global_Crypto_Stats
       </Title>
       <Row>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
