@@ -3,7 +3,7 @@ import { Select,Typography, Row, Col, Avatar, Card } from 'antd'
 import moment from 'moment/moment'
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 import { useGetCryptosQuery } from '../services/cryptoApi'
-
+import Loader from './loader'
 const { Text, Title } = Typography
 const { Option } = Select
 const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg'
@@ -14,7 +14,7 @@ const News = ({simplified}) => {
   const { data } = useGetCryptosQuery(100);
   const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
 
-  if(!cryptoNews?.value) return 'Loading...'
+  if(!cryptoNews?.value) return <Loader />
   return (
     <>
       <Row gutter={[24, 24]}>
@@ -38,11 +38,11 @@ const News = ({simplified}) => {
             <Card hoverable className="news-card">
                 <a href={news.url} target="_blank" rel="noreferrer">
                   <div className="news-image-container"  >
-                    <Title className="news-title" level={4}>{news.name}</Title>
+                    <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+" ...":news.name}</Title>
                     <img style={{maxWidth: '200px' , maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news"/>
                   </div>
                   <p>
-                    {news.description > 100 
+                    {news.description.length > 100 
                     ? `${news.description.substring(0, 100)}...` 
                     : news.description}
                   </p>

@@ -4,7 +4,7 @@ import millify from 'millify'
 import {Card, Input, Row, Col, Statistic } from 'antd'
 
 import { useGetCryptosQuery } from '../services/cryptoApi'
-
+import Loader from './loader'
 
 const Cryptocurrencies = ({simplified}) => {
   const count = simplified ? 10 : 100  // 10 is the number of coins in home page and 100 is the number of coins in the crypto page
@@ -20,7 +20,7 @@ const Cryptocurrencies = ({simplified}) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
-  if(isFetching) return 'Loading...'
+  if(isFetching) return <Loader />
   
   return (
     <>
