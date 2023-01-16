@@ -17,7 +17,7 @@ import {
     BulbOutlined
 
 } from '@ant-design/icons';
-import { Image,Layout, Menu, Space, theme, Typography ,Avatar} from 'antd';
+import {Row,Col, Image,Layout, Menu, Space, theme, Typography ,Avatar} from 'antd';
 import { Route, Routes } from 'react-router';
 import Homepage from './Homepage';
 import Exchanges from './Exchanges';
@@ -38,47 +38,20 @@ const {
 } = theme.useToken();
   return (
     <>
-    {/* <div className='nav-container'>
-        <div className='logo-container'>
-            <Avatar src={icon} size="large"  />
-            <Typography.Title level={3} className='logo'> 
-                <Link to='/'>Coinverse</Link>
-            </Typography.Title>
-             {/* <Button className='menu-control-container'> 
-                <MenuOutlined />
-            </Button> 
-            </div>
-        <Menu theme='dark'>
-            <Menu.Item icon={<HomeOutlined />}>
-                <Link to='/'>Home</Link>
-            </Menu.Item>
+    
+    
 
-            <Menu.Item icon={<FundTwoTone twoToneColor="#ee98fb" />}>
-                <Link to='/Cryptocurrencies'>Cryptocurrencies</Link>
-            </Menu.Item>
-
-            <Menu.Item icon={<SlidersTwoTone twoToneColor="#52c41a" />}>
-                <Link to='/Exchanges'>Exchanges</Link>
-            </Menu.Item>
-
-            <Menu.Item icon={ <BulbTwoTone />}>
-                <Link to='/News'>News</Link>
-            </Menu.Item>
-        </Menu>
-
-  </div> */}
-
-{/**----------code----- */}
-
-    <Layout>
+    <Layout className='main_component' >
       <Sider trigger={null} collapsible collapsed={collapsed}>
         
        <div className="logo" > 
-       
-            <Image src={icon} preview={false} />
+           <Row style={{width:"100%"}} type="flex" align="center">
+  <Col> <Image src={icon} preview={false} /></Col>
+           
+            <Col>
             <Typography.Title level={3} >
                 <Link to="/">Coinverse</Link>
-            </Typography.Title>
+            </Typography.Title></Col></Row>
         </div>
         <Menu
           theme="dark"
@@ -128,18 +101,31 @@ const {
                 </div>
                 
             </Layout>
-        <div className="footer">
-            <Typography.Title level={5} style={{color:'white',textAlign:'center'}}>
-                Coinverse<br/>
-                All rights reserved 
-            </Typography.Title>
-            <Space>
-                <Link to="/">Home</Link>
-                <Link to="/exchanges">Exchanges</Link>
-                <Link to="/news">News</Link>
 
-            </Space>
-            </div>
+            
+            <Layout.Footer style={{ background: '#002547', color: 'white', padding: '20px' }}>
+      <Row>
+       <Col xs={10} sm={8} md={8} lg={6}>
+          <h3>Made with ❤️ by Arnab</h3>
+          <p>Using <a href="https://rapidapi.com/Coinranking/api/coinranking1" style={{ color: 'grey' }}> Coinranking API</a>
+          , <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/" style={{ color: 'grey' }}>Bing News API </a> 
+          ,React,Ant Design,Redux and React Router.
+
+
+
+          </p>
+        </Col> 
+       
+        <Col>
+          <h3>Links</h3>
+          <a href="/" style={{ color: 'grey' }}>Home</a>
+          &nbsp; &nbsp;
+          <a href="/" style={{ color: 'grey' }}>Cryptocurrencies</a>
+          &nbsp; &nbsp;
+          <a href="/" style={{ color: 'grey' }}>Crypto News</a>
+        </Col>
+      </Row>
+    </Layout.Footer>
         </div>
         </Content> 
       </Layout>
