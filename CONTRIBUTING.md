@@ -1,59 +1,43 @@
-Contributing to Coinverse
-Introduction
-First of all, thank you for considering contributing to Coinverse. Your time and effort to make this project better is greatly appreciated.
-
-This project is an open-source project, and we welcome contributions from the community. Whether it's fixing a bug, improving documentation, or adding new features, every contribution makes a difference.
-
-How to Contribute
-There are several ways to contribute to this project, including:
-
-Reporting bugs and requesting new features
-Improving the documentation
-Writing code to fix bugs or add new features
-Submitting translations
-Testing the app and reporting your results
-Reporting Bugs and Requesting New Features
-If you find a bug in the app or want to request a new feature, you can open an issue in the GitHub repository.
-
-When reporting a bug, please include the following information:
-
-A clear and concise description of the problem
-Steps to reproduce the issue
-Screenshots or videos that show the issue
-The version of the app you are using
-Any relevant log files or error messages
-When requesting a new feature, please include the following information:
-
-A clear and concise description of the feature you want to see
-An explanation of why you think this feature is important
-Any relevant screenshots or sketches that show what the feature should look like
-Improving Documentation
-If you find a mistake or want to improve the documentation, you can edit the files directly in the GitHub repository.
-
-To make changes, simply click the "Edit" button at the top of the page, make your changes, and then submit a pull request.
-
-Writing Code
-If you want to contribute code to fix a bug or add a new feature, you can follow these steps:
-
-Clone the GitHub repository.
-Create a new branch for your changes.
-Make your changes and commit them to your branch.
-Push your branch to GitHub.
-Open a pull request in the GitHub repository.
-Your pull request will be reviewed by the project maintainers, and if everything looks good, your changes will be merged into the main branch.
-
-Submitting Translations
-If you want to help translate the app into your language, you can follow these steps:
-
-Clone the GitHub repository.
-Create a new branch for your translation.
-Add your translation to the appropriate files.
-Commit your changes to your branch.
-Push your branch to GitHub.
-Open a pull request in the GitHub repository.
-Testing the App
-If you want to help test the app and report your results, you can follow these steps:
-
-Install the app from the GitHub repository.
-Use the app and report any bugs or issues you find.
-If you find a bug, please open an issue in the [GitHub repository](https://github.com/arnab2001/Coinverse
+<h1> Contributing to the Coinverse </h1>
+<p> We are thrilled that you would like to contribute to the React App. The following guidelines will help you get started. </p>
+<h2> Table of Contents </h2>
+<ul> 
+  <li> <a href="#Issues"> Issues </a> </li>
+  <li> <a href="#Fork-and-Clone"> Fork and Clone </a> </li>
+  <li> <a href="#Branch-Creation"> Branch Creation </a> </li>
+  <li> <a href="#Commit-Changes"> Commit Changes </a> </li>
+  <li> <a href="#Submit-a-pull-request"> Submit a pull request </a> </li>
+  <li> <a href="#Code-of-Conduct"> Code of Conduct </a> </li>
+</ul>
+<h2 id="Issues"> Issues </h2>
+<p> Before you start contributing, we suggest you check the <a href="https://github.com/arnab2001/coinverse/issues"> issues </a> page to see if your contribution is already being addressed. If not, feel free to create a new issue and describe the problem. </p>
+<h2 id="Fork-and-Clone"> Fork and Clone </h2>
+<p> In order to contribute to the React App, you need to fork the repository and clone it to your local machine. To do this, follow these steps: </p>
+<ol>
+  <li> Go to the React App repository on GitHub. </li>
+  <li> Click the "Fork" button in the top right corner of the page. </li>
+  <li> Clone the repository to your local machine by running the following command in your terminal:
+    <pre> git clone https://github.com/arnab2001/coinverse.git </pre>
+  </li>
+</ol>
+<h2 id="Branch-Creation"> Branch Creation </h2>
+<p> It is recommended to create a separate branch for your changes. To do this, run the following command in your terminal: </p>
+<pre> git checkout -b <branch-name> </pre>
+<h2 id="Commit-Changes"> Commit Changes </h2>
+<p> After you have made your changes, it's time to commit them to your branch. Run the following commands in your terminal: </p>
+<pre>
+  git add .
+  git commit -m "<your commit message>"
+</pre>
+<h2 id="Submit-a-pull-request"> Submit a pull request </h2>
+<p> Now that you have committed your changes, it's time to submit a pull request. To do this, follow these steps: </p>
+<ol>
+  <li> Go to your forked repository on GitHub. </li>
+  <li> Click the "Compare & pull request" button. </li>
+  <li> Fill in the required information and click the "Create pull request" button. </li>
+</ol>
+<p> Your pull request will be reviewed and if approved, merged into the main branch. </p>
+<h2 id="Code-of-Conduct"> Code of Conduct </h2>
+<p> We have a Code of Conduct in place to ensure a welcoming and inclusive environment for all contributors. Please read and follow the Code of Conduct, which can be found in the <a href="https://github.com/arnab2001/coinverse/blob/master/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a> file in the repository. </p>
+<p> If you have any questions or concerns about the Code of Conduct, please feel free to reach out to the repository owner or a collaborator. </p>
+<p> Thank you for your interest in contributing to the React App! We look forward to your contribution. </p>
