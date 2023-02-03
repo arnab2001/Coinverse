@@ -1,23 +1,25 @@
-#Coinverse 
+<h1>Coinverse </h1>
 
-##Cryptocurrency tracker and News , all at one place
+<h2>Cryptocurrency tracker and News , all at one place</h2>
 
 Use this Webapp to see current prices of coins , view historical data , search and get latest news on any specefic coin 
 
-###key highlights 
-- All crypto prices at a glance in the home page
-- Crypto News 
-- Historical price data with charts
-- origin , facts and other stuffs 
+<h3>key highlights</h3>
+<p>All crypto prices at a glance in the home page
+<p>Crypto News </p>
+<p>Historical price data with charts</p>
+<p>origin , facts and other stuffs </p>
 
-###Technology Stack
-- React
-- Redux
-- Ant Designe 
-- Coinranking API, Bing News API
+ <h3>Technology Stack</h3>
+<p>React</p>
+<p>Redux</p>
+<p>Ant Designe</p>
+<p>Chart js</p>
+<p>Coinranking API, Bing News API</p>
 
 
-###Screenshots
+<h3>Screenshots</h3>
+
  ![image](https://user-images.githubusercontent.com/63441472/216686705-2b7bf6e7-87ba-4e60-9e51-147b7af6340c.png) 
  ![image](https://user-images.githubusercontent.com/63441472/216687746-e88fb7b7-2199-4078-bb72-96b15bfebf38.png)
 ![image](https://user-images.githubusercontent.com/63441472/216687966-b76c340b-3719-4a28-ac4e-6c9cd9e4990e.png)
