@@ -5,7 +5,7 @@
 // import icon from '../images/cryptocurrency.png' 
 // import {Exchanges,Homepage,Cryptocurrencies,News,CryptoDetailes} from './index'
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -18,7 +18,7 @@ import {
 
 } from '@ant-design/icons';
 import {Row,Col, Image,Layout, Menu, Space, theme, Typography ,Avatar} from 'antd';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useNavigate } from 'react-router';
 import Homepage from './Homepage';
 import Exchanges from './Exchanges';
 import Cryptocurrencies from './Cryptocurrencies';
@@ -35,6 +35,8 @@ const Navbar = () => {
 
   const [collapsed, setCollapsed] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
   const { token: { colorBgContainer } } = theme.useToken();
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -61,20 +63,20 @@ const Navbar = () => {
               key: '/',
               icon: <HomeOutlined />,
               label: 'Home',
-              onClick: () => window.location.href='/',
+              onClick: useCallback(() => navigate('/', {replace: true}), [navigate]),
             },
             {
               key: '/Cryptocurrencies',
               icon: <SlidersOutlined />,
                 label: 'Cryptocurrencies',
-                onClick: () => window.location.href='/Cryptocurrencies',
+                onClick: useCallback(() => navigate('/Cryptocurrencies', {replace: true}), [navigate]),
 
             },
             {
               key: '/News',
               icon: <BulbOutlined/>,
               label: 'Crypto News',
-              onClick: () => window.location.href='/News',
+              onClick: useCallback(() => navigate('/News', {replace: true}), [navigate]),
             },
           ]}
         /> 
