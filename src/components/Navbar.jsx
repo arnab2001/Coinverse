@@ -32,7 +32,7 @@ import './nav.css'
 const Navbar = () => {
     const { Header, Sider, Content } = Layout;
 
-const [collapsed, setCollapsed] = useState(false);
+const [collapsed, setCollapsed] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 const {
   token: { colorBgContainer },
 } = theme.useToken();
