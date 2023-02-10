@@ -345,6 +345,12 @@ a:hover{
         justify-content: center;
         min-height: 65vh !important;
     }
+
+    .home-heading-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    
 }
 
 @media screen and (min-width:576px) and (max-width:724px){
@@ -373,10 +379,28 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    
-
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 20px;
+}
+.top-heading > .ant-row{
+    text-align: center;
+}
+
+@media screen and (max-width:420px){
+    .top-heading{
+        display: block;
+        text-align: center;
+    }
+
+    .top-heading > .ant-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ant-row > .ant-col-8{
+        max-width: 100%;
+    }
+
 }
