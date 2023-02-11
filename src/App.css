@@ -76,24 +76,6 @@ a:hover{
     align-items: center;
 }
 
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
-    }
-}
-
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
-}
-
 @media screen and (max-width:800px){
     .app{
         flex-direction: column;
@@ -102,13 +84,6 @@ a:hover{
 
     .navbar{
         flex: 1;
-    }
-
-    .main{
-        flex: 1;
-        margin-top: 90px;
-        margin-left: 0px;
-        margin-right: 10px;
     }
 
     .nav-container{
@@ -124,7 +99,7 @@ a:hover{
     }
 
     .ant-menu{
-        position: absolute;
+        position: relative;
         right: 0px;
     }
     .home-title{
@@ -345,6 +320,11 @@ a:hover{
     align-items: center;
     margin-top: 40px;
 }
+@media screen and (max-width:867px){
+    .home-heading-container {
+        flex-direction: column;
+    }
+}
 .show-more{
     margin-top: 0px !important;
 }
@@ -358,8 +338,32 @@ a:hover{
 .crypto-card-container{
     min-height: 65vh !important;
 }
+
+@media screen and (min-width:992px) and (max-width:1224px){
+    .crypto-card-container {
+        display: flex;
+        justify-content: center;
+        min-height: 65vh !important;
+    }
+
+    .home-heading-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+
+@media screen and (min-width:576px) and (max-width:724px){
+    .crypto-card-container {
+        display: flex;
+        justify-content: center;
+        min-height: 65vh !important;
+    }
+}
+
 .crypto-card{
     min-width: 250px;
+    float: left;
 }
 .crypto-card .crypto-image{
     width:35px;
@@ -375,10 +379,28 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    
-
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 20px;
+}
+.top-heading > .ant-row{
+    text-align: center;
+}
+
+@media screen and (max-width:420px){
+    .top-heading{
+        display: block;
+        text-align: center;
+    }
+
+    .top-heading > .ant-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ant-row > .ant-col-8{
+        max-width: 100%;
+    }
+
 }

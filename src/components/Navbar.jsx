@@ -19,12 +19,12 @@ import {
 } from '@ant-design/icons';
 import {Row,Col, Image,Layout, Menu, Space, theme, Typography ,Avatar} from 'antd';
 import { Route, Routes, useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import Homepage from './Homepage';
 import Exchanges from './Exchanges';
 import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetailes from './CryptoDetailes';
 import News from './News';
-import Link from 'antd/es/typography/Link';
 import icon from '../images/cryptocurrency.png';
 import './nav.css'
 
@@ -48,7 +48,7 @@ const Navbar = () => {
               <Image src={icon} preview={false} />
             </Col>
             <Col>
-              <Typography.Title level={3} >
+              <Typography.Title level={5} >
                   <Link to="/">Coinverse</Link>
               </Typography.Title>
             </Col>
@@ -57,7 +57,8 @@ const Navbar = () => {
         <Menu
           theme="dark" 
           mode="inline" 
-          defaultSelectedKeys={['/' + window.location.href.split('/')[3]]}
+          defaultSelectedKeys={'/'}
+          selectedKeys={['/' + window.location.href.split('/')[3]]}
           items={[
             {
               key: '/',
