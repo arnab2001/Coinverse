@@ -1,24 +1,24 @@
-<h1>Coinverse </h1>
+# 🪙 Coinverse 🪙
 
-<h2>Cryptocurrency tracker and News , all at one place</h2>
+## Cryptocurrency tracker and cryptocurrency related News , all at one place
 
-Use this Webapp to see current prices of coins , view historical data , search and get latest news on any specefic coin 
-
-<h3>key highlights</h3>
-<p>All crypto prices at a glance in the home page
-<p>Crypto News </p>
-<p>Historical price data with charts</p>
-<p>origin , facts and other stuffs </p>
-
- <h3>Technology Stack</h3>
-<p>React</p>
-<p>Redux</p>
-<p>Ant Designe</p>
-<p>Chart js</p>
-<p>Coinranking API, Bing News API</p>
+## 📌Key Features :-
+- All crypto prices at a glance in the home page
+- Crypto News
+- Current prices of coins  
+- Historical price data with charts  
+- Search and get latest news on any specefic coin 
+- Origin , facts and other stuffs
 
 
-<h3>Screenshots</h3>
+## 💻Tech Stacks used :- 
+- React
+- Redux
+- Ant Designe
+- Chart js
+- Coinranking API, Bing News API
+
+## Screenshots
 
  ![image](https://user-images.githubusercontent.com/63441472/216686705-2b7bf6e7-87ba-4e60-9e51-147b7af6340c.png) 
  ![image](https://user-images.githubusercontent.com/63441472/216687746-e88fb7b7-2199-4078-bb72-96b15bfebf38.png)
@@ -28,11 +28,11 @@ Use this Webapp to see current prices of coins , view historical data , search a
 <h2>Getting Involved</h2>
 <p>We welcome contributions from the community and are always looking for ways to improve the Coinverse. Here's how you can get involved:</p>
 <h3>Contribute code</h3>
-<p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/<username>/<repo-name>/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
+<p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/ arnab2001/Coinverse/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
 <h3>Report bugs and suggest features</h3>
-<p>If you find any bugs or have ideas for new features, please open an issue in the <a href="https://github.com/arnab2001/coinverse/issues">Issues</a> section of the repository. Make sure to check if the issue has already been reported before creating a new one.</p>
+<p>If you find any bugs or have ideas for new features, please open an issue in the <a href="https://github.com/arnab2001/Coinverse/issues">Issues</a> section of the repository. Make sure to check if the issue has already been reported before creating a new one.</p>
 <h3>Ask for help</h3>
-<p>If you need help with anything related to the React App, feel free to open an issue in the <a href="https://github.com/<username>/<repo-name>/issues">Issues</a> section or reach out to the repository owner or a collaborator for assistance.</p>
+<p>If you need help with anything related to the React App, feel free to open an issue in the <a href="https://github.com/arnab2001/Coinverse/issues">Issues</a> section or reach out to the repository owner or a collaborator for assistance.</p>
 <p>We are excited to see what you can bring to the React App and can't wait to see your contributions!</p>
 
 # Getting Started with Coinverse( Create-React-App )
@@ -105,3 +105,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contributors
+
+<br>
+<div>
+<h1 align="center">
+ <b>Thanks to these amazing people
+<h1>
+<a href="https://github.com/arnab2001/Coinverse/contributors">
+  <img src="https://contrib.rocks/image?repo=arnab2001/Coinverse&&max=817" />
+</a>
+</div>
+<br>
+<div align="center">
+<h3>Show some ❤️ by starring this awesome repository!</h3>
+</div>
