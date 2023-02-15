@@ -38,6 +38,6 @@
 </ol>
 <p> Your pull request will be reviewed and if approved, merged into the main branch. </p>
 <h2 id="Code-of-Conduct"> Code of Conduct </h2>
-<p> We have a Code of Conduct in place to ensure a welcoming and inclusive environment for all contributors. Please read and follow the Code of Conduct, which can be found in the <a href="https://github.com/arnab2001/coinverse/blob/master/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a> file in the repository. </p>
+<p> We have a Code of Conduct in place to ensure a welcoming and inclusive environment for all contributors. Please read and follow the Code of Conduct, which can be found in the <a href="https://github.com/arnab2001/Coinverse/blob/main/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a> file in the repository. </p>
 <p> If you have any questions or concerns about the Code of Conduct, please feel free to reach out to the repository owner or a collaborator. </p>
 <p> Thank you for your interest in contributing to the React App! We look forward to your contribution. </p>
