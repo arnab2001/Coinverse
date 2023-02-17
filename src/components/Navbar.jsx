@@ -105,7 +105,7 @@ const Navbar = () => {
             <Layout.Footer style={{ background: '#002547', color: 'white', padding: '20px' }}>
               <Row>
                 <Col xs={10} sm={8} md={8} lg={6}>
-                  <h3>Made with ❤️ by Arnab</h3>
+                  <h3>Made with ❤️ by Community</h3>
                   <p>Using <a href="https://rapidapi.com/Coinranking/api/coinranking1" style={{ color: 'grey' }}> Coinranking API</a>
                   , <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/" style={{ color: 'grey' }}>Bing News API </a> 
                   , React, Ant Design, Redux and React Router.</p>
