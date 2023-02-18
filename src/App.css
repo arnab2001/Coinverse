@@ -467,18 +467,3 @@ p{
     }
 
 }
-
-.ant-card-head-title{
-    color: var(--text-color);
-    transition: 0.5s;
-}
-
-.ant-statistic-content-value{
-    color: var(--text-color) !important;
-    transition: 0.5s;
-}
-
-.ant-statistic-title{
-    color: var(--text-color) !important;
-    transition: 0.5s;
-}
