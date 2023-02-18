@@ -13,16 +13,32 @@
     box-sizing: border-box;
 }
 
+.light-mode{
+    --nav-color:  #fff !important;
+    --back-color: #f5f5f5 !important;
+    --text-color: black !important;
+    --hov-color: #0071bd !important;
+    --button-hov: #fff !important;
+}
+
+.dark-mode{
+    --nav-color: rgb(27, 27, 27)!important;
+    --back-color:rgb(0, 0, 0) !important;
+    --text-color:  #fff !important;
+    --hov-color: #f5f5f5 !important;
+    --button-hov: rgb(40, 40, 40)!important;
+}
 
 
 a:hover{
-    color: var(--pink) !important;
+    color: var(--hov-color) !important;
 }
 
 .app{
     display: flex;
     overflow: hidden;
 }
+
 
 .navbar{
     flex: 0.2;
@@ -36,7 +52,10 @@ a:hover{
 }
 .routes{
     padding: 20px;
+    background-color: var(--back-color) !important;
+    transition: 0.5s;
 }
+
 .nav-container{
     position: fixed;
     left: 0;
@@ -74,7 +93,10 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.1s;
 }
+
+
 
 @media screen and (max-width:800px){
     .app{
@@ -119,7 +141,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--text-color); /* change */
     padding-top: 20px;
     padding-bottom: 20px;
     gap: 10px;
@@ -127,7 +149,7 @@ a:hover{
 
 .coin-heading-container .coin-name{
     font-weight: 900;
-    color: var(--pink);
+    color: var(--pink); /* change */
 }
 
 .coin-heading-container p{
@@ -159,11 +181,10 @@ a:hover{
 .coin-stats{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border); /* change */
     font-size: 1rem;
     opacity: 0.9;
     padding: 20px;
-
 }
 
 .coin-stats-name{
@@ -172,8 +193,13 @@ a:hover{
     font-size: 1rem;
 }
 
+.coin-stats-name-data{
+    color: var(--text-color) !important;
+}
+
 .stats{
     font-weight: 800;
+    color: var(--text-color) !important;
 }
 
 .coin-value-statistics-heading p{
@@ -226,6 +252,7 @@ a:hover{
 .link-name{
     text-transform: capitalize;
     font-size: 1rem;
+    color: var(--text-color) !important;
 }
 
 .coin-link a{
@@ -235,7 +262,7 @@ a:hover{
 }
 
 .coin-link:hover, .coin-stats:hover{
-    background-color: var(--bgSecondary);
+    background-color: var(--button-hov) !important; /* change */
 }
 
 @media screen and (max-width:1000px){
@@ -309,10 +336,12 @@ a:hover{
 }
 .price-change{
     font-weight: 900 !important;
+    color: var(--text-color) !important;
 }
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
+    color: var(--text-color) !important;
 }
 .home-heading-container{
     display: flex;
@@ -328,13 +357,30 @@ a:hover{
 .show-more{
     margin-top: 0px !important;
 }
+
+.show-more Button{
+    background-color: var(--back-color) !important;
+}
+
 .exchange-image{
     margin: 0px 10px !important;
 }
 .search-crypto{
     margin: 20px auto 30px auto;
     width: 250px;
+    
 }
+
+.search-crypto Input{
+    background-color: var(--nav-color) !important;
+    transition: 0.6s;
+}
+
+.search-crypto Input::placeholder{
+    color: var(--text-color) !important;
+    transition: 0.5s;
+}
+
 .crypto-card-container{
     min-height: 65vh !important;
 }
@@ -365,6 +411,7 @@ a:hover{
     min-width: 250px;
     float: left;
 }
+
 .crypto-card .crypto-image{
     width:35px;
 }
@@ -373,6 +420,10 @@ a:hover{
     margin-top: 20px !important;
 }
 
+.heading{
+    color: var(--text-color) !important;
+    transition: 0.5s;
+}
 
 .top-heading {
     justify-content: center;
@@ -381,10 +432,21 @@ a:hover{
     align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
+
 .top-heading > .ant-row{
     text-align: center;
+}
+
+.home-title{
+    color: var(--text-color) !important;
+    transition: 0.5s;
+}
+
+p{
+    color: var(--text-color) !important;
+    transition: 0.5s;
 }
 
 @media screen and (max-width:420px){
@@ -401,6 +463,22 @@ a:hover{
 
     .ant-row > .ant-col-8{
         max-width: 100%;
+        color: var(--text-color) !important;
     }
 
+}
+
+.ant-card-head-title{
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.ant-statistic-content-value{
+    color: var(--text-color) !important;
+    transition: 0.5s;
+}
+
+.ant-statistic-title{
+    color: var(--text-color) !important;
+    transition: 0.5s;
 }

@@ -75,8 +75,8 @@ const CryptoDetailes = () => {
           {stats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+                <Text className="coin-stats-name-data">{icon}</Text>
+                <Text className="coin-stats-name-data">{title}</Text>
               </Col>
               <Text className="stats">{value}</Text>
             </Col>
@@ -90,8 +90,8 @@ const CryptoDetailes = () => {
           {genericStats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+                <Text className="coin-stats-name-data">{icon}</Text>
+                <Text className="coin-stats-name-data">{title}</Text>
               </Col>
               <Text className="stats">{value}</Text>
             </Col>

@@ -26,15 +26,16 @@ import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetailes from './CryptoDetailes';
 import News from './News';
 import icon from '../images/cryptocurrency.png';
-import './nav.css'
+import './nav.css';
+import ToggleMode from './ToggleMode';
 
 
 const Navbar = () => {
 
+
   const { Header, Sider, Content } = Layout;
 
   const [collapsed, setCollapsed] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-  const { token: { colorBgContainer } } = theme.useToken();
 
   const navigate = useNavigate();
 
@@ -83,11 +84,12 @@ const Navbar = () => {
         /> 
       </Sider>
       <Layout className="site-layout">
-        <Header style={{ paddingLeft: "1rem", background: colorBgContainer ,fontSize:"1.8rem"}}>
+        <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
           })}
+          <ToggleMode />
         </Header>
         <Content>
           <div className="main" >

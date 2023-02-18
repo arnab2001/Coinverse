@@ -20,12 +20,12 @@ const Homepage = () => {
   if(isFetching) return <Loader />
 
   return (
-    <>
+    <div className='homePage-mainContainer'>
       <div className='top-heading'>
       <Title level={2} className="heading">
         Global Crypto Stats
       </Title>
-      <Row gutter={[32,7]}>
+      <Row gutter={[32,7]} >
         <Col span={8}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
         <Col span={8}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} /></Col>
         <Col span={8}><Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)} /></Col>
@@ -53,7 +53,7 @@ const Homepage = () => {
       </div>
       <News simplified/> {/* simplified is a prop that we pass to the News component  */}
       
-    </>
+    </div>
   )
 }
 
