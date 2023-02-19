@@ -1,3 +1,25 @@
 #main_component{
     height: 100vh;
 }
+
+.nav-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-color) !important;
+    transition: 0.5s;
+}
+
+.trigger{
+    color: var(--text-color);
+    transition: 0.4s;
+}
+
+.switch-div{
+    padding: 0;
+}
+
+.bulb-icon{
+    color: var(--text-color);
+    transition: 0.4s;
+}
