@@ -104,15 +104,15 @@ const Navbar = () => {
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer style={{ background: '#002547', color: 'white', padding: '20px' }}>
-              <Row>
-                <Col xs={10} sm={8} md={8} lg={6}>
+            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '20px' }}>
+              <Row className='row'>
+                <Col className='tech' > 
                   <h3>Made with ❤️ by Community</h3>
-                  <p>Using <a href="https://rapidapi.com/Coinranking/api/coinranking1" style={{ color: 'grey' }}> Coinranking API</a>
-                  , <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/" style={{ color: 'grey' }}>Bing News API </a> 
+                  <p>Using <span><a href="https://rapidapi.com/Coinranking/api/coinranking1"> Coinranking API</a>
+                  , <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API </a> </span>
                   , React, Ant Design, Redux and React Router.</p>
                 </Col> 
-                <Col>
+                <Col id='link'>
                   <h3>Links</h3>
                   <a href="/" style={{ color: 'grey' }}>Home</a>
                   &nbsp; &nbsp;
