@@ -17,6 +17,7 @@
     --nav-color:  #fff !important;
     --back-color: #f5f5f5 !important;
     --text-color: black !important;
+    --text-color-1: rgb(116, 113, 113) !important;
     --hov-color: #0071bd !important;
     --button-hov: #fff !important;
 }
@@ -25,6 +26,7 @@
     --nav-color: rgb(27, 27, 27)!important;
     --back-color:rgb(0, 0, 0) !important;
     --text-color:  #fff !important;
+    --text-color-1: rgb(94, 91, 91) !important;
     --hov-color: #f5f5f5 !important;
     --button-hov: rgb(40, 40, 40)!important;
 }
@@ -72,12 +74,11 @@ a:hover{
     align-items: center;
     width: 100%;
 }
-/* .logo{
-    
-} */
+
 .logo a{
    color: white;
 }
+
 .menu-control-container{
     display: none !important;
     position: absolute !important;
@@ -95,8 +96,6 @@ a:hover{
     align-items: center;
     transition: 0.1s;
 }
-
-
 
 @media screen and (max-width:800px){
     .app{
@@ -310,11 +309,22 @@ a:hover{
 .ant-statistic-content-value{
     color: var(--text-color) !important;
     transition: 0.5s;
+    font-weight: 500;
+    font-size: 25px;
 }
 
 .ant-statistic-title{
-    color: var(--text-color) !important;
+    background: rgb(255, 255, 255) ;
+    border:1px solid rgb(156, 154, 154); 
+    border-radius: 25px;
+    color: var(--text-color-1) !important;
     transition: 0.5s;
+}
+
+@media screen and (max-width: 500px){
+    .ant-statistic-title{
+        padding:5px;
+    }
 }
 
 .news-image-container .img{
@@ -437,6 +447,9 @@ a:hover{
 .heading{
     color: var(--text-color) !important;
     transition: 0.5s;
+    padding-bottom: 15px;
+    font-weight: 600 !important;
+    font-size: 35px !important;
 }
 
 .top-heading {
