@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import HTMLReactParser from 'html-react-parser'
 import millify from 'millify'
-import { Typography, Row, Col, Statistic,Select } from 'antd'
+import { Typography, Row, Col,Select, Button } from 'antd'
 import { MoneyCollectOutlined, 
          DollarCircleOutlined,
          FundOutlined, 
@@ -11,12 +11,13 @@ import { MoneyCollectOutlined,
          TrophyOutlined, 
          CheckOutlined, 
          NumberOutlined, 
-         ThunderboltOutlined
+         ThunderboltOutlined,
+         BookOutlined
          } from '@ant-design/icons';
- import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi'
- import LineChart from './LineChart'
+import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi'
+import LineChart from './LineChart'
 import Loader from './loader'
-
+import BookmarkService from '../services/bookmarkService'
 
 
 
@@ -24,43 +25,76 @@ const { Title, Text } = Typography
 const { Option } = Select
 
 
-const CryptoDetailes = () => {
-    const { coinId } = useParams()
-    const [timeperiod, setTimePeriod] = useState('7d')
-    const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
-    const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timeperiod})
-    const cryptoDetails = data?.data?.coin
-    console.log('cryptoDetails', cryptoDetails)
+const CryptoDetailes = ({update}) => {
+  const { coinId } = useParams()
+  const [timeperiod, setTimePeriod] = useState('7d')
+  const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
+  const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timeperiod})
+  const cryptoDetails = data?.data?.coin
+  console.log('cryptoDetails', cryptoDetails)
 
-    if(isFetching) return <Loader/>
-
-    const time = ['3h', '24h', '7d', '30d','3m','1y', '3y', '5y'];
-
-    const stats = [
-      { title: 'Price to USD', value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`, icon: <DollarCircleOutlined /> },
-      { title: 'Rank', value: cryptoDetails?.rank, icon: <NumberOutlined /> },
-      { title: '24h Volume', value: `$ ${cryptoDetails?.['24hVolume'] && millify(cryptoDetails?.['24hVolume'])}`, icon: <ThunderboltOutlined /> },
-      { title: 'Market Cap', value: `$ ${cryptoDetails?.marketCap && millify(cryptoDetails?.marketCap)}`, icon: <DollarCircleOutlined /> },
-      { title: 'All-time-high(daily avg.)', value: `$ ${cryptoDetails?.allTimeHigh?.price && millify(cryptoDetails?.allTimeHigh?.price)}`, icon: <TrophyOutlined /> },
-    ];
+  const [ bookmarked, setBookmarked ] = useState(BookmarkService.validateBookMark(coinId));
+  const [ style, setStyle ] = useState("not-bookmarked");
   
-    const genericStats = [
-      { title: 'Number Of Markets', value: cryptoDetails?.numberOfMarkets, icon: <FundOutlined /> },
-      { title: 'Number Of Exchanges', value: cryptoDetails?.numberOfExchanges, icon: <MoneyCollectOutlined /> },
-      { title: 'Aprroved Supply', value: cryptoDetails?.supply?.confirmed ? <CheckOutlined /> : <StopOutlined />, icon: <ExclamationCircleOutlined /> },
-      { title: 'Total Supply', value: `$ ${cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)}`, icon: <ExclamationCircleOutlined /> },
-      { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
-    ];
 
-    if (isFetching) return 'Loading...'
-    return (
-        <>
-            <Col className="coin-detail-container">
+  useEffect(() => {
+    setBookmarked(BookmarkService.validateBookMark(coinId));
+    if(bookmarked){
+      setStyle("bookmarked");
+    } else { 
+      setStyle("not-bookmarked")
+    }
+  }, [bookmarked, coinId]);
+  
+  //console.log(bookmarked);
+  if(isFetching) return <Loader/>
+
+  const time = ['3h', '24h', '7d', '30d','3m','1y', '3y', '5y'];
+
+  const stats = [
+    { title: 'Price to USD', value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`, icon: <DollarCircleOutlined /> },
+    { title: 'Rank', value: cryptoDetails?.rank, icon: <NumberOutlined /> },
+    { title: '24h Volume', value: `$ ${cryptoDetails?.['24hVolume'] && millify(cryptoDetails?.['24hVolume'])}`, icon: <ThunderboltOutlined /> },
+    { title: 'Market Cap', value: `$ ${cryptoDetails?.marketCap && millify(cryptoDetails?.marketCap)}`, icon: <DollarCircleOutlined /> },
+    { title: 'All-time-high(daily avg.)', value: `$ ${cryptoDetails?.allTimeHigh?.price && millify(cryptoDetails?.allTimeHigh?.price)}`, icon: <TrophyOutlined /> },
+  ];
+
+  const genericStats = [
+    { title: 'Number Of Markets', value: cryptoDetails?.numberOfMarkets, icon: <FundOutlined /> },
+    { title: 'Number Of Exchanges', value: cryptoDetails?.numberOfExchanges, icon: <MoneyCollectOutlined /> },
+    { title: 'Aprroved Supply', value: cryptoDetails?.supply?.confirmed ? <CheckOutlined /> : <StopOutlined />, icon: <ExclamationCircleOutlined /> },
+    { title: 'Total Supply', value: `$ ${cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)}`, icon: <ExclamationCircleOutlined /> },
+    { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
+  ];
+  
+  const propagateBookmark = () => {
+    console.log("Bookmark button clicked.");
+
+    const set = BookmarkService.setBookmark(coinId);
+    setBookmarked(set);
+    //set ? setStyle("bookmarked") : setStyle("not-bookmarked");
+    return BookmarkService.coinArray();
+  }
+
+  if (isFetching) return 'Loading...'
+
+  return (
+    <>
+    <Col className="coin-detail-container">
       <Col className="coin-heading-container">
-        <Title level={2} className="coin-name">
-          {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
-        </Title>
-        <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
+        <div class="details-bookmark-button">
+          <div class="crypto-title">
+            <Title level={2} className="coin-name">
+              {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
+            </Title>
+          </div>
+          <div class="bookmark-button">
+            <Button className={style} icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
+          </div>
+          <div class="crypto-details">
+            <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
+          </div>
+        </div>
       </Col>
       <Select defaultValue="7d" className="select-timeperiod" placeholder="Select Timeperiod" onChange={(value) => setTimePeriod(value)}>
         {time.map((date) => <Option key={date}>{date}</Option>)}
@@ -114,9 +148,8 @@ const CryptoDetailes = () => {
         </Col>
       </Col>
     </Col>
-     
- </>
-)
+  </>
+  )
 }
 
 export default CryptoDetailes

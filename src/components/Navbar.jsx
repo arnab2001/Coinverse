@@ -5,7 +5,7 @@
 // import icon from '../images/cryptocurrency.png' 
 // import {Exchanges,Homepage,Cryptocurrencies,News,CryptoDetailes} from './index'
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -14,11 +14,13 @@ import {
     SlidersOutlined,
     FundOutlined,
     RocketOutlined,
-    BulbOutlined
+    BulbOutlined,
+    BookOutlined,
+    LineOutlined
 
 } from '@ant-design/icons';
-import {Row,Col, Image,Layout, Menu, Space, theme, Typography ,Avatar} from 'antd';
-import { Route, Routes, useNavigate } from 'react-router';
+import {Row,Col, Image,Layout, Menu, Space, theme, Typography, Avatar} from 'antd';
+import { Route, Routes } from 'react-router';
 import { Link } from 'react-router-dom';
 import Homepage from './Homepage';
 import Exchanges from './Exchanges';
@@ -28,7 +30,8 @@ import News from './News';
 import icon from '../images/cryptocurrency.png';
 import './nav.css';
 import ToggleMode from './ToggleMode';
-
+import Bookmarks from './Bookmarks';
+import BookmarkService from '../services/bookmarkService';
 
 const Navbar = () => {
 
@@ -36,8 +39,22 @@ const Navbar = () => {
   const { Header, Sider, Content } = Layout;
 
   const [collapsed, setCollapsed] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+  const [selectedMenuItem, setSelectedMenuItem] = useState(['/']);
+  const [coins, setCoins] = useState(BookmarkService.coinArray());
 
-  const navigate = useNavigate();
+  const handleClick = e => setSelectedMenuItem(e.key);
+  const reRender = (callback) => {
+    setCoins(callback());
+  }
+
+  const sendCoins = () => {
+    return coins;
+  };
+
+  useEffect(() => {
+    if(selectedMenuItem !== window.location.pathname)
+      setSelectedMenuItem(window.location.pathname)
+  }, [selectedMenuItem])
 
   return (
     <>
@@ -50,7 +67,7 @@ const Navbar = () => {
             </Col>
             <Col>
               <Typography.Title level={5} >
-                  <Link to="/">Coinverse</Link>
+                  <Link to="/" onClick={handleClick}>Coinverse</Link>
               </Typography.Title>
             </Col>
           </Row>
@@ -59,29 +76,20 @@ const Navbar = () => {
           theme="dark" 
           mode="inline" 
           defaultSelectedKeys={'/'}
-          selectedKeys={['/' + window.location.href.split('/')[3]]}
-          items={[
-            {
-              key: '/',
-              icon: <HomeOutlined />,
-              label: 'Home',
-              onClick: useCallback(() => navigate('/', {replace: true}), [navigate]),
-            },
-            {
-              key: '/Cryptocurrencies',
-              icon: <SlidersOutlined />,
-                label: 'Cryptocurrencies',
-                onClick: useCallback(() => navigate('/Cryptocurrencies', {replace: true}), [navigate]),
-
-            },
-            {
-              key: '/News',
-              icon: <BulbOutlined/>,
-              label: 'Crypto News',
-              onClick: useCallback(() => navigate('/News', {replace: true}), [navigate]),
-            },
-          ]}
-        /> 
+          selectedKeys={[selectedMenuItem]}
+          onClick={handleClick}
+        >
+          <Menu.Item key="/" icon={<HomeOutlined/>}>
+            <Link to="/">Home</Link>
+          </Menu.Item>
+          <Menu.Item key="/Cryptocurrencies" icon={<SlidersOutlined/>}>
+            <Link to="/Cryptocurrencies">Cryptocurrencies</Link>
+          </Menu.Item>
+          <Menu.Item key="/News" icon={<BulbOutlined/>}>
+            <Link to="/News">News</Link>
+          </Menu.Item>
+          <Bookmarks sendCoins={sendCoins}/>
+        </Menu>
       </Sider>
       <Layout className="site-layout">
         <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
@@ -96,10 +104,10 @@ const Navbar = () => {
             <Layout>
               <div className='routes'>
                 <Routes>
-                  <Route path='/' element={<Homepage/>}/>
+                  <Route path='/' element={<Homepage onClick={handleClick}/>}/>
                     <Route path='/Exchanges' element={<Exchanges/>}/>
-                    <Route path='/Cryptocurrencies' element={<Cryptocurrencies/>}/>
-                    <Route path='/crypto/:coinId' element={<CryptoDetailes/>}/>
+                    <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
+                    <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/news' element={<News/>}/>
                 </Routes>
               </div> 
