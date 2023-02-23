@@ -6,7 +6,7 @@ import {Card, Input, Row, Col, Statistic } from 'antd'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Loader from './loader'
 
-const Cryptocurrencies = ({simplified}) => {
+const Cryptocurrencies = ({simplified, onClick}) => {
   const count = simplified ? 10 : 100  // 10 is the number of coins in home page and 100 is the number of coins in the crypto page
   const {data: cryptosList, isFetching} = useGetCryptosQuery( count ) //this is the hook 
   const [cryptos, setCryptos] = useState() //this is the state
@@ -37,7 +37,7 @@ const Cryptocurrencies = ({simplified}) => {
       <Row gutter={[32,32]} className="crypto-card-container">
          {cryptos?.map((currency) => (
           <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
-            <Link to={`/crypto/${currency.uuid}`}>
+            <Link to={`/crypto/${currency.uuid}`} onClick={onClick}>
               <Card style={{backgroundColor: cardBgColor, color: cardColor}} title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} alt='crypto-logo' />}
                 hoverable >
