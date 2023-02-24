@@ -499,3 +499,102 @@ p{
     }
 
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: black;
+    background-clip: content-box;
+    border: 2px solid transparent;
+    border-radius: 15px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: white;
+  }
+
+  .details-bookmark-button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: [col1] 7% [col-space] 3% [col2] 30% [col3] 30% [col4] 30% [end];
+    grid-template-rows: [row1] 50% [row2] 50% [last-line];
+    padding-right: 10%;
+  }
+
+  .crypto-title {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    text-align: center;
+  }
+
+  .bookmark-button {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .crypto-details {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    text-align: center;
+  }
+
+  .not-bookmarked {
+    background-color: #ffffff;
+  }
+
+  .bookmarked {
+    background-color: goldenrod;
+  }
+
+  .bookmark-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bookmark-details > p {
+    color: rgb(116, 113, 113) !important;
+  }
+  .bookmark-image {
+    height: 25px
+  }
+
+  .ant-menu-submenu-title {
+    padding-left: 24px !important;
+  }
+
+  .ant-menu-submenu > ul > li.ant-menu-item {
+    padding-left: 48px !important;
+    padding-right: 10px;
+    height: auto;
+    white-space: normal;
+  }
+
+  ul.ant-menu-vertical > li.ant-menu-submenu-vertical > .ant-menu-submenu-title {
+    padding-left: 28px !important;
+  }
+
+  .ant-menu-submenu-popup > ul.ant-menu-vertical > li.ant-menu-item {
+    padding-left: 16px !important;
+    padding-right: 24px;
+  }
+
+  .ant-menu-submenu-popup > ul > li > .ant-menu-title-content {
+    left: 20px;
+    top: -40px;
+    position: relative;
+  }
+
+  .ant-menu-submenu-popup > ul.ant-menu-sub {
+    min-width: 220px !important;
+  }
