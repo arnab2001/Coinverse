@@ -98,7 +98,7 @@ const Navbar = () => {
             onClick: () => setCollapsed(!collapsed),
           })}
           <div class="contentt"><h2 id="h2-tag">Coinverse</h2><h2 id="h2-tag">Coinverse</h2></div>
-          <ToggleMode /> 
+          <ToggleMode/>
         </Header>
         <Content>
           <div className="main" >

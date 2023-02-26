@@ -20,7 +20,7 @@
   color: #fff;
   position: absolute;
   transform: translate(-50%, -50%);
-  font-weight: 600 !important;
+  font-weight: 600;
 }
 
 .contentt h2:nth-child(1) {
