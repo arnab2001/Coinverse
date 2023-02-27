@@ -36,7 +36,7 @@ const Homepage = ({onClick}) => {
         <Title level={2} className="home-title">Top 10 Cryptocurrencies in the world</Title>
         <Title level={3} className="show-more">
           <Button type="default" size="large">
-            <Link to="/Cryptocurrencies" onClick={onClick}>Show More</Link>
+            <Link to="/Cryptocurrencies" onClick={onClick}><p id="show-more-text">Show More</p></Link>
           </Button>
         </Title>
       </div>
@@ -45,7 +45,7 @@ const Homepage = ({onClick}) => {
         <Title level={2} className="home-title">Latest Crypto News</Title>
         <Title level={3} className="show-more">
           <Button type="default" size="large">
-            <Link to="/News" onClick={onClick}>Show More</Link>
+            <Link to="/News" onClick={onClick}><p id="show-more-text">Show More</p></Link>
           </Button>
         </Title>
       </div>

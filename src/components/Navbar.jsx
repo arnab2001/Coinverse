@@ -59,15 +59,15 @@ const Navbar = () => {
   return (
     <>
     <Layout className='main_component' >
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider className='sidebar' trigger={null} collapsible collapsed={collapsed}>
        <div className="logo" > 
           <Row style={{width:"100%"}} type="flex" align="center">
             <Col> 
-              <Image src={icon} preview={false} />
+              <Image className='icon-logo' src={icon} preview={false} />
             </Col>
             <Col>
               <Typography.Title level={5} >
-                  <Link to="/" onClick={handleClick}>Coinverse</Link>
+                  <Link to="https://coinverse-delta.vercel.app/" onClick={handleClick}>Coinverse</Link>
               </Typography.Title>
             </Col>
           </Row>
@@ -97,7 +97,8 @@ const Navbar = () => {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
           })}
-          <ToggleMode />
+          <div class="contentt"><h2 id="h2-tag">Coinverse</h2><h2 id="h2-tag">Coinverse</h2></div>
+          <ToggleMode/>
         </Header>
         <Content>
           <div className="main" >

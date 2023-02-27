@@ -20,6 +20,10 @@
     --text-color-1: rgb(116, 113, 113) !important;
     --hov-color: #0071bd !important;
     --button-hov: #fff !important;
+    --title-coinverse: #001529!important;
+    --show-more-color: #00000097!important;
+    --show-more-color-2: #0071bd!important;
+    --bulb-color:black !important;
 }
 
 .dark-mode{
@@ -29,8 +33,11 @@
     --text-color-1: rgb(94, 91, 91) !important;
     --hov-color: #f5f5f5 !important;
     --button-hov: rgb(40, 40, 40)!important;
+    --title-coinverse: #ffffff!important;
+    --show-more-color: #ffffff!important;
+    --show-more-color-2: #0071bd!important;
+    --bulb-color:rgb(251, 255, 0) !important;
 }
-
 
 a:hover{
     color: var(--hov-color) !important;
@@ -319,7 +326,14 @@ a:hover{
     border-radius: 25px;
     color: var(--text-color-1) !important;
     transition: 0.5s;
+    transition: transform .2s; /* Animation */
 }
+
+.ant-statistic-title:hover {
+    transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: 1px 1px 3px rgba(40, 40, 40, 0.365);
+}
+
 
 @media screen and (max-width: 500px){
     .ant-statistic-title{
@@ -386,6 +400,14 @@ a:hover{
     background-color: var(--back-color) !important;
 }
 
+#show-more-text{
+    color: var(--show-more-color) !important;
+}
+
+#show-more-text:hover{
+    color: var(--show-more-color-2) !important;
+}
+
 .exchange-image{
     margin: 0px 10px !important;
 }
@@ -444,6 +466,7 @@ a:hover{
 .crypto-card .crypto-image{
     width:35px;
 }
+
 .select-timeperiod{
     width: 200px !important;
     margin-top: 20px !important;
@@ -504,97 +527,105 @@ p{
     width: 10px;
   }
   
-  ::-webkit-scrollbar-thumb{
-    background-color: black;
-    background-clip: content-box;
-    border: 2px solid transparent;
-    border-radius: 15px;
-  }
-  
-  ::-webkit-scrollbar-track{
-    background-color: white;
-  }
+::-webkit-scrollbar-thumb{
+background-color: black;
+background-clip: content-box;
+border: 2px solid transparent;
+border-radius: 15px;
+}
 
-  .details-bookmark-button {
-    width: 100%;
-    display: grid;
-    grid-template-columns: [col1] 7% [col-space] 3% [col2] 30% [col3] 30% [col4] 30% [end];
-    grid-template-rows: [row1] 50% [row2] 50% [last-line];
-    padding-right: 10%;
-  }
+::-webkit-scrollbar-track{
+background-color: white;
+}
 
-  .crypto-title {
-    display: grid;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 3;
-    grid-column-end: 6;
-    text-align: center;
-  }
+.details-bookmark-button {
+width: 100%;
+display: grid;
+grid-template-columns: [col1] 7% [col-space] 3% [col2] 30% [col3] 30% [col4] 30% [end];
+grid-template-rows: [row1] 50% [row2] 50% [last-line];
+padding-right: 10%;
+}
 
-  .bookmark-button {
-    display: grid;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
+.crypto-title {
+display: grid;
+grid-row-start: 1;
+grid-row-end: 2;
+grid-column-start: 3;
+grid-column-end: 6;
+text-align: center;
+}
 
-  .crypto-details {
-    display: grid;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 6;
-    text-align: center;
-  }
+.bookmark-button {
+display: grid;
+grid-row-start: 1;
+grid-row-end: 3;
+grid-column-start: 1;
+grid-column-end: 2;
+}
 
-  .not-bookmarked {
-    background-color: #ffffff;
-  }
+.crypto-details {
+display: grid;
+grid-row-start: 2;
+grid-row-end: 3;
+grid-column-start: 3;
+grid-column-end: 6;
+text-align: center;
+}
 
-  .bookmarked {
-    background-color: goldenrod;
-  }
+.not-bookmarked {
+background-color: #ffffff;
+}
 
-  .bookmark-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .bookmark-details > p {
-    color: rgb(116, 113, 113) !important;
-  }
-  .bookmark-image {
-    height: 25px
-  }
+.bookmarked {
+background-color: goldenrod;
+}
 
-  .ant-menu-submenu-title {
-    padding-left: 24px !important;
-  }
+.bookmark-details {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.bookmark-details > p {
+color: rgb(116, 113, 113) !important;
+}
+.bookmark-image {
+height: 25px
+}
 
-  .ant-menu-submenu > ul > li.ant-menu-item {
-    padding-left: 48px !important;
-    padding-right: 10px;
-    height: auto;
-    white-space: normal;
-  }
+.ant-menu-submenu-title {
+padding-left: 24px !important;
+}
 
-  ul.ant-menu-vertical > li.ant-menu-submenu-vertical > .ant-menu-submenu-title {
-    padding-left: 28px !important;
-  }
+.ant-menu-submenu > ul > li.ant-menu-item {
+padding-left: 48px !important;
+padding-right: 10px;
+height: auto;
+white-space: normal;
+}
 
-  .ant-menu-submenu-popup > ul.ant-menu-vertical > li.ant-menu-item {
-    padding-left: 16px !important;
-    padding-right: 24px;
-  }
+ul.ant-menu-vertical > li.ant-menu-submenu-vertical > .ant-menu-submenu-title {
+padding-left: 28px !important;
+}
 
-  .ant-menu-submenu-popup > ul > li > .ant-menu-title-content {
-    left: 20px;
-    top: -40px;
-    position: relative;
-  }
+.ant-menu-submenu-popup > ul.ant-menu-vertical > li.ant-menu-item {
+padding-left: 16px !important;
+padding-right: 24px;
+}
 
-  .ant-menu-submenu-popup > ul.ant-menu-sub {
-    min-width: 220px !important;
-  }
+.ant-menu-submenu-popup > ul > li > .ant-menu-title-content {
+left: 20px;
+top: -40px;
+position: relative;
+}
+
+.ant-menu-submenu-popup > ul.ant-menu-sub {
+min-width: 220px !important;
+}
+
+.icon-logo{
+transition: transform .2s;
+}
+
+.icon-logo:hover{
+transform: scale(1.2);
+}
