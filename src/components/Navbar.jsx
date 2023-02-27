@@ -27,7 +27,8 @@ import Exchanges from './Exchanges';
 import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetailes from './CryptoDetailes';
 import News from './News';
-import icon from '../images/cryptocurrency.png';
+import icon from '../images/coinverse-logo-b.png';
+import iconM from '../images/coinverse-logo-m.png';
 import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
@@ -41,6 +42,10 @@ const Navbar = () => {
   const [collapsed, setCollapsed] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
   const [selectedMenuItem, setSelectedMenuItem] = useState(['/']);
   const [coins, setCoins] = useState(BookmarkService.coinArray());
+  const [logo, setLogo] = useState(icon);
+  const [link, setLink] = useState({display: "none"});
+
+  
 
   const handleClick = e => setSelectedMenuItem(e.key);
   const reRender = (callback) => {
@@ -54,7 +59,14 @@ const Navbar = () => {
   useEffect(() => {
     if(selectedMenuItem !== window.location.pathname)
       setSelectedMenuItem(window.location.pathname)
-  }, [selectedMenuItem])
+      if(!collapsed){
+        setLogo(icon);
+        setLink({display: "none"});
+      } else {
+        setLogo(iconM);
+        setLink({display: "block"});
+      }
+  }, [selectedMenuItem, collapsed])
 
   return (
     <>
@@ -63,9 +75,9 @@ const Navbar = () => {
        <div className="logo" > 
           <Row style={{width:"100%"}} type="flex" align="center">
             <Col> 
-              <Image src={icon} preview={false} />
+              <Image src={logo} preview={false} />
             </Col>
-            <Col>
+            <Col style={link}>
               <Typography.Title level={5} >
                   <Link to="/" onClick={handleClick}>Coinverse</Link>
               </Typography.Title>
