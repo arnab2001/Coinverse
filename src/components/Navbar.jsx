@@ -5,21 +5,17 @@
 // import icon from '../images/cryptocurrency.png' 
 // import {Exchanges,Homepage,Cryptocurrencies,News,CryptoDetailes} from './index'
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
  
     HomeOutlined,
     SlidersOutlined,
-    FundOutlined,
-    RocketOutlined,
-    BulbOutlined,
-    BookOutlined,
-    LineOutlined
+    BulbOutlined
 
 } from '@ant-design/icons';
-import {Row,Col, Image,Layout, Menu, Space, theme, Typography, Avatar} from 'antd';
+import {Row,Col, Image,Layout, Menu, Typography} from 'antd';
 import { Route, Routes } from 'react-router';
 import { Link } from 'react-router-dom';
 import Homepage from './Homepage';
@@ -44,8 +40,6 @@ const Navbar = () => {
   const [coins, setCoins] = useState(BookmarkService.coinArray());
   const [logo, setLogo] = useState(icon);
   const [link, setLink] = useState({display: "none"});
-
-  
 
   const handleClick = e => setSelectedMenuItem(e.key);
   const reRender = (callback) => {
@@ -90,18 +84,25 @@ const Navbar = () => {
           defaultSelectedKeys={'/'}
           selectedKeys={[selectedMenuItem]}
           onClick={handleClick}
-        >
-          <Menu.Item key="/" icon={<HomeOutlined/>}>
-            <Link to="/">Home</Link>
-          </Menu.Item>
-          <Menu.Item key="/Cryptocurrencies" icon={<SlidersOutlined/>}>
-            <Link to="/Cryptocurrencies">Cryptocurrencies</Link>
-          </Menu.Item>
-          <Menu.Item key="/News" icon={<BulbOutlined/>}>
-            <Link to="/News">News</Link>
-          </Menu.Item>
-          <Bookmarks sendCoins={sendCoins}/>
-        </Menu>
+          items={[
+            {
+              key: '/',
+              icon: <HomeOutlined />,
+              label: <Link to="/">Home</Link>,
+            },
+            {
+              key: '/Cryptocurrencies',
+              icon: <SlidersOutlined />,
+              label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
+            },
+            {
+              key: '/News',
+              icon: <BulbOutlined/>,
+              label: <Link to="/News">News</Link>,
+            },
+          ]}
+        />
+          <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
       </Sider>
       <Layout className="site-layout">
         <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
