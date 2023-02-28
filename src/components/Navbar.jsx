@@ -97,7 +97,7 @@ const Navbar = () => {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
           })}
-          <div class="contentt"><h2 id="h2-tag">Coinverse</h2><h2 id="h2-tag">Coinverse</h2></div>
+          <div className="contentt"><h2 id="h2-tag">Coinverse</h2><h2 id="h2-tag">Coinverse</h2></div>
           <ToggleMode/>
         </Header>
         <Content>

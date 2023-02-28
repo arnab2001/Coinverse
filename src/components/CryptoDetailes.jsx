@@ -82,16 +82,16 @@ const CryptoDetailes = ({update}) => {
     <>
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
-        <div class="details-bookmark-button">
-          <div class="crypto-title">
+        <div className="details-bookmark-button">
+          <div className="crypto-title">
             <Title level={2} className="coin-name">
               {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
             </Title>
           </div>
-          <div class="bookmark-button">
+          <div className="bookmark-button">
             <Button className={style} icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
           </div>
-          <div class="crypto-details">
+          <div className="crypto-details">
             <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
           </div>
         </div>
