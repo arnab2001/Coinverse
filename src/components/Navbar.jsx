@@ -32,6 +32,7 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
+// import Facebook from '../images/icons8-facebook-30.png';
 
 const Navbar = () => {
 
@@ -113,21 +114,56 @@ const Navbar = () => {
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '20px' }}>
+            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px' }}>
+              <h4 style={{color: 'grey', paddingLeft:'125px'}}>Made with ❤️ by Community</h4>
+              <br/>
               <Row className='row'>
-                <Col className='tech' > 
-                  <h3>Made with ❤️ by Community</h3>
-                  <p>Using <span><a href="https://rapidapi.com/Coinranking/api/coinranking1"> Coinranking API</a>
-                  , <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API </a> </span>
-                  , React, Ant Design, Redux and React Router.</p>
-                </Col> 
+                <Col className='tech'>
+                  <h3>Technologies Used</h3>
+                  <br/>
+                  <div id="underline1"></div>
+                  <br/>
+                  <p id="tecnologies-division">
+                    <span>
+                      <a class="footer-links" style={{color:'grey'}} href="https://rapidapi.com/Coinranking/api/coinranking1">Coinranking API&nbsp;</a>
+                      <br/>
+                      <a class="footer-links" style={{color:'grey'}} href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API</a>
+                      <br/>
+                      <a class="footer-links" style={{color:'grey'}} href="https://reactjs.org/">React</a>
+                      <br/>
+                    </span>
+                    <span>
+                      <a class="footer-links" style={{color:'grey'}} href="https://ant.design/">Ant Design</a>
+                      <br/>
+                      <a class="footer-links" style={{color:'grey'}} href="https://redux.js.org/">Redux</a>
+                      <br/>
+                      <a class="footer-links" style={{color:'grey'}} href="https://reactrouter.com/en/main">React Router</a>
+                    </span>
+                  </p>
+                </Col>
+                <Col className='socials'>
+                  <h3>Follow Us</h3>
+                  <br/>
+                  <div id="underline2"></div>
+                  <br/>
+                  <p>
+                    <a href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-facebook-30.png')} alt=""/></a>&nbsp;
+                    <a href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a>&nbsp;
+                    <a href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-twitter-30.png')} alt=""/></a>&nbsp;
+                    <a href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-github-30.png')} alt=""/></a>&nbsp;
+                    <a href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-30.png')} alt=""/></a>&nbsp;
+                  </p>
+                </Col>
                 <Col id='link'>
                   <h3>Links</h3>
-                  <a href="/" style={{ color: 'grey' }}>Home</a>
-                  &nbsp; &nbsp;
-                  <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
-                  &nbsp; &nbsp;
-                  <a href="/News" style={{ color: 'grey' }}>Crypto News</a>
+                  <br/>
+                  <div id="underline3"></div>
+                  <br/>
+                  <p>
+                    <a href="/" style={{color: 'grey'}}>Home<br/></a>
+                    <a href="/Cryptocurrencies" style={{color: 'grey'}}>Cryptocurrencies<br/></a>
+                    <a href="/News" style={{color: 'grey'}}>Crypto News<br/></a>
+                  </p>
                 </Col>
               </Row>
             </Layout.Footer>
