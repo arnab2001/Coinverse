@@ -28,6 +28,7 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
+import BackupNews from './BackupNews';
 
 const Navbar = () => {
 
@@ -88,9 +89,9 @@ const Navbar = () => {
               label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
             },
             {
-              key: '/News',
+              key: '/BackupNews',
               icon: <BulbOutlined/>,
-              label: <Link to="/News">News</Link>,
+              label: <Link to="/BackupNews">News</Link>,
             },
           ]}
         />
@@ -114,7 +115,7 @@ const Navbar = () => {
                     <Route path='/Exchanges' element={<Exchanges/>}/>
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
-                    <Route path='/news' element={<News/>}/>
+                    <Route path='/Backupnews' element={<BackupNews />}/>
                 </Routes>
               </div> 
             </Layout>
@@ -132,7 +133,7 @@ const Navbar = () => {
                   &nbsp; &nbsp;
                   <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
                   &nbsp; &nbsp;
-                  <a href="/News" style={{ color: 'grey' }}>Crypto News</a>
+                  <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
                 </Col>
               </Row>
             </Layout.Footer>
