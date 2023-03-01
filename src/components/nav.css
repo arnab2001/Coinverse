@@ -95,7 +95,7 @@
 .row{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
 }
 
 .footer{
@@ -192,9 +192,27 @@
     }
   }
   
-#tecnologies-division{
+.tecnologies-division1{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px;
+  padding: 0px;
+  font-size: medium;
+}
+
+.tecnologies-division2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px;
+  padding: 0px;
+  font-size: medium;
+}
+
+#div-container-techlinks{
+  display: flex;
+  justify-content: center;
 }
 
 .tech h3{
@@ -215,10 +233,23 @@
 }
 
 .social-icon{
-  width:32px !important;
-  height:32px !important;
-  padding:2px !important;
-  filter: invert(100%);
+  width:25px;
+  height:25px;
+  padding:px;
+}
+
+.socials p{
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icon-div{
+  transition: transform .2s;
+  padding: 5px;
+}
+
+.social-icon-div:hover{
+  transform: scale(1.3);
 }
 
 #underline1{
@@ -240,4 +271,43 @@
   height: 3px;
   width:48px;
   border-radius: 50px;
+}
+
+#footercomment{
+  color: grey;
+  align-self: center;
+}
+
+.tech-div{
+  padding: 2px;
+  margin: 0px;
+  transition: transform .2s;
+}
+
+.tech-div:hover{
+  transform: translateX(3px);
+}
+
+#home{
+  transition: transform .2s;
+}
+
+#home:hover{
+  transform: translateX(3px);
+}
+
+#crypto-currencies{
+  transition: transform .2s;
+}
+
+#crypto-currencies:hover{
+  transform: translateX(3px);
+}
+
+#cryto-news{
+  transition: transform .2s;
+}
+
+#cryto-news:hover{
+  transform: translateX(3px);
 }
