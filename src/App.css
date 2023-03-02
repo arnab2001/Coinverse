@@ -74,6 +74,18 @@ a:hover{
     background-color: rgb(0, 21, 41);
 }
 
+.ant-card-body{
+    background-color: var(--nav-color) !important;
+}
+
+h4{
+    color: var(--text-color) !important;
+}
+
+.ant-typography{
+    color: var(--text-color) !important;
+}
+
 .logo-container{
     background-color: #002547;
     display: flex;

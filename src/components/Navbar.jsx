@@ -2,7 +2,7 @@
 // import { Button, Menu, Typography, Avatar } from 'antd'
 // import { Link } from 'react-router-dom'
 // import { HomeOutlined, SlidersTwoTone , BulbTwoTone , FundTwoTone, MenuOutlined } from '@ant-design/icons'
-// import icon from '../images/cryptocurrency.png' 
+// import icon from '../images/cryptocurrency.png
 // import {Exchanges,Homepage,Cryptocurrencies,News,CryptoDetailes} from './index'
 
 import React, { useState, useEffect } from 'react';
@@ -28,7 +28,11 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
+
+import BackupNews from './BackupNews';
+
 // import Facebook from '../images/icons8-facebook-30.png';
+
 
 const Navbar = () => {
 
@@ -89,9 +93,9 @@ const Navbar = () => {
               label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
             },
             {
-              key: '/News',
+              key: '/BackupNews',
               icon: <BulbOutlined/>,
-              label: <Link to="/News">News</Link>,
+              label: <Link to="/BackupNews">News</Link>,
             },
           ]}
         />
@@ -115,7 +119,7 @@ const Navbar = () => {
                     <Route path='/Exchanges' element={<Exchanges/>}/>
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
-                    <Route path='/news' element={<News/>}/>
+                    <Route path='/Backupnews' element={<BackupNews />}/>
                 </Routes>
               </div> 
             </Layout>
@@ -161,6 +165,13 @@ const Navbar = () => {
                 </Col>
                 <Col id='link'>
                   <h3>Links</h3>
+
+                  <a href="/" style={{ color: 'grey' }}>Home</a>
+                  &nbsp; &nbsp;
+                  <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
+                  &nbsp; &nbsp;
+                  <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
+
                   <br/>
                   <div id="underline3"></div>
                   <br/>
@@ -169,6 +180,7 @@ const Navbar = () => {
                     <div id="crypto-currencies"><a href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
                     <div id="cryto-news"><a href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
                   </p>
+
                 </Col>
               </Row>
             </Layout.Footer>
