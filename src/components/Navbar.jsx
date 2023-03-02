@@ -28,6 +28,7 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
+// import Facebook from '../images/icons8-facebook-30.png';
 
 const Navbar = () => {
 
@@ -118,21 +119,56 @@ const Navbar = () => {
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '20px' }}>
+            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px' }}>
+              <h4 id="footercomment">Made with ❤️ by Community</h4>
+              <br/>
               <Row className='row'>
-                <Col className='tech' > 
-                  <h3>Made with ❤️ by Community</h3>
-                  <p>Using <span><a href="https://rapidapi.com/Coinranking/api/coinranking1"> Coinranking API</a>
-                  , <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API </a> </span>
-                  , React, Ant Design, Redux and React Router.</p>
-                </Col> 
+                <Col className='tech'>
+                  <h3>Technologies Used</h3>
+                  <br/>
+                  <div id="underline1"></div>
+                  <br/>
+                  <div id="div-container-techlinks">
+                    <div class="tecnologies-division1">
+                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/Coinranking/api/coinranking1">Coinranking API&nbsp;</a></div>
+                      <br/>
+                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API</a></div>
+                      <br/>
+                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactjs.org/">React</a></div>
+                      <br/>
+                    </div>
+                    <div class="tecnologies-division2">
+                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://ant.design/">Ant Design</a></div>
+                      <br/>
+                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://redux.js.org/">Redux</a></div>
+                      <br/>
+                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactrouter.com/en/main">React Router</a></div>
+                    </div>
+                  </div>
+                </Col>
+                <Col className='socials'>
+                  <h3>Follow Us</h3>
+                  <br/>
+                  <div id="underline2"></div>
+                  <br/>
+                  <p>
+                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-facebook-50 (1).png')} alt=""/></a></div>
+                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a></div>
+                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-twitter-50.png')} alt=""/></a></div>
+                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
+                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
+                  </p>
+                </Col>
                 <Col id='link'>
                   <h3>Links</h3>
-                  <a href="/" style={{ color: 'grey' }}>Home</a>
-                  &nbsp; &nbsp;
-                  <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
-                  &nbsp; &nbsp;
-                  <a href="/News" style={{ color: 'grey' }}>Crypto News</a>
+                  <br/>
+                  <div id="underline3"></div>
+                  <br/>
+                  <p>
+                    <div id="home"><a href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
+                    <div id="crypto-currencies"><a href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
+                    <div id="cryto-news"><a href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
+                  </p>
                 </Col>
               </Row>
             </Layout.Footer>
