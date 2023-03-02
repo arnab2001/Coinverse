@@ -82,16 +82,16 @@ const CryptoDetailes = ({update}) => {
     <>
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
-        <div class="details-bookmark-button">
-          <div class="crypto-title">
+        <div className="details-bookmark-button">
+          <div className="crypto-title">
             <Title level={2} className="coin-name">
               {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
             </Title>
           </div>
-          <div class="bookmark-button">
+          <div className="bookmark-button">
             <Button className={style} icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
           </div>
-          <div class="crypto-details">
+          <div className="crypto-details">
             <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
           </div>
         </div>
@@ -107,12 +107,12 @@ const CryptoDetailes = ({update}) => {
             <p>An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
           {stats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text className="coin-stats-name-data">{icon}</Text>
-                <Text className="coin-stats-name-data">{title}</Text>
+            <Col className="coin-stats" key={"stats-"+title}>
+              <Col className="coin-stats-name" key={"stats-name-"+title}>
+                <Text className="coin-stats-name-data" key={"stats-name-data-"+title}>{icon}</Text>
+                <Text className="coin-stats-name-data" key={"stats-name-date-"+title}>{title}</Text>
               </Col>
-              <Text className="stats">{value}</Text>
+              <Text className="stats" key={value}>{value}</Text>
             </Col>
           ))}
         </Col>
@@ -122,12 +122,12 @@ const CryptoDetailes = ({update}) => {
             <p>An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
           {genericStats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text className="coin-stats-name-data">{icon}</Text>
-                <Text className="coin-stats-name-data">{title}</Text>
+            <Col className="coin-stats" key={"stats-"+title}>
+              <Col className="coin-stats-name" key={"stats-name-"+title}>
+                <Text className="coin-stats-name-data" key={"stats-name-data-"+title}>{icon}</Text>
+                <Text className="coin-stats-name-data" key={"stats-name-date-"+title}>{title}</Text>
               </Col>
-              <Text className="stats">{value}</Text>
+              <Text className="stats" key={value}>{value}</Text>
             </Col>
           ))}
         </Col>
