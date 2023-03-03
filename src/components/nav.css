@@ -1,3 +1,7 @@
+*{
+  cursor:default;
+}
+
 #main_component{
     height: 100vh;
 }
