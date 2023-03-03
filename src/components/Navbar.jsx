@@ -128,7 +128,7 @@ const Navbar = () => {
               <br/>
               <Row className='row'>
                 <Col className='tech'>
-                  <h3>Technologies Used</h3>
+                  <h3 id="tech-h3">Technologies Used</h3>
                   <br/>
                   <div id="underline1"></div>
                   <br/>
@@ -151,7 +151,7 @@ const Navbar = () => {
                   </div>
                 </Col>
                 <Col className='socials'>
-                  <h3>Follow Us</h3>
+                  <h3 id="social-h3">Follow Us</h3>
                   <br/>
                   <div id="underline2"></div>
                   <br/>
@@ -159,10 +159,14 @@ const Navbar = () => {
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-facebook-50 (1).png')} alt=""/></a></div>
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a></div>
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-twitter-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
+                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" id="github-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
                   </p>
                 </Col>
+<<<<<<< HEAD
+                <Col className='link'>
+                  <h3 id="link-h3">Links</h3>
+=======
                 <Col id='link'>
                   <h3>Links</h3>
 
@@ -172,13 +176,14 @@ const Navbar = () => {
                   &nbsp; &nbsp;
                   <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
 
+>>>>>>> dfeb1324b4e514de391aaea0f4ebca389680c367
                   <br/>
                   <div id="underline3"></div>
                   <br/>
                   <p>
-                    <div id="home"><a href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
-                    <div id="crypto-currencies"><a href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
-                    <div id="cryto-news"><a href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
+                    <div id="home"><a class="link-links" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
+                    <div id="crypto-currencies"><a class="link-links" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
+                    <div id="cryto-news"><a class="link-links" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
                   </p>
 
                 </Col>

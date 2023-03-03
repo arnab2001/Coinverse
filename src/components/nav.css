@@ -1,3 +1,7 @@
+*{
+  cursor:default;
+}
+
 #main_component{
     height: 100vh;
 }
@@ -129,68 +133,6 @@
   #link a:hover{
     color: whitesmoke !important;
   }
-
-  @media (max-width:480px) {
-
-    .row{
-        flex-direction: column;
-    }
-    .footer h3{
-        width: 300px;
-        text-align: center;
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-    .footer .row p{
-        line-height: 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .footer a{
-        margin-bottom: 0;
-    }
-  }
-  
-  @media ( (min-width:481px) and (max-width: 768px)) {
-    .row {
-      text-align: center;
-      flex-direction: row;
-      justify-content: center;
-    }
-    
-    .footer h3 {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-    
-    .footer .row p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-      line-height: 1rem;
-    }
-    
-    .footer .row p a {
-      line-height: 1rem;
-    }
-    
-    .footer a:last-of-type {
-      margin-bottom: 0;
-    }
-
-    #link{
-        flex-direction: column;
-    }
-  }
-  
-  @media ((min-width: 769px) and (max-width:1100px)) {
-    .row{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    #link{
-        align-self: flex-start;
-    }
-  }
   
 .tecnologies-division1{
   display: flex;
@@ -223,6 +165,10 @@
   color: whitesmoke !important;
 }
 
+.link-links:hover{
+  color: whitesmoke !important;
+}
+
 .socials{
   display: flex;
   flex-direction: column;
@@ -233,9 +179,21 @@
 }
 
 .social-icon{
-  width:25px;
-  height:25px;
-  padding:px;
+  width:35px;
+  height:35px;
+  padding:3px;
+  margin: 2px;
+  border-radius: 50px;  
+  border-top: 3px solid #0071bd;
+  border-right: 3px solid #0071bd;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#github-icon{
+  width:36px;
+  height:36px;
+  padding:1px;
 }
 
 .socials p{
@@ -310,4 +268,14 @@
 
 #cryto-news:hover{
   transform: translateX(3px);
+} 
+@media (max-width:500px) {
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
