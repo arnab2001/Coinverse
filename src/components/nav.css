@@ -161,6 +161,10 @@
   color: whitesmoke !important;
 }
 
+.link-links:hover{
+  color: whitesmoke !important;
+}
+
 .socials{
   display: flex;
   flex-direction: column;
