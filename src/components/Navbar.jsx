@@ -124,7 +124,7 @@ const Navbar = () => {
               <br/>
               <Row className='row'>
                 <Col className='tech'>
-                  <h3>Technologies Used</h3>
+                  <h3 id="tech-h3">Technologies Used</h3>
                   <br/>
                   <div id="underline1"></div>
                   <br/>
@@ -147,7 +147,7 @@ const Navbar = () => {
                   </div>
                 </Col>
                 <Col className='socials'>
-                  <h3>Follow Us</h3>
+                  <h3 id="social-h3">Follow Us</h3>
                   <br/>
                   <div id="underline2"></div>
                   <br/>
@@ -159,8 +159,8 @@ const Navbar = () => {
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
                   </p>
                 </Col>
-                <Col id='link'>
-                  <h3>Links</h3>
+                <Col className='link'>
+                  <h3 id="link-h3">Links</h3>
                   <br/>
                   <div id="underline3"></div>
                   <br/>
