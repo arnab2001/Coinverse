@@ -233,12 +233,21 @@
 }
 
 .social-icon{
-  width:26px;
-  height:26px;
-  padding:0px;
-  margin: 0px;
-  /*border-radius: 50px;  
-  border: 3px solid #0071bd;*/
+  width:35px;
+  height:35px;
+  padding:3px;
+  margin: 2px;
+  border-radius: 50px;  
+  border-top: 3px solid #0071bd;
+  border-right: 3px solid #0071bd;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#github-icon{
+  width:36px;
+  height:36px;
+  padding:1px;
 }
 
 .socials p{
