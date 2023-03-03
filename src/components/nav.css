@@ -232,7 +232,7 @@
 }
 
 #footercomment{
-  color: grey;
+  color: rgb(152, 152, 152) !important;
   align-self: center;
 }
 

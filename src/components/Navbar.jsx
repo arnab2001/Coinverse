@@ -2,7 +2,7 @@
 // import { Button, Menu, Typography, Avatar } from 'antd'
 // import { Link } from 'react-router-dom'
 // import { HomeOutlined, SlidersTwoTone , BulbTwoTone , FundTwoTone, MenuOutlined } from '@ant-design/icons'
-// import icon from '../images/cryptocurrency.png
+// import icon from '../images/cryptocurrency.png' 
 // import {Exchanges,Homepage,Cryptocurrencies,News,CryptoDetailes} from './index'
 
 import React, { useState, useEffect } from 'react';
@@ -28,11 +28,7 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
-
-import BackupNews from './BackupNews';
-
 // import Facebook from '../images/icons8-facebook-30.png';
-
 
 const Navbar = () => {
 
@@ -93,9 +89,9 @@ const Navbar = () => {
               label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
             },
             {
-              key: '/BackupNews',
+              key: '/News',
               icon: <BulbOutlined/>,
-              label: <Link to="/BackupNews">News</Link>,
+              label: <Link to="/News">News</Link>,
             },
           ]}
         />
@@ -119,7 +115,7 @@ const Navbar = () => {
                     <Route path='/Exchanges' element={<Exchanges/>}/>
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
-                    <Route path='/Backupnews' element={<BackupNews />}/>
+                    <Route path='/news' element={<News/>}/>
                 </Routes>
               </div> 
             </Layout>
@@ -163,20 +159,8 @@ const Navbar = () => {
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
                   </p>
                 </Col>
-<<<<<<< HEAD
                 <Col className='link'>
                   <h3 id="link-h3">Links</h3>
-=======
-                <Col id='link'>
-                  <h3>Links</h3>
-
-                  <a href="/" style={{ color: 'grey' }}>Home</a>
-                  &nbsp; &nbsp;
-                  <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
-                  &nbsp; &nbsp;
-                  <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
-
->>>>>>> dfeb1324b4e514de391aaea0f4ebca389680c367
                   <br/>
                   <div id="underline3"></div>
                   <br/>
@@ -185,7 +169,6 @@ const Navbar = () => {
                     <div id="crypto-currencies"><a class="link-links" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
                     <div id="cryto-news"><a class="link-links" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
                   </p>
-
                 </Col>
               </Row>
             </Layout.Footer>
