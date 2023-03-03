@@ -163,10 +163,6 @@ const Navbar = () => {
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
                   </p>
                 </Col>
-<<<<<<< HEAD
-                <Col className='link'>
-                  <h3 id="link-h3">Links</h3>
-=======
                 <Col id='link'>
                   <h3>Links</h3>
 
@@ -176,7 +172,6 @@ const Navbar = () => {
                   &nbsp; &nbsp;
                   <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
 
->>>>>>> dfeb1324b4e514de391aaea0f4ebca389680c367
                   <br/>
                   <div id="underline3"></div>
                   <br/>
