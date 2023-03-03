@@ -261,3 +261,13 @@
 #cryto-news:hover{
   transform: translateX(3px);
 } 
+@media (max-width:500px) {
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
