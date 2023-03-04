@@ -29,7 +29,7 @@ import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
 
-import BackupNews from './BackupNews';
+// import BackupNews from './BackupNews';
 
 // import Facebook from '../images/icons8-facebook-30.png';
 
@@ -93,9 +93,9 @@ const Navbar = () => {
               label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
             },
             {
-              key: '/BackupNews',
+              key: '/News',
               icon: <BulbOutlined/>,
-              label: <Link to="/BackupNews">News</Link>,
+              label: <Link to="/News">News</Link>,
             },
           ]}
         />
@@ -119,7 +119,7 @@ const Navbar = () => {
                     <Route path='/Exchanges' element={<Exchanges/>}/>
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
-                    <Route path='/Backupnews' element={<BackupNews />}/>
+                    <Route path='/News' element={<News update={reRender}/> }/>
                 </Routes>
               </div> 
             </Layout>
@@ -174,7 +174,7 @@ const Navbar = () => {
                   &nbsp; &nbsp;
                   <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
                   &nbsp; &nbsp;
-                  <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
+                  <a href="/News" style={{ color: 'grey' }}>Crypto News</a>
 
                   <br/>
                   <div id="underline3"></div>

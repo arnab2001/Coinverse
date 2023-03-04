@@ -3,7 +3,7 @@ import millify from 'millify'
 import { Typography, Row, Col, Statistic, Button} from 'antd'
 import { Link } from 'react-router-dom'
 import { useGetCryptosQuery } from '../services/cryptoApi'
-import {Cryptocurrencies,BackupNews} from '../components'
+import {Cryptocurrencies,News} from '../components'
 import Loader from './loader'
 const { Title } = Typography
 
@@ -45,13 +45,14 @@ const Homepage = ({onClick}) => {
         <Title level={2} className="home-title">Latest Crypto News</Title>
         <Title level={3} className="show-more">
           <Button type="default" size="large">
-            <Link to="/BackupNews" onClick={onClick}><p id="show-more-text">Show More</p></Link>
+            <Link to="/News" onClick={onClick}><p id="show-more-text">Show More</p></Link>
           </Button>
         </Title>
       </div>
-      {/* <News simplified onClick={onClick}/> simplified is a prop that we pass to the News component  */}
+      <News simplified onClick={onClick}/>
+      {/* //simplified is a prop that we pass to the News component  */}
 
-      <BackupNews simplified onClick={onClick}/>
+      {/* <BackupNews simplified onClick={onClick}/> */}
       
     </div>
   )
