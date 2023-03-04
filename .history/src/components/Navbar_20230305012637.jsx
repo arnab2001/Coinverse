@@ -169,6 +169,14 @@ const Navbar = () => {
 
                 <Col id='link'>
                   <h3>Links</h3>
+
+                  <a href="/" style={{ color: 'grey' }}>Home</a>
+                  &nbsp; &nbsp;
+                  <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
+                  &nbsp; &nbsp;
+                  <a href="/News" style={{ color: 'grey' }}>Crypto News</a>
+
+                  <br/>
                   <div id="underline3"></div>
                   <br/>
                   <p>
