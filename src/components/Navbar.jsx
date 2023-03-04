@@ -164,8 +164,8 @@ const Navbar = () => {
                   </p>
                 </Col>
 
-                <Col className='link'>
-                  <h3 id="link-h3">Links</h3>
+                {/* <Col className='link'>
+                  <h3 id="link-h3">Links</h3> */}
 
                 <Col id='link'>
                   <h3>Links</h3>
