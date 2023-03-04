@@ -166,25 +166,12 @@ const Navbar = () => {
 
                 <Col className='link'>
                   <h3 id="link-h3">Links</h3>
-
-                <Col id='link'>
-                  <h3>Links</h3>
-
-                  <a href="/" style={{ color: 'grey' }}>Home</a>
-                  &nbsp; &nbsp;
-                  <a href="/Cryptocurrencies" style={{ color: 'grey' }}>Cryptocurrencies</a>
-                  &nbsp; &nbsp;
-                  <a href="/BackupNews" style={{ color: 'grey' }}>Crypto News</a>
-
-                  <br/>
                   <div id="underline3"></div>
-                  <br/>
                   <p>
                     <div id="home"><a class="link-links" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
                     <div id="crypto-currencies"><a class="link-links" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
                     <div id="cryto-news"><a class="link-links" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
                   </p>
-
                 </Col>
               </Row>
             </Layout.Footer>
