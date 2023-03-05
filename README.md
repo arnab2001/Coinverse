@@ -39,7 +39,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To Setup this project in your local environment
+- Clone repo to you local system 
+``` bash
+git clone https://github.com/arnab2001/Coinverse.git
+```
+- Add .env file ( example is given in the .envDEMO)
+- go to https://rapidapi.com/Coinranking/api/coinranking1 and https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1 
+- subscribe to both of them 
+- take rapdi api key from there and put it in your .env file 
+- run  
+```bash
+npm install
+```
+- then run  
+```bash 
+npm start
+```
+- good to go!
+
+### Available Scripts
 
 In the project directory, you can run:
 
