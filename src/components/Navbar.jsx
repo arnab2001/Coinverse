@@ -61,8 +61,8 @@ const Navbar = () => {
 
   return (
     <>
-    <Layout className='main_component' >
-      <Sider className='sidebar' trigger={null} collapsible collapsed={collapsed}>
+    <Layout className='main_component'style={{ position: 'relative', zIndex: 0 }} >
+        <Sider className='sidebar' style={{ position: "fixed", top: "0", bottom: "0", left: "0", transition: "width 5s ease-in" }} trigger={null} collapsible collapsed={collapsed}>
        <div className="logo" > 
           <Row style={{width:"100%"}} type="flex" align="center">
             <Col> 
@@ -102,7 +102,8 @@ const Navbar = () => {
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
       </Sider>
       <Layout className="site-layout">
-        <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
+          {/* <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem", position: "fixed",top: "0",right:"0", left: "240px", zIndex:"1",width: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)"}} className='nav-head'> */}
+          <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem", position: "fixed", top: "0", right: "0", left: "240px", zIndex: "1", marginLeft: collapsed ? -160 : -40, maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", transition: "width 5s ease-in"  }} className='nav-head'>
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
@@ -111,9 +112,9 @@ const Navbar = () => {
           <ToggleMode/>
         </Header>
         <Content>
-          <div className="main" >
+            <div className="main" style={{ marginTop: "63px", marginLeft: collapsed ? 80 : 200 } }>
             <Layout>
-              <div className='routes'>
+                <div className='routes' style={{ padding: '0 20px', maxWidth: collapsed ? 1450 : 1330, transition: "width 5s ease-in" }}>
                 <Routes>
                   <Route path='/' element={<Homepage onClick={handleClick}/>}/>
                     <Route path='/Exchanges' element={<Exchanges/>}/>
@@ -123,8 +124,8 @@ const Navbar = () => {
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px' }}>
-              <h4 id="footercomment">Made with ❤️ by Community</h4>
+            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px', left:"0" }}>
+              <h4 id="footercomment" style={{marginRight:"300px"}}>Made with ❤️ by Community</h4>
               <br/>
               <Row className='row'>
                 <Col className='tech'>

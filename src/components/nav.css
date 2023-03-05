@@ -99,7 +99,8 @@
 .row{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:space-between;
+    margin-right: 250px;
 }
 
 .footer{
