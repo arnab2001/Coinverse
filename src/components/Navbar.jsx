@@ -114,7 +114,7 @@ const Navbar = () => {
         <Content>
             <div className="main" style={{ marginTop: "63px", marginLeft: collapsed ? 80 : 200 } }>
             <Layout>
-                <div className='routes' style={{ padding: '0 20px', maxWidth: collapsed ? 1450 : 1330, transition: "width 5s ease-in" }}>
+                <div className='routes' style={{ padding: '0 20px', maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", transition: "width 5s ease-in" }}>
                 <Routes>
                   <Route path='/' element={<Homepage onClick={handleClick}/>}/>
                     <Route path='/Exchanges' element={<Exchanges/>}/>
