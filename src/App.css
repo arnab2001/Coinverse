@@ -505,9 +505,9 @@ border-color: darkgrey;
     padding:10px;
     padding-top: 20px;
     background: rgba( 255, 255, 255, 0.1 );
-box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 9.5px );
--webkit-backdrop-filter: blur( 9.5px );
+box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+backdrop-filter: blur( 12px );
+-webkit-backdrop-filter: blur( 12px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 
