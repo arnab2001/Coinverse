@@ -7,11 +7,11 @@
 }
 
 .nav-head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--nav-color) !important;
-    transition: 0.5s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-color) !important;
+  transition: 0.5s;
 }
 
 .contentt{
@@ -277,5 +277,7 @@
     justify-content: center;
     align-items: center;
   }
+
+
   
 }

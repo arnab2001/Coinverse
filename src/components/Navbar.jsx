@@ -28,7 +28,7 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
-// import Facebook from '../images/icons8-facebook-30.png';
+// import BackupNews from './BackupNews';
 
 const Navbar = () => {
 
@@ -57,8 +57,8 @@ const Navbar = () => {
 
   return (
     <>
-    <Layout className='main_component' >
-      <Sider className='sidebar' trigger={null} collapsible collapsed={collapsed}>
+    <Layout className='main_component'style={{ position: 'relative', zIndex: 0 }} >
+        <Sider className='sidebar' style={{ position: "fixed", top: "0", bottom: "0", left: "0", transition: "width 5s ease-in" }} trigger={null} collapsible collapsed={collapsed}>
        <div className="logo" > 
           <Row style={{width:"100%"}} type="flex" align="center">
             <Col> 
@@ -98,7 +98,8 @@ const Navbar = () => {
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
       </Sider>
       <Layout className="site-layout">
-        <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
+          {/* <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem", position: "fixed",top: "0",right:"0", left: "240px", zIndex:"1",width: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)"}} className='nav-head'> */}
+          <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem", position: "fixed", top: "0", right: "0", left: "240px", zIndex: "1", marginLeft: collapsed ? -160 : -40, maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", transition: "width 5s ease-in"  }} className='nav-head'>
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
@@ -107,19 +108,20 @@ const Navbar = () => {
           <ToggleMode/>
         </Header>
         <Content>
-          <div className="main" >
+            <div className="main" style={{ marginTop: "63px", marginLeft: collapsed ? 80 : 200 } }>
             <Layout>
-              <div className='routes'>
+                <div className='routes' style={{ padding: '0 20px', maxWidth: collapsed ? 1450 : 1330, transition: "width 5s ease-in" }}>
                 <Routes>
                   <Route path='/' element={<Homepage onClick={handleClick}/>}/>
                     <Route path='/Exchanges' element={<Exchanges/>}/>
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
-                    <Route path='/news' element={<News/>}/>
+                    <Route path='/News' element={<News/>}/>
+                    <Route path='/News' element={<News update={reRender}/> }/>
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px' }}>
+            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px', left:"0" }}>
               <h4 id="footercomment">Made with ❤️ by Community</h4>
               <br/>
               <Row className='row'>
@@ -158,7 +160,7 @@ const Navbar = () => {
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" id="github-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
                     <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
                   </p>
-                </Col>
+                </Col> 
                 <Col className='link'>
                   <h3 id="link-h3">Links</h3>
                   <br/>
