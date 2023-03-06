@@ -170,6 +170,7 @@ const Navbar = () => {
 
                 <Col className='link'>
                   <h3 id="links-section-h3">Links</h3>
+                  <br/>
                   <div id="underline3"></div>
                   <br/>
                   <p>
