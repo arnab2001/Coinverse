@@ -21,7 +21,7 @@ const Homepage = ({onClick}) => {
   return (
     <div className='homePage-mainContainer'>
       <div className='top-heading'>
-      <Title level={2} className="heading" style={{paddingTop:"20px"}}>
+      <Title level={2} className="heading">
         Global Crypto Stats
       </Title>
       <Row gutter={[32,7]} >
