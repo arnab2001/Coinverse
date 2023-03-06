@@ -125,7 +125,7 @@ const Navbar = () => {
               </div> 
             </Layout>
             <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px', left:"0" }}>
-              <h4 id="footercomment">Made with ❤️ by Community</h4>
+              <h4 id="footercomment" >Made with ❤️ by Community</h4>
               <br/>
               <Row className='row'>
                 <Col className='tech'>
