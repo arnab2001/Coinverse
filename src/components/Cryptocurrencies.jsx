@@ -32,15 +32,17 @@ const Cryptocurrencies = ({simplified, onClick}) => {
     <div className="search-crypto">
       <Input placeholder="Search Cryptocurrency"
        onChange={(e) => setSearchTerm(e.target.value.toLowerCase())} />
-    </div>
+
+       </div>
     )}
       <Row gutter={[32,32]} className="crypto-card-container">
          {cryptos?.map((currency) => (
           <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
             <Link to={`/crypto/${currency.uuid}`} onClick={onClick}>
-              <Card style={{backgroundColor: cardBgColor, color: cardColor}} title={`${currency.rank}. ${currency.name}`}
+              <Card className="card" title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} alt='crypto-logo' />}
                 hoverable >
+                
                   <p>Price: {millify(currency.price)}</p>
                   <p>Price: {millify(currency.marketCap)}</p>
                   <p>Daily Change: &nbsp;
