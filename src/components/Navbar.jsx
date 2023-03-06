@@ -70,7 +70,7 @@ const Navbar = () => {
             </Col>
             <Col>
               <Typography.Title level={5} >
-                  <Link to="https://coinverse-delta.vercel.app/" onClick={handleClick}>Coinverse</Link>
+                  <Link to="/" onClick={handleClick}>Coinverse</Link>
               </Typography.Title>
             </Col>
           </Row>
@@ -114,70 +114,67 @@ const Navbar = () => {
         <Content>
             <div className="main" style={{ marginTop: "63px", marginLeft: collapsed ? 80 : 200 } }>
             <Layout>
-                <div className='routes' style={{ padding: '0 20px', maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", transition: "width 5s ease-in" }}>
+                <div className='routes' style={{ padding: '0 20px 20px 20px', maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", transition: "width 5s ease-in" }}>
                 <Routes>
-                  <Route path='/' element={<Homepage onClick={handleClick}/>}/>
+                  <Route path='/' element={<Homepage onClick={handleClick} update={reRender}/>}/>
                     <Route path='/Exchanges' element={<Exchanges/>}/>
-                    <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
+                    <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick} update={reRender}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/News' element={<News update={reRender}/> }/>
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px', left:"0" }}>
-              <h4 id="footercomment" style={{marginRight:"300px"}}>Made with ❤️ by Community</h4>
+            <Layout.Footer className='footer' style={{ maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", background: '#002547', color: 'white', padding: '15px', left:"0" }}>
+              <h4 id="footercomment">Made with ❤️ by Community</h4>
               <br/>
               <Row className='row'>
                 <Col className='tech'>
                   <h3 id="tech-h3">Technologies Used</h3>
-                  <br/>
                   <div id="underline1"></div>
                   <br/>
                   <div id="div-container-techlinks">
-                    <div class="tecnologies-division1">
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/Coinranking/api/coinranking1">Coinranking API&nbsp;</a></div>
+                    <div className="tecnologies-division1">
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/Coinranking/api/coinranking1">Coinranking API&nbsp;</a></div>
                       <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API</a></div>
                       <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactjs.org/">React</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactjs.org/">React</a></div>
                       <br/>
                     </div>
-                    <div class="tecnologies-division2">
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://ant.design/">Ant Design</a></div>
+                    <div className="tecnologies-division2">
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://ant.design/">Ant Design</a></div>
                       <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://redux.js.org/">Redux</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://redux.js.org/">Redux</a></div>
                       <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactrouter.com/en/main">React Router</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactrouter.com/en/main">React Router</a></div>
                     </div>
                   </div>
                 </Col>
                 <Col className='socials'>
                   <h3 id="social-h3">Follow Us</h3>
-                  <br/>
                   <div id="underline2"></div>
                   <br/>
-                  <p>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-facebook-50 (1).png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-twitter-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" id="github-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
-                  </p>
+                  <div className="social-icons">
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-facebook-50 (1).png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-twitter-50.png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" id="github-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
+                  </div>
                 </Col>
 
                 {/* <Col className='link'>
                   <h3 id="link-h3">Links</h3> */}
 
-                <Col id='link'>
+                <Col id='link' className="links">
                   <h3>Links</h3>
                   <div id="underline3"></div>
                   <br/>
-                  <p>
-                    <div id="home"><a class="link-links" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
-                    <div id="crypto-currencies"><a class="link-links" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
-                    <div id="cryto-news"><a class="link-links" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
-                  </p>
-
+                  <div className="link-links">
+                    <div id="home"><a className="link-link" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
+                    <div id="crypto-currencies"><a className="link-link" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
+                    <div id="crypto-news"><a className="link-link" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
+                  </div> 
                 </Col>
               </Row>
             </Layout.Footer>
