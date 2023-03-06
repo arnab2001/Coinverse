@@ -99,7 +99,8 @@
 .row{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:space-between;
+    padding: 0 5%;
 }
 
 .footer{
@@ -120,9 +121,6 @@
   
   .footer a {
     color: whitesmoke;
-  }
-  #link{
-    align-self: flex-start;
   }
   #link h3{
     font-size: 1.2rem;
@@ -154,7 +152,6 @@
 
 #div-container-techlinks{
   display: flex;
-  justify-content: center;
 }
 
 .tech h3{
@@ -163,6 +160,10 @@
 
 .footer-links:hover{
   color: whitesmoke !important;
+}
+
+.link-links {
+  align-content: flex-start;
 }
 
 .link-links:hover{
@@ -201,6 +202,11 @@
   justify-content: space-between;
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
 .social-icon-div{
   transition: transform .2s;
   padding: 5px;
@@ -232,8 +238,8 @@
 }
 
 #footercomment{
-  color: grey !important;
-  align-self: center;
+  color: grey;
+  text-align: center;
 }
 
 .tech-div{
@@ -326,4 +332,16 @@
     width:30px !important;
     height:30px !important;
   }
+}
+
+#home,
+#crypto-currencies,
+#crypto-news {
+    margin-bottom: 12px;
+}
+
+#home,
+#crypto-currencies,
+#crypto-news {
+    margin-bottom: 12px;
 }

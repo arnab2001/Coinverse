@@ -6,22 +6,28 @@ import BookmarkService from '../services/bookmarkService';
 import { BookOutlined, LineOutlined } from '@ant-design/icons';
 import Loader from './loader';
 
-const Bookmarks = ({sendCoins}) => {
+const Bookmarks = ({sendCoins, handleClick}) => {
     const [ bookmarks, setBookmarks ] = useState(BookmarkService.coinArray());
     const { data: cryptosList, isFetching } = useGetCryptosQuery(100);
     const [cryptos, setCryptos] = useState('');
+    const [selectedMenuItem, setSelectedMenuItem] = useState(['/']);
 
+    
     let subMenu = [];
 
     useEffect(() => {
+        if(selectedMenuItem !== window.location.pathname){
+            setSelectedMenuItem(window.location.pathname);
+        }
+            
         if(bookmarks !== sendCoins) {
             setBookmarks(sendCoins)
         }
-        const filteredData = cryptosList?.data?.coins.filter((item) => bookmarks.indexOf(item.uuid) !== -1);
+        const filteredData = cryptosList?.data.coins.filter((item) => bookmarks.indexOf(item.uuid) !== -1);
     
         setCryptos(filteredData);
 
-      }, [sendCoins, bookmarks, cryptosList]);
+      }, [sendCoins, bookmarks, cryptosList, selectedMenuItem]);
 
     if(isFetching) return <Loader/>
 
@@ -44,6 +50,8 @@ const Bookmarks = ({sendCoins}) => {
         <Menu
           theme="dark" 
           mode="inline"
+          selectedKeys={[selectedMenuItem]}
+          onClick={handleClick}
           items={
             [{
                 type: "submenu",
