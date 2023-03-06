@@ -99,8 +99,7 @@
 .row{
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    margin-right: 250px;
+    justify-content:space-evenly;
 }
 
 .footer{
@@ -233,7 +232,7 @@
 }
 
 #footercomment{
-  color: grey;
+  color: grey !important;
   align-self: center;
 }
 
