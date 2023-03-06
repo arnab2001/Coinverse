@@ -277,5 +277,53 @@
     justify-content: center;
     align-items: center;
   }
+
+  .tech{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   
+  #social-h3{
+    padding-left: 0px;
+  }
+
+  #tech-h3{
+    padding-left: 0px;
+  }
+  
+  .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #social-h3{
+    align-self: center;
+  }
+
+  #links-section-h3{
+    align-self: center;
+  }
+
+  .social-icon{
+    width:30px !important;
+    height:30px !important;
+  }
 }
