@@ -17,7 +17,7 @@ const News = ({simplified}) => {
   if(!cryptoNews?.value) return <Loader />
   return (
     <>
-      <Row gutter={[24, 24]}>
+      <Row gutter={[16, 16]} className="news-card-container">
       {!simplified && (
         <Col span={24}>
           <Select
@@ -28,13 +28,13 @@ const News = ({simplified}) => {
             onChange={(value) => setNewsCategory(value)}
             filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
-            <Option value="Cryptocurency">Cryptocurrency</Option>
-            {data?.data?.coins?.map((currency) => <Option value={currency.name}>{currency.name}</Option>)}
+            <Option value="Cryptocurency" key="Cryptocurrency">Cryptocurrency</Option>
+            {data?.data?.coins?.map((currency) => <Option value={currency.name} key={currency.name}>{currency.name}</Option>)}
           </Select>
         </Col>
       )}
         {cryptoNews.value.map((news, i) => (
-          <Col xs={24} sm={12} lg={8} key={i}>
+          <Col xs={24} lg={12} xl={8} xxl={6} key={i}>
             <Card hoverable className="news-card">
                 <a href={news.url} target="_blank" rel="noreferrer">
                   <div className="news-image-container"  >

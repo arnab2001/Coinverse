@@ -311,10 +311,18 @@ h4{
     }
 }
 
+.news-card-container {
+}
+
+.news-card-container > .ant-col >  .ant-card > .ant-card-body{
+    border-radius: 8px;
+}
+
 .select-news{
     width: 180px;
 }
 .news-card{
+    min-width: 270px;
     min-height: 300px !important;
 }
 .news-image-container{
@@ -461,11 +469,15 @@ border-color: darkgrey;
 
 .crypto-card-container{
     min-height: 65vh !important;
+<<<<<<< HEAD
     
     
+=======
+    display: flex;
+>>>>>>> eddy-dev
 }
 
-@media screen and (min-width:992px) and (max-width:1224px){
+@media screen and (min-width:992px) and (max-width:1321px){
     .crypto-card-container {
         display: flex;
         justify-content: center;
@@ -476,11 +488,10 @@ border-color: darkgrey;
     .home-heading-container{
         display: flex;  
         justify-content: space-around;
-    }
-    
+    }   
 }
 
-@media screen and (min-width:576px) and (max-width:724px){
+@media screen and (min-width:576px) and (max-width:782px){
     .crypto-card-container {
         display: flex;
         justify-content: center;
@@ -489,9 +500,25 @@ border-color: darkgrey;
     }
 }
 
+@media screen and (min-width:992px) and (max-width:1600px){
+    .news-card-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (min-width:576px) and (max-width:798px){
+    .news-card-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .crypto-card{
-    min-width: 250px;
+    min-width: 270px;
     float: left;
+<<<<<<< HEAD
     transition: transform .3s; /* Animation */
     
     
@@ -528,10 +555,49 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .crypto-card:hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+=======
+    padding-right: 0px;
+}
+
+.container-card {
+    position: relative;
+    background-color: transparent;
+    transition: transform .2s; /* Animation */
+}
+
+.container-card > a > p{
+    cursor: pointer;
+}
+
+.container-card:hover {
+    transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    z-index: 100;
+>>>>>>> eddy-dev
 }
 
 .crypto-card .crypto-image{
     width:35px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: [col1] 36px [col2] calc(25% - 9px) [col3] calc(25% - 9px) [col4] calc(25% - 9px) [col5] calc(25% - 9px) [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+}
+
+.card-bm {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.card-details {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 6;
 }
 
 .select-timeperiod{
@@ -608,7 +674,7 @@ background-color: white;
 .details-bookmark-button {
 width: 100%;
 display: grid;
-grid-template-columns: [col1] 7% [col-space] 3% [col2] 30% [col3] 30% [col4] 30% [end];
+grid-template-columns: [col1] 16px [col-space] calc(10% - 16px) [col2] 30% [col3] 30% [col4] 30% [end];
 grid-template-rows: [row1] 50% [row2] 50% [last-line];
 padding-right: 10%;
 }
@@ -695,4 +761,11 @@ transition: transform .2s;
 
 .icon-logo:hover{
 transform: scale(1.2);
+}
+
+@media screen and (max-width:400px){
+    .routes{
+        padding: 0 12px !important;
+    }
+    
 }

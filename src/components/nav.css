@@ -121,9 +121,6 @@
   .footer a {
     color: whitesmoke;
   }
-  #link{
-    align-self: flex-start;
-  }
   #link h3{
     font-size: 1.2rem;
   }
@@ -140,7 +137,8 @@
   justify-content: flex-start;
   margin: 0px;
   padding: 0px;
-  font-size: medium;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .tecnologies-division2{
@@ -149,12 +147,12 @@
   justify-content: flex-start;
   margin: 0px;
   padding: 0px;
-  font-size: medium;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 #div-container-techlinks{
   display: flex;
-  justify-content: center;
 }
 
 .tech h3{
@@ -163,6 +161,12 @@
 
 .footer-links:hover{
   color: whitesmoke !important;
+}
+
+.link-links {
+  color: gray!important;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .link-links:hover{
@@ -201,6 +205,11 @@
   justify-content: space-between;
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
 .social-icon-div{
   transition: transform .2s;
   padding: 5px;
@@ -233,7 +242,7 @@
 
 #footercomment{
   color: grey !important;
-  align-self: center;
+  text-align: center;
 }
 
 .tech-div{
