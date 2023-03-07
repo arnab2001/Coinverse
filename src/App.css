@@ -17,26 +17,28 @@
     --nav-color:  #fff !important;
     --back-color: #f5f5f5 !important;
     --text-color: black !important;
-    --text-color-1: rgb(116, 113, 113) !important;
+    --text-color-1: rgb(0, 0, 0) !important;
     --hov-color: #0071bd !important;
     --button-hov: #fff !important;
     --title-coinverse: #001529!important;
     --show-more-color: #00000097!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:black !important;
+    --stats-card-bg-color: rgba(241, 241, 241, 0.861) !important;
 }
 
 .dark-mode{
     --nav-color: rgb(27, 27, 27)!important;
     --back-color:rgb(0, 0, 0) !important;
     --text-color:  #fff !important;
-    --text-color-1: rgb(94, 91, 91) !important;
+    --text-color-1: rgb(0, 0, 0) !important;
     --hov-color: #f5f5f5 !important;
     --button-hov: rgb(40, 40, 40)!important;
     --title-coinverse: #ffffff!important;
     --show-more-color: #ffffff!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:rgb(251, 255, 0) !important;
+    --stats-card-bg-color: rgba(0, 0, 0, 0.861) !important;
 }
 
 a:hover{
@@ -333,22 +335,23 @@ h4{
 .ant-statistic-content-value{
     color: var(--text-color) !important;
     transition: 0.5s;
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .ant-statistic-title{
     background: rgb(255, 255, 255) ;
-    border:1px solid rgb(156, 154, 154); 
     border-radius: 25px;
     color: var(--text-color-1) !important;
     transition: 0.5s;
-    transition: transform .2s; /* Animation */
+    transition: letter-spacing .2s; /* Animation */
+    font-weight: 700;
+    font-size: 25px !important;
+    padding: 5px;
 }
 
 .ant-statistic-title:hover {
-    transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    box-shadow: 1px 1px 3px rgba(40, 40, 40, 0.365);
+    letter-spacing: 1px;
 }
 
 
