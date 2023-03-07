@@ -61,8 +61,8 @@ const Navbar = () => {
 
   return (
     <>
-    <Layout className='main_component'style={{ position: 'relative', zIndex: 0 }} >
-        <Sider className='sidebar' style={{ position: "fixed", top: "0", bottom: "0", left: "0", transition: "width 5s ease-in" }} trigger={null} collapsible collapsed={collapsed}>
+       <Layout className='main_component' >
+        <Sider className='sidebar' trigger={null} collapsible collapsed={collapsed}>
        <div className="logo" > 
           <Row style={{width:"100%"}} type="flex" align="center">
             <Col> 
@@ -70,7 +70,7 @@ const Navbar = () => {
             </Col>
             <Col>
               <Typography.Title level={5} >
-                  <Link to="https://coinverse-delta.vercel.app/" onClick={handleClick}>Coinverse</Link>
+                  <Link to="/" onClick={handleClick}>Coinverse</Link>
               </Typography.Title>
             </Col>
           </Row>
@@ -102,8 +102,7 @@ const Navbar = () => {
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
       </Sider>
       <Layout className="site-layout">
-          {/* <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem", position: "fixed",top: "0",right:"0", left: "240px", zIndex:"1",width: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)"}} className='nav-head'> */}
-          <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem", position: "fixed", top: "0", right: "0", left: "240px", zIndex: "1", marginLeft: collapsed ? -160 : -40, maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)", transition: "width 5s ease-in"  }} className='nav-head'>
+      <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
@@ -112,13 +111,13 @@ const Navbar = () => {
           <ToggleMode/>
         </Header>
         <Content>
-            <div className="main" style={{ marginTop: "63px", marginLeft: collapsed ? 80 : 200 } }>
+        <div className="main" >
             <Layout>
-                <div className='routes' style={{ padding: '0 20px', maxWidth: collapsed ? 1450 : 1330, transition: "width 5s ease-in" }}>
+                <div className='routes'>
                 <Routes>
-                  <Route path='/' element={<Homepage onClick={handleClick}/>}/>
+                  <Route path='/' element={<Homepage onClick={handleClick} update={reRender}/>}/>
                     <Route path='/Exchanges' element={<Exchanges/>}/>
-                    <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick}/>}/>
+                    <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick} update={reRender}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/News' element={<News update={reRender}/> }/>
                 </Routes>
@@ -130,39 +129,34 @@ const Navbar = () => {
               <Row className='row'>
                 <Col className='tech'>
                   <h3 id="tech-h3">Technologies Used</h3>
-                  <br/>
                   <div id="underline1"></div>
                   <br/>
                   <div id="div-container-techlinks">
-                    <div class="tecnologies-division1">
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/Coinranking/api/coinranking1">Coinranking API&nbsp;</a></div>
-                      <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API</a></div>
-                      <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactjs.org/">React</a></div>
-                      <br/>
+                    <div className="tecnologies-division1">
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/Coinranking/api/coinranking1">Coinranking API&nbsp;</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/">Bing News API</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactjs.org/">React</a></div>
                     </div>
-                    <div class="tecnologies-division2">
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://ant.design/">Ant Design</a></div>
-                      <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://redux.js.org/">Redux</a></div>
-                      <br/>
-                      <div class="tech-div"><a class="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactrouter.com/en/main">React Router</a></div>
+                    <div className="tecnologies-division2">
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://ant.design/">Ant Design</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://redux.js.org/">Redux</a></div>
+                      <div className="tech-div"><a className="footer-links" target="_blank" rel="noreferrer" style={{color:'grey'}} href="https://reactrouter.com/en/main">React Router</a></div>
                     </div>
                   </div>
+                  <br/>
                 </Col>
                 <Col className='socials'>
                   <h3 id="social-h3">Follow Us</h3>
-                  <br/>
                   <div id="underline2"></div>
                   <br/>
-                  <p>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-facebook-50 (1).png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-twitter-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" id="github-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
-                    <div class="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img class="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
-                  </p>
+                  <div className="social-icons">
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-facebook-50 (1).png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-instagram-50.png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-twitter-50.png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" id="github-icon" src={require('../images/icons8-github-50.png')} alt=""/></a></div>
+                    <div className="social-icon-div"><a target="_blank" rel="noreferrer" href="https://www.google.co.in/"><img className="social-icon" src={require('../images/icons8-linkedin-circled-50.png')} alt=""/></a></div>
+                  </div>
+                  <br/>
                 </Col>
 
                 {/* <Col className='link'>
@@ -173,12 +167,12 @@ const Navbar = () => {
                   <br/>
                   <div id="underline3"></div>
                   <br/>
-                  <p>
-                    <div id="home"><a class="link-links" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
-                    <div id="crypto-currencies"><a class="link-links" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
-                    <div id="cryto-news"><a class="link-links" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
-                  </p>
-
+                  <div className="link-links">
+                    <div id="home"><a className="link-link" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
+                    <div id="crypto-currencies"><a className="link-link" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
+                    <div id="crypto-news"><a className="link-link" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
+                  </div>
+                  <br/>
                 </Col>
               </Row>
             </Layout.Footer>

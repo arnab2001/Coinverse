@@ -78,8 +78,8 @@ a:hover{
 .ant-card-body{
     background-color: var(--nav-color) !important;
     transition: 0.6s;
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px !important;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 h4{
@@ -317,11 +317,22 @@ h4{
     width: 180px;
 }
 .news-card{
+    min-width: 270px;
     min-height: 300px !important;
+    background: rgba( 255, 255, 255, 0.1 );
+    padding:10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .news-image-container{
     display: flex !important;
     justify-content: space-between !important;
+    white-space: normal;
+}
+
+.news-image-container > img {
+    margin-bottom: 0.5rem;
 }
 
 .ant-card-head-title{
@@ -354,7 +365,6 @@ h4{
     letter-spacing: 1px;
 }
 
-
 @media screen and (max-width: 500px){
     .ant-statistic-title{
         padding:5px;
@@ -365,6 +375,7 @@ h4{
     width:100px;
     height:100px;
 }
+
 .news-card p{
     color: black;
     margin: 10px 0px !important;
@@ -432,10 +443,8 @@ h4{
     margin: 0px 10px !important;
 }
 .search-crypto{
-   margin: 30px auto 30px auto;
-    width: 350px;
-   
-    
+    margin: 30px auto 30px auto;
+    max-width: 350px; 
 }
 
 .search-crypto Input{
@@ -445,15 +454,14 @@ h4{
     background-color: var(--nav-color) !important;
     transition: 0.6s;
     background: rgba( 255, 255, 255, 0.1 );
-box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 9.5px );
--webkit-backdrop-filter: blur( 9.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .search-crypto Input:focus{
-border-color: darkgrey;
-
+    border-color: darkgrey;
 }
 
 .search-crypto Input::placeholder{
@@ -461,80 +469,168 @@ border-color: darkgrey;
     transition: 0.5s;
 }
 
-
 .crypto-card-container{
     min-height: 65vh !important;
-    
-    
+    display: flex;
 }
 
-@media screen and (min-width:992px) and (max-width:1224px){
+@media screen and (min-width:992px) and (max-width:1321px){
     .crypto-card-container {
         display: flex;
         justify-content: center;
         min-height: 65vh !important;
-        
     }
 
     .home-heading-container{
         display: flex;  
         justify-content: space-around;
-    }
-    
+    } 
 }
 
-@media screen and (min-width:576px) and (max-width:724px){
+@media screen and (min-width:576px) and (max-width:782px){
     .crypto-card-container {
         display: flex;
         justify-content: center;
         min-height: 65vh !important;
-        
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1600px){
+    .news-card-container {
+        display: flex;
+        justify-content: center;
+    } 
+}
+
+@media screen and (min-width:576px) and (max-width:798px){
+    .news-card-container {
+        display: flex;
+        justify-content: center;
     }
 }
 
 .crypto-card{
-    min-width: 250px;
+    min-width: 270px;
     float: left;
-    transition: transform .3s; /* Animation */
-    
-    
-    
-
+    padding-right: 0px;
 }
 
+.container-card {
+    position: relative;
+    background-color: transparent;
+}
 
 .card{
     padding:10px;
     padding-top: 20px;
     background: rgba( 255, 255, 255, 0.1 );
-box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
-backdrop-filter: blur( 9.7px );
--webkit-backdrop-filter: blur( 9.7px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-}
-
-.card:hover{
     box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
-    backdrop-filter: blur( 12px );
-    -webkit-backdrop-filter: blur( 12px );
-    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
 .card p{
     border-radius: 10px;
     font-weight: 450;
-    margin-left: 4px;
-   
-    
-}
-
-.crypto-card:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    margin-left: 4px;  
 }
 
 .crypto-card .crypto-image{
     width:35px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: [col1] 36px [col2] calc(25% - 9px) [col3] calc(25% - 9px) [col4] calc(25% - 9px) [col5] calc(25% - 9px) [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+}
+
+.card-bm {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 10px;
+}
+
+.card-details {
+    transition: transform .3s; /* Animation */
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.card-bg {
+    transition: transform .3s; /* Animation */
+    background: rgba( 255, 255, 255, 0.1 );
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.card-details:hover {
+    z-index: 100;
+    transform: scale(1.1);
+    box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+}
+
+.card-details:hover + .card-bg {
+    z-index: 99;
+    transform: scale(1.1);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20% [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+}
+
+.news-card-grid{
+    transition: transform .3s; /* Animation */
+    box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    z-index: 2;
+}
+
+.news-bg {
+    transition: transform .3s; /* Animation */
+    background: rgba( 255, 255, 255, 0.1 );
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    z-index: 1;
+}
+
+.news-card-grid:hover {
+    z-index: 100;
+    transform: scale(1.1);
+
+}
+
+.news-card-grid:hover + .news-bg {
+    z-index: 99;
+    transform: scale(1.1);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+}
+
+.ant-card-head {
+    border-bottom: none !important;
 }
 
 .select-timeperiod{
@@ -611,7 +707,7 @@ background-color: white;
 .details-bookmark-button {
 width: 100%;
 display: grid;
-grid-template-columns: [col1] 7% [col-space] 3% [col2] 30% [col3] 30% [col4] 30% [end];
+grid-template-columns: [col1] 16px [col-space] calc(10% - 16px) [col2] 30% [col3] 30% [col4] 30% [end];
 grid-template-rows: [row1] 50% [row2] 50% [last-line];
 padding-right: 10%;
 }
@@ -698,4 +794,11 @@ transition: transform .2s;
 
 .icon-logo:hover{
 transform: scale(1.2);
+}
+
+@media screen and (max-width:400px){
+    .routes{
+        padding: 0 12px !important;
+    }
+    
 }

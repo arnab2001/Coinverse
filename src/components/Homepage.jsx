@@ -9,7 +9,7 @@ const { Title } = Typography
 
 
 
-const Homepage = ({onClick}) => {
+const Homepage = ({onClick, update}) => {
   const { data, isFetching } = useGetCryptosQuery(10)
  
   // const globalStats = data.data.stats;
@@ -21,7 +21,7 @@ const Homepage = ({onClick}) => {
   return (
     <div className='homePage-mainContainer'>
       <div className='top-heading'>
-      <Title level={2} className="heading" style={{paddingTop:"20px"}}>
+      <Title level={2} className="heading">
         Global Crypto Stats
       </Title>
       <Row gutter={[32,7]} >
@@ -105,7 +105,7 @@ const Homepage = ({onClick}) => {
           </Button>
         </Title>
       </div>
-      <Cryptocurrencies simplified onClick={onClick}/>
+      <Cryptocurrencies simplified onClick={onClick} update={update}/>
       <div className="home-heading-container">
         <Title level={2} className="home-title">Latest Crypto News</Title>
         <Title level={3} className="show-more">
