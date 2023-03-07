@@ -25,6 +25,7 @@
     --show-more-color-2: #0071bd!important;
     --bulb-color:black !important;
     --stats-card-bg-color: rgba(241, 241, 241, 0.861) !important;
+    --graph-line-color:rgba(220, 220, 220, 0.906) !important;
 }
 
 .dark-mode{
@@ -39,6 +40,7 @@
     --show-more-color-2: #0071bd!important;
     --bulb-color:rgb(251, 255, 0) !important;
     --stats-card-bg-color: rgba(0, 0, 0, 0.861) !important;
+    --graph-line-color:white !important;
 }
 
 a:hover{
@@ -198,6 +200,9 @@ h4{
     font-weight: 700 !important;
     margin-top: 20px !important;
     color: var(--pink) !important;
+    margin-bottom: 10px !important;
+    padding: 10px;
+    padding-left: 0px;
 }
 
 .coin-stats{
@@ -255,7 +260,12 @@ h4{
 }
 
 .coin-desc{
+    color:var(--text-color-1);
     flex: 0.5;
+    align-content: flex-start;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 25px;
 }
 
 .coin-links{
@@ -805,6 +815,7 @@ transform: scale(1.2);
 
 .ag-format-container {
     width: 1000px;
+    padding-left: 20px;
   }
   .ag-courses_box {
     display: -webkit-box;
@@ -869,6 +880,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 1025px) {
     .ag-format-container {
       width: auto;
+      padding-left: 15px;
     }
     .ag-courses_box{
       width: 800px !important;
@@ -878,6 +890,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 913px) {
     .ag-format-container {
       width: auto;
+      padding-left: 15px;
     }
     .ag-courses_box{
       width: 700px !important;
@@ -887,6 +900,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 821px) {
     .ag-format-container {
       width: auto;
+      padding-left: 10px;
     }
     .ag-courses_box{
       width: 600px !important;
@@ -904,6 +918,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 769px) {
     .ag-format-container {
       width: auto;
+      padding-left: 10px;
     }
     .ag-courses_box{
       width: 550px !important;
@@ -921,6 +936,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 540px) {
     .ag-format-container {
         width: auto;
+        padding-left: 0px;
     }
     .ag-courses_box{
         width: 900px !important;
@@ -938,6 +954,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 400px) {
     .ag-format-container {
       width: auto;
+      padding-left: 0px;
     }
     .ag-courses_box{
       width: 850px !important;
@@ -955,6 +972,7 @@ transform: scale(1.2);
   @media only screen and (max-width: 281px) {
     .ag-format-container {
       width: auto;
+      padding-left: 0px;
     }
     .ag-courses_box{
       width: 600px !important;
@@ -1017,3 +1035,10 @@ transform: scale(1.2);
     }
   } */
   
+  .graph{
+    background-color: var(--graph-line-color);
+    border-radius: 25px;
+    padding: 5px;
+    margin: 2px;
+    box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
+  }
