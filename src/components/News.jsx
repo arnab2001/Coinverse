@@ -17,7 +17,7 @@ const News = ({simplified}) => {
   if(!cryptoNews?.value) return <Loader />
   return (
     <>
-      <Row gutter={[16, 16]} className="news-card-container">
+      <Row gutter={[8, 16]} className="news-card-container">
       {!simplified && (
         <Col span={24}>
           <Select
@@ -35,27 +35,35 @@ const News = ({simplified}) => {
       )}
         {cryptoNews.value.map((news, i) => (
           <Col xs={24} lg={12} xl={8} xxl={6} key={i}>
-            <Card hoverable className="news-card">
+            <div className="news-grid">
+              <div className="news-card-grid">
                 <a href={news.url} target="_blank" rel="noreferrer">
-                  <div className="news-image-container"  >
-                    <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+" ...":news.name}</Title>
-                    <img style={{maxWidth: '200px' , maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news"/>
-                  </div>
-                  <p>
-                    {news.description.length > 100 
-                    ? `${news.description.substring(0, 100)}...` 
-                    : news.description}
-                  </p>
-                  <div className="provider-container">
-                    <div>
-                       <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="news" size={20} />
-                        <Text className="provider-name">{news.provider[0]?.name}</Text>
+                  <Card
+                    title={
+                      <div className="news-image-container"  >
+                      <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+" ...":news.name}</Title>
+                      <img style={{maxWidth: '200px' , maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news"/>
                     </div>
-                      <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
-                    
-                  </div>
+                    }
+                    hoverable 
+                    className="news-card">
+                    <p>
+                      {news.description.length > 100 
+                      ? `${news.description.substring(0, 100)}...` 
+                      : news.description}
+                    </p>
+                    <div className="provider-container">
+                      <div>
+                        <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="news" size={20} />
+                          <Text className="provider-name">{news.provider[0]?.name}</Text>
+                      </div>
+                        <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                    </div>
+                  </Card>
                 </a>
-            </Card>
+              </div>
+              <div className="news-bg"></div>
+            </div>
           </Col>
         ))}
       </Row>
