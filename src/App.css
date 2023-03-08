@@ -840,30 +840,55 @@ transform: scale(1.2);
     border: 2px solid #fff;
     border-radius: 28px;
     box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
-    backdrop-filter: blur( 9.7px );
-    -webkit-backdrop-filter: blur( 9.7px );
+    
     transition: transform 0.3s;
+    display: grid;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20% [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
   }
   .ag-courses_item:hover{
     transform: scale(1.1);
   }
+
   .ag-courses-item_link {
-    display: block;
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background: transparent;
+  }
+
+  .ag-courses-item_bg-container {
     padding: 30px 20px;
     background-color: var(--stats-card-bg-color);
     overflow: hidden;
+    backdrop-filter: blur( 9.7px );
+    -webkit-backdrop-filter: blur( 9.7px );
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
   }
   .ag-courses-item_link:hover .ag-courses-item_bg {
     -webkit-transform: scale(10);
     -ms-transform: scale(10);
     transform: scale(10);
   }
+
   .ag-courses-item_title {
+    padding: 30px 20px;
     min-height: 5px;
     overflow: hidden;
     color: #FFF ;
-    z-index: 2;
+    z-index: 3;
     position: relative;
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
   }
   .ag-courses-item_bg {
     height: 128px;

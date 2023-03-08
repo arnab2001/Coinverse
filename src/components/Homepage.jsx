@@ -30,9 +30,11 @@ const Homepage = ({onClick, update}) => {
             <div class="ag-courses_box">
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
                   <div class="ag-courses-item_title">
-                  <Statistic title="Total Crypto Currencies" value={globalStats.total}/>
+                    <Statistic title="Total Crypto Currencies" value={globalStats.total}/>
+                  </div>
+                  <div class="ag-courses-item_bg-container">
+                    <div class="ag-courses-item_bg"></div>
                   </div>
                 </a>
               </div>
@@ -44,9 +46,11 @@ const Homepage = ({onClick, update}) => {
             <div class="ag-courses_box">
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
                   <div class="ag-courses-item_title">
-                  <Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)}/>
+                    <Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)}/>
+                  </div>
+                  <div class="ag-courses-item_bg-container">
+                    <div class="ag-courses-item_bg"></div>
                   </div>
                 </a>
               </div>
@@ -58,9 +62,11 @@ const Homepage = ({onClick, update}) => {
             <div class="ag-courses_box">
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
                   <div class="ag-courses-item_title">
-                  <Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)}/>
+                    <Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)}/>
+                  </div>
+                  <div class="ag-courses-item_bg-container">
+                    <div class="ag-courses-item_bg"></div>
                   </div>
                 </a>
               </div>
@@ -72,9 +78,11 @@ const Homepage = ({onClick, update}) => {
             <div class="ag-courses_box">
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
                   <div class="ag-courses-item_title">
-                  <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)}/>
+                    <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)}/>
+                  </div>
+                  <div class="ag-courses-item_bg-container">
+                    <div class="ag-courses-item_bg"></div>
                   </div>
                 </a>
               </div>
@@ -86,9 +94,11 @@ const Homepage = ({onClick, update}) => {
             <div class="ag-courses_box">
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
                   <div class="ag-courses-item_title">
-                  <Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}/>
+                    <Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}/>
+                  </div>
+                  <div class="ag-courses-item_bg-container">
+                    <div class="ag-courses-item_bg"></div>
                   </div>
                 </a>
               </div>
