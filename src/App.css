@@ -58,9 +58,14 @@ a:hover{
     background-color: rgb(0, 21, 41);
 }
 
+.site-layout {
+    background-color: var(--back-color);
+}
+
 .main{
-    flex: 0.8;
-    
+    position: relative;
+    margin-top: 63px;
+    transition: all 0.2s;
 }
 .routes{
     padding: 20px;
@@ -144,10 +149,6 @@ h4{
         display: block !important;
     }
 
-    .ant-menu{
-        position: relative;
-        right: 0px;
-    }
     .home-title{
         font-size: 1.4rem !important;
     }
@@ -796,6 +797,10 @@ position: relative;
 
 .ant-menu-submenu-popup > ul.ant-menu-sub {
 min-width: 220px !important;
+}
+
+.ant-menu-submenu-popup {
+    position: fixed !important;
 }
 
 .icon-logo{

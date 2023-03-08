@@ -72,7 +72,7 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
                       hoverable
                       >
                       <p>Price: {millify(currency.price)}</p>
-                      <p>Price: {millify(currency.marketCap)}</p>
+                      <p>Market Cap: {millify(currency.marketCap)}</p>
                       <p>Daily Change: &nbsp;
                       {millify(currency.change) < 0 ? (
                         <span style={{color: 'red'}}>{millify(currency.change)}% </span>

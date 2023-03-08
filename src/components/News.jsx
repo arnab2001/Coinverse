@@ -41,7 +41,7 @@ const News = ({simplified}) => {
                   <Card
                     title={
                       <div className="news-image-container"  >
-                      <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+" ...":news.name}</Title>
+                      <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+"...":news.name}</Title>
                       <img style={{maxWidth: '200px' , maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news"/>
                     </div>
                     }
