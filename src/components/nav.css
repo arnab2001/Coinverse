@@ -291,11 +291,11 @@
   transform: translateX(3px);
 }
 
-#cryto-news{
+#crypto-news{
   transition: transform .2s;
 }
 
-#cryto-news:hover{
+#crypto-news:hover{
   transform: translateX(3px);
 } 
 @media (max-width:500px) {
