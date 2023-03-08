@@ -7,6 +7,7 @@
 }
 
 .sidebar {
+  background: linear-gradient(90deg, var(--nav-color1),var(--nav-color2)) !important;
   position: fixed !important;
   height: 100%;
   top: 0;
@@ -53,8 +54,14 @@
 }
 
 .contentt h2:nth-child(2) {
-  color: var(--title-coinverse);
+  background: linear-gradient(90deg, var(--title-coinverse1),var(--title-coinverse2));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   animation: animate 4s ease-in-out infinite;
+
+  /*color: var(--title-coinverse);
+  animation: animate 4s ease-in-out infinite;*/
 }
 
 @keyframes animate {
@@ -126,6 +133,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: linear-gradient(90deg, var(--nav-color2), var(--nav-color1)) !important;
+  color: var(--title-coinverse) !important;
 }
   
   .footer h3 {
@@ -139,7 +148,7 @@
   }
   
   .footer a {
-    color: whitesmoke;
+    color: var(--footer-text) !important;
   }
   #link h3{
     font-size: 1.2rem;
@@ -261,7 +270,7 @@
 }
 
 #footercomment{
-  color: grey !important;
+  color: var(--footer-text) !important;
   text-align: center;
 }
 
@@ -275,29 +284,18 @@
   transform: translateX(3px);
 }
 
-#home{
+#home,
+#crypto-currencies,
+#crypto-news {
   transition: transform .2s;
 }
 
-#home:hover{
+#home:hover,
+#crypto-currencies:hover,
+#crypto-news:hover {
   transform: translateX(3px);
 }
 
-#crypto-currencies{
-  transition: transform .2s;
-}
-
-#crypto-currencies:hover{
-  transform: translateX(3px);
-}
-
-#cryto-news{
-  transition: transform .2s;
-}
-
-#cryto-news:hover{
-  transform: translateX(3px);
-} 
 @media (max-width:500px) {
 
   .row{

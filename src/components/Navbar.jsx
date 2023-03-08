@@ -76,7 +76,8 @@ const Navbar = () => {
               </Row>
             </div>
           <Menu
-            theme="dark" 
+            theme="dark"
+            style={{background: 'none'}}
             mode="inline" 
             defaultSelectedKeys={'/'}
             selectedKeys={[selectedMenuItem]}
@@ -126,7 +127,7 @@ const Navbar = () => {
                 </Routes>
               </div> 
             </Layout>
-            <Layout.Footer className='footer' style={{background: '#002547', color: 'white', padding: '15px', left:"0" }}>
+            <Layout.Footer className='footer' style={{padding: '15px', left:"0" }}>
               <h4 id="footercomment" >Made with ❤️ by Community</h4>
               <br/>
               <Row className='row'>
@@ -163,7 +164,6 @@ const Navbar = () => {
                 </Col>
                 <Col className='link'>
                   <h3 id="links-section-h3">Links</h3>
-                  <br/>
                   <div id="underline3"></div>
                   <br/>
                   <div className="link-links">
