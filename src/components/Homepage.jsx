@@ -25,7 +25,7 @@ const Homepage = ({onClick, update}) => {
         Global Crypto Stats
       </Title>
       <Row gutter={[8,16]} className="stats-card-container">
-        <Col sm={24} md={12} xl={8}>
+        <Col xs={24} sm={24} md={12} xl={8}>
           <div class="ag-courses_item">
             <a href="#" class="ag-courses-item_link">
               <div class="ag-courses-item_title">
@@ -37,7 +37,7 @@ const Homepage = ({onClick, update}) => {
             </a>
           </div>
         </Col>
-        <Col sm={24} md={12} xl={8}>
+        <Col xs={24} sm={24} md={12} xl={8}>
           <div class="ag-courses_item">
             <a href="#" class="ag-courses-item_link">
               <div class="ag-courses-item_title">
@@ -49,7 +49,7 @@ const Homepage = ({onClick, update}) => {
             </a>
           </div>
         </Col>
-        <Col sm={24} md={12} xl={8}>
+        <Col xs={24} sm={24} md={12} xl={8}>
           <div class="ag-courses_item">
             <a href="#" class="ag-courses-item_link">
               <div class="ag-courses-item_title">
@@ -61,7 +61,7 @@ const Homepage = ({onClick, update}) => {
             </a>
           </div>
         </Col>
-        <Col sm={24} md={12} xl={8}>
+        <Col xs={24} sm={24} md={12} xl={8}>
           <div class="ag-courses_item">
             <a href="#" class="ag-courses-item_link">
               <div class="ag-courses-item_title">
@@ -73,7 +73,7 @@ const Homepage = ({onClick, update}) => {
             </a>
           </div>
         </Col>
-        <Col sm={24} md={12} xl={8}>
+        <Col xs={24} sm={24} md={12} xl={8}>
           <div class="ag-courses_item">
             <a href="#" class="ag-courses-item_link">
               <div class="ag-courses-item_title">
