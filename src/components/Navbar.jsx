@@ -62,47 +62,49 @@ const Navbar = () => {
   return (
     <>
        <Layout className='main_component' >
-        <Sider className='sidebar' trigger={null} collapsible collapsed={collapsed}>
-       <div className="logo" > 
-          <Row style={{width:"100%"}} type="flex" align="center">
-            <Col> 
-              <Image className='icon-logo' src={iconM} preview={false} />
-            </Col>
-            <Col>
-              <Typography.Title level={5} >
-                  <Link to="/" onClick={handleClick}>Coinverse</Link>
-              </Typography.Title>
-            </Col>
-          </Row>
-        </div>
-        <Menu
-          theme="dark" 
-          mode="inline" 
-          defaultSelectedKeys={'/'}
-          selectedKeys={[selectedMenuItem]}
-          onClick={handleClick}
-          items={[
-            {
-              key: '/',
-              icon: <HomeOutlined />,
-              label: <Link to="/">Home</Link>,
-            },
-            {
-              key: '/Cryptocurrencies',
-              icon: <SlidersOutlined />,
-              label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
-            },
-            {
-              key: '/News',
-              icon: <BulbOutlined/>,
-              label: <Link to="/News">News</Link>,
-            },
-          ]}
-        />
+        <Sider className="sidebar" trigger={null} collapsible collapsed={collapsed}>
+          <div className="logo" > 
+              <Row style={{width:"100%"}} type="flex" align="center">
+                <Col> 
+                  <Image className='icon-logo' src={iconM} preview={false} />
+                </Col>
+                <Col>
+                  <Typography.Title level={5} >
+                      <Link to="/" onClick={handleClick}>Coinverse</Link>
+                  </Typography.Title>
+                </Col>
+              </Row>
+            </div>
+          <Menu
+            theme="dark" 
+            mode="inline" 
+            defaultSelectedKeys={'/'}
+            selectedKeys={[selectedMenuItem]}
+            onClick={handleClick}
+            items={[
+              {
+                key: '/',
+                icon: <HomeOutlined />,
+                label: <Link to="/">Home</Link>,
+              },
+              {
+                key: '/Cryptocurrencies',
+                icon: <SlidersOutlined />,
+                label: <Link to="/Cryptocurrencies">Cryptocurrencies</Link>,
+              },
+              {
+                key: '/News',
+                icon: <BulbOutlined/>,
+                label: <Link to="/News">News</Link>,
+              },
+            ]}
+          />
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
       </Sider>
       <Layout className="site-layout">
-      <Header style={{ paddingLeft: "1rem",fontSize:"1.8rem"}} className='nav-head'>
+      <Header style={{ paddingLeft: "1rem", fontSize: "1.8rem",
+        maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)",
+        transform: collapsed ? `translateX(80px)` : `translateX(200px)`}} className='nav-head'>
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
@@ -111,7 +113,8 @@ const Navbar = () => {
           <ToggleMode/>
         </Header>
         <Content>
-        <div className="main" >
+        <div className="main" style={{ transform: collapsed ? `translateX(80px)` : `translateX(200px)`,
+          maxWidth: collapsed ? "calc(100% - 80px)" : "calc(100% - 200px)"}}>
             <Layout>
                 <div className='routes'>
                 <Routes>
@@ -160,7 +163,6 @@ const Navbar = () => {
                 </Col>
                 <Col className='link'>
                   <h3 id="links-section-h3">Links</h3>
-                  <br/>
                   <div id="underline3"></div>
                   <br/>
                   <div className="link-links">
