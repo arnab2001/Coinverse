@@ -12,7 +12,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/arnab2001/Coinverse)
 ![GitHub last commit](https://img.shields.io/github/last-commit/arnab2001/Coinverse)
 ![GitHub repo size](https://img.shields.io/github/repo-size/arnab2001/Coinverse)
-![Github](https://img.shields.io/github/license/arnab2001/Coinversep)
+![Github](https://img.shields.io/github/license/arnab2001/Coinverse)
 ![GitHub issues](https://img.shields.io/github/issues/arnab2001/Coinverse)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/arnab2001/Coinverse)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/arnab2001/Coinverse)
