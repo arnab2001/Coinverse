@@ -82,6 +82,7 @@ const CryptoDetailes = ({update}) => {
     <>
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
+        {/* <div class="coin-logo-in-heading"><img className="crypto-image" src={} alt='crypto-logo' /></div> */}
         <div className="details-bookmark-button">
           <div className="crypto-title">
             <Title level={2} className="coin-name">
@@ -89,7 +90,7 @@ const CryptoDetailes = ({update}) => {
             </Title>
           </div>
           <div className="bookmark-button">
-            <Button className={style} icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
+            <Button className={style}  icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
           </div>
           <div className="crypto-details">
             <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
