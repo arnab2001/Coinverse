@@ -107,7 +107,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
         </Col>
       </Row>
       <div className="graph">
-        <Line data={data} options={options}/>
+        <Line className="line-chart" data={data} options={options}/>
       </div>
     </>
   );

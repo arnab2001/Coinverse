@@ -971,3 +971,8 @@ transform: scale(1.2);
     margin: 2px;
     box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
 }
+
+.line-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
