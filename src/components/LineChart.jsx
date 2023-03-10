@@ -106,8 +106,14 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           <Title level={5} className="current-price">Current {coinName} Price: $ {currentPrice}</Title>
         </Col>
       </Row>
+<<<<<<< HEAD
       <div className="graph"><Line data={data} options={options}/></div>
 
+=======
+      <div className="graph">
+        <Line data={data} options={options}/>
+      </div>
+>>>>>>> 4c15165d3cef204329786efa7cac9954cdb87bbd
     </>
   );
 };

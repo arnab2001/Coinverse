@@ -57,7 +57,7 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
     )}
       <Row gutter={[8,16]} className="crypto-card-container">
          {cryptos?.map((currency) => (
-          <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
+          <Col xs={24} sm={24} md={12} xl={8} xxl={6} className="crypto-card" key={currency.uuid}>
             <div className="container-card">
               <div className="card-grid">
                 <div className="card-bm">
@@ -72,7 +72,7 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
                       hoverable
                       >
                       <p>Price: {millify(currency.price)}</p>
-                      <p>Price: {millify(currency.marketCap)}</p>
+                      <p>Market Cap: {millify(currency.marketCap)}</p>
                       <p>Daily Change: &nbsp;
                       {millify(currency.change) < 0 ? (
                         <span style={{color: 'red'}}>{millify(currency.change)}% </span>

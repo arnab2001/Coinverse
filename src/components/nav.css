@@ -6,12 +6,32 @@
     height: 100vh;
 }
 
+.sidebar {
+  position: fixed !important;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+}
+
+.main_component {
+  position: relative;
+  z-index: 0;
+  background-color: --back-color;
+}
+
 .nav-head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--nav-color) !important;
-    transition: 0.5s;
+  transition: all 0.2s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-color) !important;
 }
 
 .contentt{
@@ -270,11 +290,11 @@
   transform: translateX(3px);
 }
 
-#cryto-news{
+#crypto-news{
   transition: transform .2s;
 }
 
-#cryto-news:hover{
+#crypto-news:hover{
   transform: translateX(3px);
 } 
 @media (max-width:500px) {
