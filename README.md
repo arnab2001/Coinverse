@@ -1,4 +1,24 @@
-# 🪙 Coinverse 🪙
+
+# <p align="center"> 🪙 Coinverse 🪙</p>
+
+ <div align="center">
+ <p>
+
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=arnab2001%2FCoinverse%20&countColor=%23263759&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/arnab2001/Coinverse)
+![GitHub Repo stars](https://img.shields.io/github/stars/arnab2001/Coinverse)
+![GitHub contributors](https://img.shields.io/github/contributors/arnab2001/Coinverse)
+![GitHub last commit](https://img.shields.io/github/last-commit/arnab2001/Coinverse)
+![GitHub repo size](https://img.shields.io/github/repo-size/arnab2001/Coinverse)
+![Github](https://img.shields.io/github/license/arnab2001/Coinversep)
+![GitHub issues](https://img.shields.io/github/issues/arnab2001/Coinverse)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/arnab2001/Coinverse)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/arnab2001/Coinverse)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/arnab2001/Coinverse)
+ </p>
+ </div>
 
 ## Cryptocurrency tracker and cryptocurrency related News , all at one place
 
