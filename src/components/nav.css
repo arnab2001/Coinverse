@@ -128,27 +128,28 @@
   justify-content: center;
 }
   
-.footer h3 {
-  font-size: 1.2rem;
-}
-
-.footer .row p{
-  font-size: 1rem;
-  line-height: 2rem;
-  color: gray !important;
-}
-
-#link h3{
-  font-size: 1.2rem;
-}
-
-#link-links a{
-  font-size: 1.1rem;
-}
-
-#link-links a:hover{
-  color:whitesmoke !important;
-}
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer .row p{
+    font-size: 1rem;
+    line-height: 2rem;
+    color: gray !important;
+  }
+  
+  .footer a {
+    color: whitesmoke;
+  }
+  #link h3{
+    font-size: 1.2rem;
+  }
+  #link a{
+    font-size: 1.1rem;
+  }
+  #link a:hover{
+    color: whitesmoke !important;
+  }
   
 .tecnologies-division1{
   display: flex;
