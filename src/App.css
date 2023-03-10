@@ -797,7 +797,7 @@ padding-left: 24px !important;
 
 .ant-menu-submenu-popup .ant-menu-sub,
 .ant-menu-submenu-popup .ant-menu-item:not(.ant-menu-item-selected) {
-    background: var(--nav-color1) !important;
+    background: linear-gradient(var(--nav-color1),var(--nav-color2)) !important;
 }
 
 .ant-menu-item-selected {
@@ -808,7 +808,7 @@ padding-left: 24px !important;
 .ant-menu-item:active,
 .ant-menu-submenu-title:active,
 .ant-menu-submenu-popup .ant-menu-item:active {
-    background-color: var(--nav-select) !important;
+    background: var(--nav-select) !important;
     color: var(--title-coinverse) !important;
 }
 
