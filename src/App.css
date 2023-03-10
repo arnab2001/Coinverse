@@ -20,7 +20,15 @@
     --text-color-1: rgb(0, 0, 0) !important;
     --hov-color: #0071bd !important;
     --button-hov: #fff !important;
+    --nav-hov-color: #fff;
+    --nav-select: #fff!important;
+    --nav-hov-select-color: #0071bd !important;
+    --nav-color1: #69e1ef!important;
+    --nav-color2: #5f67fa!important;
     --title-coinverse: #001529!important;
+    --title-coinverse1: #69e1ef!important;
+    --title-coinverse2: #5f67fa!important;
+    --footer-text: #fff;
     --show-more-color: #00000097!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:black !important;
@@ -35,7 +43,15 @@
     --text-color-1: rgb(0, 0, 0) !important;
     --hov-color: #f5f5f5 !important;
     --button-hov: rgb(40, 40, 40)!important;
+    --nav-hov-color: #0071bd !important;
+    --nav-select: rgb(27, 27, 27)!important;
+    --nav-hov-select-color: #0071bd !important;
+    --nav-color1: #2b2e76!important;
+    --nav-color2: rgb(0, 0, 0) !important;
     --title-coinverse: #ffffff!important;
+    --title-coinverse1: #ffffff;
+    --title-coinverse2: rgb(27, 27, 27)!important;
+    --footer-text: whitesmoke;
     --show-more-color: #ffffff!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:rgb(251, 255, 0) !important;
@@ -44,7 +60,7 @@
 }
 
 a:hover{
-    color: var(--hov-color) !important;
+    color: var(--hov-color) !important; 
 }
 
 .app{
@@ -106,8 +122,11 @@ h4{
 }
 
 .logo a{
-   color: white;
+   color: var(--title-coinverse);
 }
+.logo a:hover {
+    color: var(--nav-hov-color) !important;
+ }
 
 .menu-control-container{
     display: none !important;
@@ -485,6 +504,8 @@ h4{
     display: flex;
 }
 
+
+
 @media screen and (min-width:992px) and (max-width:1600px){
     .news-card-container {
         display: flex;
@@ -738,7 +759,7 @@ background-color: #ffffff;
 }
 
 .bookmarked {
-background-color: goldenrod;
+    background:  goldenrod;
 }
 
 .bookmark-details {
@@ -753,8 +774,50 @@ color: rgb(116, 113, 113) !important;
 height: 25px
 }
 
+.bookmark-button .ant-btn,
+.card-bm .ant-btn {
+    border-color: transparent;
+}
+
+.bookmark-button .ant-btn:hover:not(.not-bookmarked),
+.card-bm .ant-btn:hover:not(.not-bookmarked) {
+    color: white;
+}
+
+.bookmark-button .ant-btn:hover:not(.bookmarked),
+.card-bm .ant-btn:hover:not(.bookmarked) {
+    color: goldenrod;
+}
+
 .ant-menu-submenu-title {
 padding-left: 24px !important;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+    background: none;
+}
+
+.ant-menu-item-selected {
+    background-color: var(--nav-select) !important;
+    color: var(--title-coinverse) !important;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected), 
+.ant-menu-submenu-title:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+    color: var(--title-coinverse) !important;
+}
+.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),
+.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) a, 
+.ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),
+.ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) a {
+    color: var(--nav-hov-color) !important;
+}
+
+.ant-menu-item-selected:hover,
+.ant-menu-item-selected:hover a,
+.ant-menu-submenu-title:hover,
+.ant-menu-submenu-title:hover a {
+    color: var(--nav-hov-select-color) !important;
 }
 
 .ant-menu-submenu > ul > li.ant-menu-item {
@@ -871,7 +934,7 @@ transform: scale(1.2);
 .ag-courses-item_bg {
     height: 128px;
     width: 128px;
-    background-color: #1677ff;
+    background: linear-gradient(90deg, var(--title-coinverse1), var(--title-coinverse2));
 
     z-index: 2;
     position: absolute;
@@ -884,11 +947,11 @@ transform: scale(1.2);
     -o-transition: all .5s ease;
     transition: all .5s ease;
 }
-  
-  .graph{
+
+.graph{
     background-color: var(--graph-line-color);
     border-radius: 25px;
     padding: 5px;
     margin: 2px;
     box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
-  }
+}
