@@ -90,7 +90,7 @@ const CryptoDetailes = ({update}) => {
             </Title>
           </div>
           <div className="bookmark-button">
-            <Button className={style} icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
+            <Button className={style}  icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
           </div>
           <div className="crypto-details">
             <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
