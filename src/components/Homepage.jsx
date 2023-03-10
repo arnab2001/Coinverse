@@ -26,61 +26,61 @@ const Homepage = ({onClick, update}) => {
       </Title>
       <Row gutter={[8,16]} className="stats-card-container">
         <Col xs={24} sm={24} md={12} xl={8}>
-          <div class="ag-courses_item">
-            <a href="#" class="ag-courses-item_link">
-              <div class="ag-courses-item_title">
-                <Statistic title="Total Crypto Currencies" value={globalStats.total}/>
+          <div className="ag-courses_item">
+            <a href="#" className="ag-courses-item_link">
+              <div className="ag-courses-item_title">
+                <Statistic title="Total Crypto Currencies" value={millify(globalStats.total)}/>
               </div>
-              <div class="ag-courses-item_bg-container">
-                <div class="ag-courses-item_bg"></div>
+              <div className="ag-courses-item_bg-container">
+                <div className="ag-courses-item_bg"></div>
               </div>
             </a>
           </div>
         </Col>
         <Col xs={24} sm={24} md={12} xl={8}>
-          <div class="ag-courses_item">
-            <a href="#" class="ag-courses-item_link">
-              <div class="ag-courses-item_title">
+          <div className="ag-courses_item">
+            <a href="#" className="ag-courses-item_link">
+              <div className="ag-courses-item_title">
                 <Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)}/>
               </div>
-              <div class="ag-courses-item_bg-container">
-                <div class="ag-courses-item_bg"></div>
+              <div className="ag-courses-item_bg-container">
+                <div className="ag-courses-item_bg"></div>
               </div>
             </a>
           </div>
         </Col>
         <Col xs={24} sm={24} md={12} xl={8}>
-          <div class="ag-courses_item">
-            <a href="#" class="ag-courses-item_link">
-              <div class="ag-courses-item_title">
+          <div className="ag-courses_item">
+            <a href="#" className="ag-courses-item_link">
+              <div className="ag-courses-item_title">
                 <Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)}/>
               </div>
-              <div class="ag-courses-item_bg-container">
-                <div class="ag-courses-item_bg"></div>
+              <div className="ag-courses-item_bg-container">
+                <div className="ag-courses-item_bg"></div>
               </div>
             </a>
           </div>
         </Col>
         <Col xs={24} sm={24} md={12} xl={8}>
-          <div class="ag-courses_item">
-            <a href="#" class="ag-courses-item_link">
-              <div class="ag-courses-item_title">
+          <div className="ag-courses_item">
+            <a href="#" className="ag-courses-item_link">
+              <div className="ag-courses-item_title">
                 <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)}/>
               </div>
-              <div class="ag-courses-item_bg-container">
-                <div class="ag-courses-item_bg"></div>
+              <div className="ag-courses-item_bg-container">
+                <div className="ag-courses-item_bg"></div>
               </div>
             </a>
           </div>
         </Col>
         <Col xs={24} sm={24} md={12} xl={8}>
-          <div class="ag-courses_item">
-            <a href="#" class="ag-courses-item_link">
-              <div class="ag-courses-item_title">
+          <div className="ag-courses_item">
+            <a href="#" className="ag-courses-item_link">
+              <div className="ag-courses-item_title">
                 <Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}/>
               </div>
-              <div class="ag-courses-item_bg-container">
-                <div class="ag-courses-item_bg"></div>
+              <div className="ag-courses-item_bg-container">
+                <div className="ag-courses-item_bg"></div>
               </div>
             </a>
           </div>
