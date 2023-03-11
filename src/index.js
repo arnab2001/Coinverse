@@ -6,6 +6,7 @@ import App from './App';
 import 'antd/dist/reset.css';
 import store from './components/app/store';
 import { Provider } from 'react-redux';
+import { Route, Routes } from 'react-router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <Router>
       <Provider store={store}>
         <App />
+        {/* <Route path='*' element={<Error />}/> */}
      </Provider>
     </Router>
   </React.StrictMode>
