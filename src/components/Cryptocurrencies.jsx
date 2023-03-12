@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import millify from 'millify'
 import {Card, Input, Row, Col, Button } from 'antd'
 import { BookOutlined } from '@ant-design/icons';
+import { FaArrowUp } from "react-icons/fa";
 
 import BookmarkService from '../services/bookmarkService';
 import { useGetCryptosQuery } from '../services/cryptoApi'
@@ -35,6 +36,28 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
       element.classList.add("not-bookmarked");
     }
   }
+
+
+  const [isVisible, setIsVisible] = useState(false);
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const listentoScroll = () => {
+    let heightToHidden = 25;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listentoScroll);
+    return () => window.removeEventListener("scroll", listentoScroll);
+  }, []);
 
   const returnCoins = () => {
     return BookmarkService.coinArray();
@@ -85,6 +108,11 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
           </Col>
         ))}
       </Row>
+      {isVisible && (
+      <div className="top-btn" onClick={goToBtn}>
+        <FaArrowUp className="uparrow"></FaArrowUp>
+      </div>
+      )}
     </>
   )
 }

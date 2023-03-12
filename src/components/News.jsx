@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Select,Typography, Row, Col, Avatar, Card } from 'antd'
 import moment from 'moment/moment'
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Loader from './loader'
+import { FaArrowUp } from "react-icons/fa";
+
 const { Text, Title } = Typography
 const { Option } = Select
 const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg'
@@ -14,6 +16,28 @@ const News = ({simplified}) => {
   const { data } = useGetCryptosQuery(100);
   const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 8: 16 });
 
+  const [isVisible, setIsVisible] = useState(false);
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const listentoScroll = () => {
+    let heightToHidden = 25;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listentoScroll);
+    return () => window.removeEventListener("scroll", listentoScroll);
+  }, []);
+
+  
   if(!cryptoNews?.value) return <Loader />
   return (
     <>
@@ -67,7 +91,11 @@ const News = ({simplified}) => {
           </Col>
         ))}
       </Row>
-        
+      {isVisible && (
+      <div className="top-btn" onClick={goToBtn}>
+        <FaArrowUp className="uparrow"></FaArrowUp>
+      </div>
+      )}
     </>
   )
 }

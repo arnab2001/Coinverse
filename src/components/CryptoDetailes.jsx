@@ -18,6 +18,7 @@ import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/
 import LineChart from './LineChart'
 import Loader from './loader'
 import BookmarkService from '../services/bookmarkService'
+import { FaArrowUp } from "react-icons/fa";
 
 
 
@@ -45,6 +46,29 @@ const CryptoDetailes = ({update}) => {
       setStyle("not-bookmarked")
     }
   }, [bookmarked, coinId]);
+
+  
+  const [isVisible, setIsVisible] = useState(false);
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const listentoScroll = () => {
+    let heightToHidden = 25;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listentoScroll);
+    return () => window.removeEventListener("scroll", listentoScroll);
+  }, []);
+
   
   //console.log(bookmarked);
   if(isFetching) return <Loader/>
@@ -149,6 +173,11 @@ const CryptoDetailes = ({update}) => {
         </Col>
       </Col>
     </Col>
+    {isVisible && (
+      <div className="top-btn" onClick={goToBtn}>
+        <FaArrowUp className="uparrow"></FaArrowUp>
+      </div>
+      )}
   </>
   )
 }

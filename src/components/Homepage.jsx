@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import millify from 'millify'
 import { Typography, Row, Col, Statistic, Button} from 'antd'
 import { Link } from 'react-router-dom'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import {Cryptocurrencies,News} from '../components'
+import { FaArrowUp } from "react-icons/fa";
 import Loader from './loader'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -36,6 +37,27 @@ const { Title } = Typography
 
 const Homepage = ({onClick, update}) => {
   const { data, isFetching } = useGetCryptosQuery(10)
+
+  const [isVisible, setIsVisible] = useState(false);
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const listentoScroll = () => {
+    let heightToHidden = 25;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listentoScroll);
+    return () => window.removeEventListener("scroll", listentoScroll);
+  }, []);
  
   // const globalStats = data.data.stats;
   const globalStats = data?.data?.stats;
@@ -46,6 +68,8 @@ const Homepage = ({onClick, update}) => {
   
 
   return (
+    <>
+    
     <div className='homePage-mainContainer'>
       <div className='top-heading'>
       <Title level={2} className="heading">
@@ -162,6 +186,12 @@ const Homepage = ({onClick, update}) => {
       </div>
       <News simplified onClick={onClick}/>
     </div>
+    {isVisible && (
+      <div className="top-btn" onClick={goToBtn}>
+        <FaArrowUp className="uparrow"></FaArrowUp>
+      </div>
+      )}
+    </>
   );
 }
 
