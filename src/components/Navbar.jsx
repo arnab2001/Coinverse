@@ -28,6 +28,7 @@ import './nav.css';
 import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
+import Error from './Error';
 
 // import BackupNews from './BackupNews';
 
@@ -124,6 +125,7 @@ const Navbar = () => {
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick} update={reRender}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/News' element={<News update={reRender}/> }/>
+                    <Route path='*' element={<Error />}/>
                 </Routes>
               </div> 
             </Layout>

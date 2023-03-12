@@ -21,10 +21,12 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "swiper": "^9.1.0",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.76.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
