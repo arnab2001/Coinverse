@@ -85,8 +85,8 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
                 label: 'Price In USD',
                 data: coinPrice,
                 fill: false,
-                backgroundColor: '#0071bd',
-                borderColor: '#0071bd',
+                backgroundColor: document.body.className === 'light-mode' ? 'rgba(110, 111, 119, 1)' : 'rgba(96, 148, 197, 1)',
+                borderColor: document.body.className === 'light-mode' ? 'rgba(110, 111, 119, 1)': 'rgba(96, 148, 197, 1)',
             },
         ],
     };

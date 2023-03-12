@@ -14,23 +14,38 @@
 }
 
 .light-mode{
-    --nav-color:  #fff !important;
-    --back-color: #f5f5f5 !important;
-    --text-color: black !important;
-    --text-color-1: rgb(0, 0, 0) !important;
-    --hov-color: #0071bd !important;
-    --hov-color-2: #000000 !important;
-    --button-hov: #fff !important;
-    --nav-hov-color: #fff;
-    --nav-select: #fff!important;
-    --nav-hov-select-color: #001529!important;
-    --nav-color1: #69e1ef!important;
-    --nav-color2: #5f67fa!important;
-    --title-coinverse: #001529!important;
-    --title-coinverse1: #69e1ef!important;
-    --title-coinverse2: #5f67fa!important;
-    --footer-text: #001529!important;
-    --footer-line: #fff!important;
+     /* PALETTE */
+    --light-shades: rgb(249, 249, 249);
+    --light-accent: rgb(110, 111, 119);
+    --main-color: rgb(98, 107, 236);
+    --dark-accent: rgb(53, 49, 56);
+    --dark-shades: rgb(40, 54, 145);
+    --darker-shades: rgb(32, 41, 102);
+    
+
+    --sidebar-color: var(--darker-shades)!important;
+    --sidebar-text: var(--light-shades)!important;
+    --sidebar-hov-color: var(--main-color)!important;
+    --sidebar-select-hov-color: var(--main-color)!important;
+    --sidebar-select-text-color: var(--main-color)!important;
+    --sidebar-select-color: var(--light-shades)!important;
+    --crypto-detail-bold-text: var(--dark-accent);
+    --crypto-detail-text: var(--light-accent);
+
+    --nav-color:  var(--light-shades)!important;
+    --back-color: #fff !important;
+    --text-color: var(--darker-shades)!important;
+    --text-color-1: var(--darker-shades) !important;
+    --hov-color: var(--main-color) !important;
+    --hov-color-2: var(--dark-accent)!important;
+    --button-hov: rgb(110, 111, 119, 0.1)!important;
+
+    --title-coinverse: var(--darker-shades)!important;
+    --title-coinverse1: var(--light-shades)!important;
+    --title-coinverse2: var(--dark-shades)!important;
+    --footer-back-color: var(--dark-shades)!important;
+    --footer-text: var(--light-accent)!important;
+    --footer-line: var(--darker-shades)!important;
     --footer-hov: #fff!important;
     --show-more-color: #00000097!important;
     --show-more-color-2: #0071bd!important;
@@ -41,24 +56,41 @@
 }
 
 .dark-mode{
-    --nav-color: rgb(27, 27, 27)!important;
-    --back-color:rgb(0, 0, 0) !important;
-    --text-color:  #fff !important;
-    --text-color-1: rgb(0, 0, 0) !important;
-    --hov-color: #f5f5f5 !important;
-    --hov-color-2: #ffffff !important;
-    --button-hov: rgb(40, 40, 40)!important;
-    --nav-hov-color: #5f67fa!important;
-    --nav-select: rgb(27, 27, 27)!important;
-    --nav-hov-select-color: #fff !important;
-    --nav-color1: #2b2e76!important;
-    --nav-color2: rgb(0, 0, 0) !important;
-    --title-coinverse: #ffffff!important;
-    --title-coinverse1: #2b2e76!important;
-    --title-coinverse2: rgb(27, 27, 27)!important;
-    --footer-text: whitesmoke;
-    --footer-line: rgb(27, 27, 27)!important;
-    --footer-hov: #5f67fa!important;
+
+    --light-shades: rgb(249, 249, 249);
+    --light-accent: rgb(96, 148, 197);
+    --main-color: rgb(95, 101, 240);
+    --dark-accent: rgb(48, 74, 94);
+    --dark-shades: rgb(18, 24, 47);
+    --darker-shades: rgb(14, 20, 35);
+
+    --darkr-shades: rgb(29, 30, 32);
+    --darke-shades: rgb(23, 24, 25);
+
+    --sidebar-color: var(--darker-shades)!important;
+    --sidebar-text: var(--light-shades)!important;
+    --sidebar-hov-color: var(--light-accent)!important;
+    --sidebar-select-hov-color: var(--light-accent)!important;
+    --sidebar-select-text-color: var(--light-accent)!important;
+    --sidebar-select-color: var(--darkr-shades)!important;
+    --crypto-detail-bold-text: var(--light-accent);
+    --crypto-detail-text: var(--light-shades);
+
+    --nav-color:  var(--darke-shades)!important;
+    --back-color: var(--darkr-shades) !important;
+    --text-color: var(--light-shades)!important;
+    --text-color-1: var(--dark-shades) !important;
+    --hov-color: var(--light-accent) !important;
+    --hov-color-2: var(--light-accent)!important;
+    --button-hov: rgb(96, 148, 197, 0.1)!important;
+
+    --title-coinverse: var(--light-shades)!important;
+    --title-coinverse1: var(--dark-shades)!important;
+    --title-coinverse2: var(--light-shades)!important;
+    --footer-back-color: var(--dark-shades)!important;
+    --footer-text: var(--light-accent)!important;
+    --footer-line: var(--darker-shades)!important;
+    --footer-hov: #fff!important;
     --show-more-color: #ffffff!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:rgb(251, 255, 0) !important;
@@ -133,11 +165,11 @@ h4{
    color: var(--title-coinverse);
 }
 .logo a:hover {
-    color: var(--nav-hov-color) !important;
+    color: var(--sidebar-hov-color) !important;
 }
 
 .logo a:active {
-    color: var(--title-coinverse);
+    color: var(--sidebar-hov-color);
 }
 
 .logo a:visited {
@@ -196,6 +228,7 @@ h4{
     margin: 30px;
     margin-top: 10px;
     padding-top:0px;
+    color: var(--light-accent) !important;
 }
 
 .coin-heading-container{
@@ -236,7 +269,7 @@ h4{
 .coin-details-heading{
     font-weight: 700 !important;
     margin-top: 20px !important;
-    color: var(--pink) !important;
+    color: var(--crypto-detail-bold-text) !important;
     margin-bottom: 10px !important;
     padding: 10px;
     padding-left: 0px;
@@ -250,7 +283,7 @@ h4{
     opacity: 0.9;
     padding: 20px;
 }
-
+.coin-stats
 .coin-stats-name{
     display: flex;
     gap: 10px;
@@ -258,12 +291,12 @@ h4{
 }
 
 .coin-stats-name-data{
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .stats{
     font-weight: 800;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-value-statistics-heading p{
@@ -286,6 +319,7 @@ h4{
 .coin-desc-link p{
     font-size: 1rem;
     opacity: 0.9;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-desc-link a{
@@ -321,13 +355,19 @@ h4{
 .link-name{
     text-transform: capitalize;
     font-size: 1rem;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-link a{
-    color: var(--pink);
+    color: var(--light-accent);
     font-weight: 700;
     font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.coin-link a:hover {
+    transform: translateX(5px);
+    color: var(--title-coinverse2) !important;
 }
 
 .coin-link:hover, .coin-stats:hover{
@@ -439,10 +479,9 @@ h4{
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    color: #0071bd;
 }
 .chart-title{
-    color: #0071bd !important;
+    color: var(--crypto-detail-bold-text) !important;
 }
 .price-container{
     display: flex !important;
@@ -452,12 +491,12 @@ h4{
 }
 .price-change{
     font-weight: 900 !important;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 .home-heading-container{
     display: flex;
@@ -476,14 +515,13 @@ h4{
 
 .show-more Button{
     background-color: var(--back-color) !important;
-}
-
-#show-more-text{
     color: var(--show-more-color) !important;
 }
 
-#show-more-text:hover{
-    color: var(--show-more-color-2) !important;
+.show-more Button:hover,
+.show-more Button:hover a p {
+    color: var(--hov-color) !important;
+    border-color: var(--hov-color) !important;
 }
 
 .exchange-image{
@@ -688,6 +726,11 @@ p{
     transition: 0.5s;
 }
 
+.stats-container p{
+    color: var(--crypto-detail-text) !important;
+    transition: 0.5s;
+}
+
 @media screen and (max-width:420px){
     .top-heading{
         display: block;
@@ -756,6 +799,10 @@ grid-column-end: 6;
 text-align: center;
 }
 
+.crypto-details p {
+    color: var(--crypto-detail-text) !important;
+}
+
 .not-bookmarked {
 background-color: #ffffff;
 }
@@ -803,40 +850,40 @@ padding-left: 24px !important;
 
 .ant-menu-submenu-popup .ant-menu-sub,
 .ant-menu-submenu-popup .ant-menu-item:not(.ant-menu-item-selected) {
-    background: linear-gradient(var(--nav-color1),var(--nav-color2)) !important;
+    background-color: var(--sidebar-color) !important;
 }
 
 .ant-menu-item-selected {
-    background-color: var(--nav-select) !important;
-    color: var(--title-coinverse) !important;
+    background-color: var(--sidebar-select-color) !important;
+    color: var(--sidebar-select-text-color) !important;
 }
 
 .ant-menu-item:active,
 .ant-menu-submenu-title:active,
 .ant-menu-submenu-popup .ant-menu-item:active {
-    background: var(--nav-select) !important;
-    color: var(--title-coinverse) !important;
+    background: var(--sidebar-select-color) !important;
+    color: var(--sidebar-select-text-color) !important;
 }
 
 .ant-menu-item:active a {
-    color: var(--title-coinverse) !important;
+    color: var(--sidebar-select-text-color) !important;
 }
 
 .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected), 
 .ant-menu-submenu-title:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
-    color: var(--title-coinverse) !important;
+    color: var(--sidebar-text);
 }
 .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active),
 .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active) a, 
 .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active){
-    color: var(--nav-hov-color) !important;
+    color: var(--sidebar-hov-color) !important;
 }
 
 .ant-menu-item-selected:hover,
 .ant-menu-item-selected:hover a,
 .ant-menu-submenu-title:hover,
 .ant-menu-submenu-title:hover a {
-    color: var(--nav-hov-select-color) !important;
+    color: var(--sidebar-select-hov-color) !important;
 }
 
 .ant-menu-submenu > ul > li.ant-menu-item {
@@ -1013,6 +1060,7 @@ transform: scale(1.2);
   .coin-name{
     font-weight: 700 !important;
     transition: letter-spacing 200ms;
+    color: var(--crypto-detail-text) !important;
   }
 
   .coin-name:after {
@@ -1022,7 +1070,7 @@ transform: scale(1.2);
     display: inline-block;
     height: 1em;
     width: 58%;
-    left: 198px;
+    left: 21%;
     border-bottom: 2px solid;
     margin-top: 10px;
     opacity: 0;
@@ -1060,28 +1108,32 @@ transform: scale(1.2);
 .swiper-button-next{
     right:350px;
     transition: color 0.3s ease;
-}
-
-.swiper-button-next:hover{
-    color:var(--hov-color-2);
+    color: var(--light-shades);
+    -webkit-text-stroke: 0.1px var(--hov-color);
+    user-select: none;
 }
 
 .swiper-button-prev{
     left: 350px;
     transition: color 0.3s ease;
+    color: var(--light-shades);
+    -webkit-text-stroke: 0.1px var(--hov-color);
+    user-select: none;
 }
 
-.swiper-button-prev:hover{
-    color:var(--hov-color-2);
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    color:var(--hov-color);
 }
 
 .swiper-pagination-bullet{
     background-color: #e1e0e0f0;
     opacity:1;
+    user-select: none;
 }
 
 .swiper-pagination-bullet-active{
-    background-color: #0280d4;
+    background-color: var(--hov-color);
 }
 
 /* @media screen and (max-width:px) {
