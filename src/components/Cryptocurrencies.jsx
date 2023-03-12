@@ -41,9 +41,6 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
   }
 
   if(isFetching) return <Loader />
-
-  let cardBgColor= (document.body.className === 'light-mode') ? '#ffff' : 'rgb(27, 27, 27)';
-  let cardColor= (document.body.className === 'light-mode') ? 'black' : '#fff';
   
   return (
     <>
@@ -86,7 +83,7 @@ const Cryptocurrencies = ({simplified, onClick, update}) => {
               </div>
             </div>
           </Col>
-        ))} { console.log(cryptos)}
+        ))}
       </Row>
     </>
   )

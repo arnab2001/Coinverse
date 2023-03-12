@@ -66,7 +66,7 @@ const Homepage = ({onClick, update}) => {
           className="mySwiper"
           loop={true}
           autoplay={{
-            delay: 1000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
         >

@@ -7,6 +7,8 @@
 }
 
 .sidebar {
+  /*background: linear-gradient(90deg, var(--nav-color1),var(--nav-color2)) !important;*/
+  background-color: var(--sidebar-color)!important;
   position: fixed !important;
   height: 100%;
   top: 0;
@@ -53,8 +55,14 @@
 }
 
 .contentt h2:nth-child(2) {
-  color: var(--title-coinverse);
+  background: linear-gradient(90deg, var(--title-coinverse1),var(--title-coinverse2));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   animation: animate 4s ease-in-out infinite;
+
+  /*color: var(--title-coinverse);
+  animation: animate 4s ease-in-out infinite;*/
 }
 
 @keyframes animate {
@@ -126,30 +134,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--footer-back-color) !important;
+  color: var(--light-shades) !important;
 }
   
-  .footer h3 {
-    font-size: 1.2rem;
-  }
-  
-  .footer .row p{
-    font-size: 1rem;
-    line-height: 2rem;
-    color: gray !important;
-  }
-  
-  .footer a {
-    color: whitesmoke;
-  }
-  #link h3{
-    font-size: 1.2rem;
-  }
-  #link a{
-    font-size: 1.1rem;
-  }
-  #link a:hover{
-    color: whitesmoke !important;
-  }
+.footer h3 {
+  font-size: 1.2rem;
+}
+
+.footer .row p{
+  font-size: 1rem;
+  line-height: 2rem;
+  color: gray !important;
+}
+
+.footer a {
+  color: var(--footer-text) !important;
+}
+
+.footer a:hover {
+  color: var(--footer-hov) !important;
+}
   
 .tecnologies-division1{
   display: flex;
@@ -179,18 +184,10 @@
   padding-left: 27px;
 }
 
-.footer-links:hover{
-  color: whitesmoke !important;
-}
-
 .link-links {
   color: gray!important;
   font-size: 1rem;
   line-height: 2rem;
-}
-
-.link-links:hover{
-  color: whitesmoke !important;
 }
 
 .socials{
@@ -208,8 +205,8 @@
   padding:3px;
   margin: 2px;
   border-radius: 50px;  
-  border-top: 3px solid #0071bd;
-  border-right: 3px solid #0071bd;
+  border-top: 3px solid var(--footer-line);
+  border-right: 3px solid var(--footer-line);
   border-left: 3px solid #fff;
   border-bottom: 3px solid #fff;
 }
@@ -240,28 +237,28 @@
 }
 
 #underline1{
-  background-color: #0071bd;
+  background-color: var(--footer-line);
   height: 3px;
   width:225px;
   border-radius: 50px;
 }
 
 #underline2{
-  background-color: #0071bd;
+  background-color: var(--footer-line);
   height: 3px;
   width:105px;
   border-radius: 50px;
 }
 
 #underline3{
-  background-color: #0071bd;
+  background-color: var(--footer-line);
   height: 3px;
   width:48px;
   border-radius: 50px;
 }
 
 #footercomment{
-  color: grey !important;
+  color: var(--footer-text) !important;
   text-align: center;
 }
 
@@ -275,29 +272,18 @@
   transform: translateX(3px);
 }
 
-#home{
+#home,
+#crypto-currencies,
+#crypto-news {
   transition: transform .2s;
 }
 
-#home:hover{
+#home:hover,
+#crypto-currencies:hover,
+#crypto-news:hover {
   transform: translateX(3px);
 }
 
-#crypto-currencies{
-  transition: transform .2s;
-}
-
-#crypto-currencies:hover{
-  transform: translateX(3px);
-}
-
-#crypto-news{
-  transition: transform .2s;
-}
-
-#crypto-news:hover{
-  transform: translateX(3px);
-} 
 @media (max-width:500px) {
 
   .row{

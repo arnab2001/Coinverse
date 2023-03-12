@@ -14,14 +14,39 @@
 }
 
 .light-mode{
-    --nav-color:  #fff !important;
-    --back-color: #f5f5f5 !important;
-    --text-color: black !important;
-    --text-color-1: rgb(0, 0, 0) !important;
-    --hov-color: #0071bd !important;
-    --hov-color-2: #000000 !important;
-    --button-hov: #fff !important;
-    --title-coinverse: #001529!important;
+     /* PALETTE */
+    --light-shades: rgb(249, 249, 249);
+    --light-accent: rgb(110, 111, 119);
+    --main-color: rgb(98, 107, 236);
+    --dark-accent: rgb(53, 49, 56);
+    --dark-shades: rgb(40, 54, 145);
+    --darker-shades: rgb(32, 41, 102);
+    
+
+    --sidebar-color: var(--darker-shades)!important;
+    --sidebar-text: var(--light-shades)!important;
+    --sidebar-hov-color: var(--main-color)!important;
+    --sidebar-select-hov-color: var(--main-color)!important;
+    --sidebar-select-text-color: var(--main-color)!important;
+    --sidebar-select-color: var(--light-shades)!important;
+    --crypto-detail-bold-text: var(--dark-accent);
+    --crypto-detail-text: var(--light-accent);
+
+    --nav-color:  var(--light-shades)!important;
+    --back-color: #fff !important;
+    --text-color: var(--darker-shades)!important;
+    --text-color-1: var(--darker-shades) !important;
+    --hov-color: var(--main-color) !important;
+    --hov-color-2: var(--dark-accent)!important;
+    --button-hov: rgb(110, 111, 119, 0.1)!important;
+
+    --title-coinverse: var(--darker-shades)!important;
+    --title-coinverse1: var(--light-shades)!important;
+    --title-coinverse2: var(--dark-shades)!important;
+    --footer-back-color: var(--dark-shades)!important;
+    --footer-text: var(--light-accent)!important;
+    --footer-line: var(--darker-shades)!important;
+    --footer-hov: #fff!important;
     --show-more-color: #00000097!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:black !important;
@@ -31,14 +56,41 @@
 }
 
 .dark-mode{
-    --nav-color: rgb(27, 27, 27)!important;
-    --back-color:rgb(0, 0, 0) !important;
-    --text-color:  #fff !important;
-    --text-color-1: rgb(0, 0, 0) !important;
-    --hov-color: #f5f5f5 !important;
-    --hov-color-2: #ffffff !important;
-    --button-hov: rgb(40, 40, 40)!important;
-    --title-coinverse: #ffffff!important;
+
+    --light-shades: rgb(249, 249, 249);
+    --light-accent: rgb(96, 148, 197);
+    --main-color: rgb(95, 101, 240);
+    --dark-accent: rgb(48, 74, 94);
+    --dark-shades: rgb(18, 24, 47);
+    --darker-shades: rgb(14, 20, 35);
+
+    --darkr-shades: rgb(29, 30, 32);
+    --darke-shades: rgb(23, 24, 25);
+
+    --sidebar-color: var(--darker-shades)!important;
+    --sidebar-text: var(--light-shades)!important;
+    --sidebar-hov-color: var(--light-accent)!important;
+    --sidebar-select-hov-color: var(--light-accent)!important;
+    --sidebar-select-text-color: var(--light-accent)!important;
+    --sidebar-select-color: var(--darkr-shades)!important;
+    --crypto-detail-bold-text: var(--light-accent);
+    --crypto-detail-text: var(--light-shades);
+
+    --nav-color:  var(--darke-shades)!important;
+    --back-color: var(--darkr-shades) !important;
+    --text-color: var(--light-shades)!important;
+    --text-color-1: var(--dark-shades) !important;
+    --hov-color: var(--light-accent) !important;
+    --hov-color-2: var(--light-accent)!important;
+    --button-hov: rgb(96, 148, 197, 0.1)!important;
+
+    --title-coinverse: var(--light-shades)!important;
+    --title-coinverse1: var(--dark-shades)!important;
+    --title-coinverse2: var(--light-shades)!important;
+    --footer-back-color: var(--dark-shades)!important;
+    --footer-text: var(--light-accent)!important;
+    --footer-line: var(--darker-shades)!important;
+    --footer-hov: #fff!important;
     --show-more-color: #ffffff!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:rgb(251, 255, 0) !important;
@@ -48,7 +100,7 @@
 }
 
 a:hover{
-    color: var(--hov-color) !important;
+    color: var(--hov-color) !important; 
 }
 
 .app{
@@ -110,7 +162,18 @@ h4{
 }
 
 .logo a{
-   color: white;
+   color: var(--title-coinverse);
+}
+.logo a:hover {
+    color: var(--sidebar-hov-color) !important;
+}
+
+.logo a:active {
+    color: var(--sidebar-hov-color);
+}
+
+.logo a:visited {
+    color: var(--title-coinverse);
 }
 
 .menu-control-container{
@@ -165,6 +228,7 @@ h4{
     margin: 30px;
     margin-top: 10px;
     padding-top:0px;
+    color: var(--light-accent) !important;
 }
 
 .coin-heading-container{
@@ -205,7 +269,7 @@ h4{
 .coin-details-heading{
     font-weight: 700 !important;
     margin-top: 20px !important;
-    color: var(--pink) !important;
+    color: var(--crypto-detail-bold-text) !important;
     margin-bottom: 10px !important;
     padding: 10px;
     padding-left: 0px;
@@ -219,7 +283,7 @@ h4{
     opacity: 0.9;
     padding: 20px;
 }
-
+.coin-stats
 .coin-stats-name{
     display: flex;
     gap: 10px;
@@ -227,12 +291,12 @@ h4{
 }
 
 .coin-stats-name-data{
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .stats{
     font-weight: 800;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-value-statistics-heading p{
@@ -255,6 +319,7 @@ h4{
 .coin-desc-link p{
     font-size: 1rem;
     opacity: 0.9;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-desc-link a{
@@ -290,13 +355,19 @@ h4{
 .link-name{
     text-transform: capitalize;
     font-size: 1rem;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-link a{
-    color: var(--pink);
+    color: var(--light-accent);
     font-weight: 700;
     font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.coin-link a:hover {
+    transform: translateX(5px);
+    color: var(--title-coinverse2) !important;
 }
 
 .coin-link:hover, .coin-stats:hover{
@@ -408,10 +479,9 @@ h4{
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    color: #0071bd;
 }
 .chart-title{
-    color: #0071bd !important;
+    color: var(--crypto-detail-bold-text) !important;
 }
 .price-container{
     display: flex !important;
@@ -421,12 +491,12 @@ h4{
 }
 .price-change{
     font-weight: 900 !important;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 .home-heading-container{
     display: flex;
@@ -445,14 +515,13 @@ h4{
 
 .show-more Button{
     background-color: var(--back-color) !important;
-}
-
-#show-more-text{
     color: var(--show-more-color) !important;
 }
 
-#show-more-text:hover{
-    color: var(--show-more-color-2) !important;
+.show-more Button:hover,
+.show-more Button:hover a p {
+    color: var(--hov-color) !important;
+    border-color: var(--hov-color) !important;
 }
 
 .exchange-image{
@@ -488,20 +557,6 @@ h4{
 .crypto-card-container{
     min-height: 65vh !important;
     display: flex;
-}
-
-@media screen and (min-width:992px) and (max-width:1600px){
-    .news-card-container {
-        display: flex;
-        justify-content: center;
-    } 
-}
-
-@media screen and (min-width:576px) and (max-width:798px){
-    .news-card-container {
-        display: flex;
-        justify-content: center;
-    }
 }
 
 .stats-card-container {
@@ -671,6 +726,11 @@ p{
     transition: 0.5s;
 }
 
+.stats-container p{
+    color: var(--crypto-detail-text) !important;
+    transition: 0.5s;
+}
+
 @media screen and (max-width:420px){
     .top-heading{
         display: block;
@@ -739,12 +799,16 @@ grid-column-end: 6;
 text-align: center;
 }
 
+.crypto-details p {
+    color: var(--crypto-detail-text) !important;
+}
+
 .not-bookmarked {
 background-color: #ffffff;
 }
 
 .bookmarked {
-background-color: goldenrod;
+    background:  goldenrod;
 }
 
 .bookmark-details {
@@ -759,8 +823,67 @@ color: rgb(116, 113, 113) !important;
 height: 25px
 }
 
+.bookmark-button .ant-btn,
+.card-bm .ant-btn {
+    border-color: transparent;
+}
+
+.bookmark-button .ant-btn:hover:not(.not-bookmarked),
+.card-bm .ant-btn:hover:not(.not-bookmarked) {
+    border-color: white;
+    color: white;
+}
+
+.bookmark-button .ant-btn:hover:not(.bookmarked),
+.card-bm .ant-btn:hover:not(.bookmarked) {
+    border-color: goldenrod;
+    color: goldenrod;
+}
+
 .ant-menu-submenu-title {
 padding-left: 24px !important;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+    background: none !important;
+}
+
+.ant-menu-submenu-popup .ant-menu-sub,
+.ant-menu-submenu-popup .ant-menu-item:not(.ant-menu-item-selected) {
+    background-color: var(--sidebar-color) !important;
+}
+
+.ant-menu-item-selected {
+    background-color: var(--sidebar-select-color) !important;
+    color: var(--sidebar-select-text-color) !important;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active,
+.ant-menu-submenu-popup .ant-menu-item:active {
+    background: var(--sidebar-select-color) !important;
+    color: var(--sidebar-select-text-color) !important;
+}
+
+.ant-menu-item:active a {
+    color: var(--sidebar-select-text-color) !important;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected), 
+.ant-menu-submenu-title:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+    color: var(--sidebar-text);
+}
+.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active),
+.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active) a, 
+.ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active){
+    color: var(--sidebar-hov-color) !important;
+}
+
+.ant-menu-item-selected:hover,
+.ant-menu-item-selected:hover a,
+.ant-menu-submenu-title:hover,
+.ant-menu-submenu-title:hover a {
+    color: var(--sidebar-select-hov-color) !important;
 }
 
 .ant-menu-submenu > ul > li.ant-menu-item {
@@ -813,13 +936,15 @@ transform: scale(1.2);
     overflow: hidden;
     border: 2px solid #fff;
     border-radius: 28px;
-    box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+    box-shadow: 3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
     display: grid;
     grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20% [end];
     grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+    position: relative;
+    z-index: 2;
 }
 
 .ag-courses_item:hover{
@@ -837,10 +962,11 @@ transform: scale(1.2);
 
 .ag-courses-item_bg-container {
     padding: 30px 20px;
-    background-color: var(--crypto-stats-color);
+    background-color: transparent;
     overflow: hidden;
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
     display: grid;
     grid-row-start: 1;
     grid-row-end: 5;
@@ -877,9 +1003,9 @@ transform: scale(1.2);
 .ag-courses-item_bg {
     height: 128px;
     width: 128px;
-    background-color: #1677ff;
+    background: linear-gradient(90deg, var(--title-coinverse1), var(--title-coinverse2));
 
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     top: -75px;
     right: -75px;
@@ -890,14 +1016,20 @@ transform: scale(1.2);
     -o-transition: all .5s ease;
     transition: all .5s ease;
 }
-  
-  .graph{
+
+.graph{
     background-color: var(--graph-line-color);
     border-radius: 25px;
     padding: 5px;
     margin: 2px;
     box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
-  }
+}
+
+
+.line-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
 
 .coin-details-heading:after {
     content: '';
@@ -928,6 +1060,7 @@ transform: scale(1.2);
   .coin-name{
     font-weight: 700 !important;
     transition: letter-spacing 200ms;
+    color: var(--crypto-detail-text) !important;
   }
 
   .coin-name:after {
@@ -937,7 +1070,7 @@ transform: scale(1.2);
     display: inline-block;
     height: 1em;
     width: 58%;
-    left: 198px;
+    left: 21%;
     border-bottom: 2px solid;
     margin-top: 10px;
     opacity: 0;
@@ -975,28 +1108,32 @@ transform: scale(1.2);
 .swiper-button-next{
     right:350px;
     transition: color 0.3s ease;
-}
-
-.swiper-button-next:hover{
-    color:var(--hov-color-2);
+    color: var(--light-shades);
+    -webkit-text-stroke: 0.1px var(--hov-color);
+    user-select: none;
 }
 
 .swiper-button-prev{
     left: 350px;
     transition: color 0.3s ease;
+    color: var(--light-shades);
+    -webkit-text-stroke: 0.1px var(--hov-color);
+    user-select: none;
 }
 
-.swiper-button-prev:hover{
-    color:var(--hov-color-2);
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    color:var(--hov-color);
 }
 
 .swiper-pagination-bullet{
     background-color: #e1e0e0f0;
     opacity:1;
+    user-select: none;
 }
 
 .swiper-pagination-bullet-active{
-    background-color: #0280d4;
+    background-color: var(--hov-color);
 }
 
 /* @media screen and (max-width:px) {

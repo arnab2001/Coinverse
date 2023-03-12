@@ -48,17 +48,18 @@ const Bookmarks = ({sendCoins, handleClick}) => {
     if(bookmarks.length !== 0) return (
         <>
         <Menu
-          theme="dark" 
-          mode="inline"
-          selectedKeys={[selectedMenuItem]}
-          onClick={handleClick}
-          items={
-            [{
-                type: "submenu",
-                icon: <BookOutlined/>,
-                label: "Bookmarks",
-                children: subMenu
-            }]
+            style={{background: 'none'}}
+            theme="dark" 
+            mode="inline"
+            selectedKeys={[selectedMenuItem]}
+            onClick={handleClick}
+            items={
+                [{
+                    type: "submenu",
+                    icon: <BookOutlined/>,
+                    label: "Bookmarks",
+                    children: subMenu
+                }]
           }
         />
         </>
