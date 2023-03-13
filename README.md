@@ -40,8 +40,8 @@
 
 ## Screenshots
 
- ![home-page](https://github.com/Awesomeasma/Coinverse/blob/main/src/images/homepage-screenshot.png) 
- ![price-chart](https://github.com/Awesomeasma/Coinverse/blob/main/src/images/price-chart-screenshot.png)
+ ![home-page](https://user-images.githubusercontent.com/86073340/224627305-c835236c-c4ab-47a4-beb4-0376602e26f7.png)
+ ![price-chart](https://user-images.githubusercontent.com/86073340/224627337-271151fe-6e2f-4c3f-ac6c-e91c8cee704e.png)
 <!-- ![image](https://user-images.githubusercontent.com/63441472/216687966-b76c340b-3719-4a28-ac4e-6c9cd9e4990e.png) -->
 
 
