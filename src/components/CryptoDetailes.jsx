@@ -18,6 +18,7 @@ import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/
 import LineChart from './LineChart'
 import Loader from './loader'
 import BookmarkService from '../services/bookmarkService'
+import { FaArrowUp } from "react-icons/fa";
 
 
 
@@ -45,6 +46,29 @@ const CryptoDetailes = ({update}) => {
       setStyle("not-bookmarked")
     }
   }, [bookmarked, coinId]);
+
+  
+  const [isVisible, setIsVisible] = useState(false);
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const listentoScroll = () => {
+    let heightToHidden = 25;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listentoScroll);
+    return () => window.removeEventListener("scroll", listentoScroll);
+  }, []);
+
   
   //console.log(bookmarked);
   if(isFetching) return <Loader/>
@@ -62,7 +86,7 @@ const CryptoDetailes = ({update}) => {
   const genericStats = [
     { title: 'Number Of Markets', value: cryptoDetails?.numberOfMarkets, icon: <FundOutlined /> },
     { title: 'Number Of Exchanges', value: cryptoDetails?.numberOfExchanges, icon: <MoneyCollectOutlined /> },
-    { title: 'Aprroved Supply', value: cryptoDetails?.supply?.confirmed ? <CheckOutlined /> : <StopOutlined />, icon: <ExclamationCircleOutlined /> },
+    { title: 'Approved Supply', value: cryptoDetails?.supply?.confirmed ? <CheckOutlined /> : <StopOutlined />, icon: <ExclamationCircleOutlined /> },
     { title: 'Total Supply', value: `$ ${cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)}`, icon: <ExclamationCircleOutlined /> },
     { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
   ];
@@ -82,16 +106,17 @@ const CryptoDetailes = ({update}) => {
     <>
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
-        <div class="details-bookmark-button">
-          <div class="crypto-title">
+        {/* <div class="coin-logo-in-heading"><img className="crypto-image" src={} alt='crypto-logo' /></div> */}
+        <div className="details-bookmark-button">
+          <div className="crypto-title">
             <Title level={2} className="coin-name">
               {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
             </Title>
           </div>
-          <div class="bookmark-button">
-            <Button className={style} icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
+          <div className="bookmark-button">
+            <Button className={style}  icon={<BookOutlined />} onClick={() => update(propagateBookmark)}></Button>
           </div>
-          <div class="crypto-details">
+          <div className="crypto-details">
             <p>{cryptoDetails.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
           </div>
         </div>
@@ -107,12 +132,12 @@ const CryptoDetailes = ({update}) => {
             <p>An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
           {stats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text className="coin-stats-name-data">{icon}</Text>
-                <Text className="coin-stats-name-data">{title}</Text>
+            <Col className="coin-stats" key={"stats-"+title}>
+              <Col className="coin-stats-name" key={"stats-name-"+title}>
+                <Text className="coin-stats-name-data" key={"stats-name-data-"+title}>{icon}</Text>
+                <Text className="coin-stats-name-data" key={"stats-name-date-"+title}>{title}</Text>
               </Col>
-              <Text className="stats">{value}</Text>
+              <Text className="stats" key={value}>{value}</Text>
             </Col>
           ))}
         </Col>
@@ -122,12 +147,12 @@ const CryptoDetailes = ({update}) => {
             <p>An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
           {genericStats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text className="coin-stats-name-data">{icon}</Text>
-                <Text className="coin-stats-name-data">{title}</Text>
+            <Col className="coin-stats" key={"stats-"+title}>
+              <Col className="coin-stats-name" key={"stats-name-"+title}>
+                <Text className="coin-stats-name-data" key={"stats-name-data-"+title}>{icon}</Text>
+                <Text className="coin-stats-name-data" key={"stats-name-date-"+title}>{title}</Text>
               </Col>
-              <Text className="stats">{value}</Text>
+              <Text className="stats" key={value}>{value}</Text>
             </Col>
           ))}
         </Col>
@@ -135,7 +160,7 @@ const CryptoDetailes = ({update}) => {
       <Col className="coin-desc-link">
         <Row className="coin-desc">
           <Title level={3} className="coin-details-heading">What is {cryptoDetails.name}?</Title>
-          {HTMLReactParser(cryptoDetails.description)}
+          <p id="coin-details-description">{HTMLReactParser(cryptoDetails.description)}</p>
         </Row>
         <Col className="coin-links">
           <Title level={3} className="coin-details-heading">{cryptoDetails.name} Links</Title>
@@ -148,6 +173,11 @@ const CryptoDetailes = ({update}) => {
         </Col>
       </Col>
     </Col>
+    {isVisible && (
+      <div className="top-btn" onClick={goToBtn}>
+        <FaArrowUp className="uparrow"></FaArrowUp>
+      </div>
+      )}
   </>
   )
 }

@@ -14,33 +14,93 @@
 }
 
 .light-mode{
-    --nav-color:  #fff !important;
-    --back-color: #f5f5f5 !important;
-    --text-color: black !important;
-    --text-color-1: rgb(116, 113, 113) !important;
-    --hov-color: #0071bd !important;
-    --button-hov: #fff !important;
-    --title-coinverse: #001529!important;
+     /* PALETTE */
+    --light-shades: rgb(249, 249, 249);
+    --light-accent: rgb(110, 111, 119);
+    --main-color: rgb(98, 107, 236);
+    --dark-accent: rgb(53, 49, 56);
+    --dark-shades: rgb(40, 54, 145);
+    --darker-shades: rgb(32, 41, 102);
+    
+
+    --sidebar-color: var(--darker-shades)!important;
+    --sidebar-text: var(--light-shades)!important;
+    --sidebar-hov-color: var(--main-color)!important;
+    --sidebar-select-hov-color: var(--main-color)!important;
+    --sidebar-select-text-color: var(--main-color)!important;
+    --sidebar-select-color: var(--light-shades)!important;
+    --crypto-detail-bold-text: var(--dark-accent);
+    --crypto-detail-text: var(--light-accent);
+
+    --nav-color:  var(--light-shades)!important;
+    --back-color: #fff !important;
+    --text-color: var(--darker-shades)!important;
+    --text-color-1: var(--darker-shades) !important;
+    --hov-color: var(--main-color) !important;
+    --hov-color-2: var(--dark-accent)!important;
+    --button-hov: rgb(110, 111, 119, 0.1)!important;
+
+    --title-coinverse: var(--darker-shades)!important;
+    --title-coinverse1: var(--light-shades)!important;
+    --title-coinverse2: var(--dark-shades)!important;
+    --footer-back-color: var(--dark-shades)!important;
+    --footer-text: var(--light-accent)!important;
+    --footer-line: var(--darker-shades)!important;
+    --footer-hov: #fff!important;
     --show-more-color: #00000097!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:black !important;
+    --stats-card-bg-color: rgba(241, 241, 241, 0.861) !important;
+    --graph-line-color:rgba(220, 220, 220, 0.906) !important;
+    --crpto-stats-color:rgba(241, 241, 241, 0.861) !important;
 }
 
 .dark-mode{
-    --nav-color: rgb(27, 27, 27)!important;
-    --back-color:rgb(0, 0, 0) !important;
-    --text-color:  #fff !important;
-    --text-color-1: rgb(94, 91, 91) !important;
-    --hov-color: #f5f5f5 !important;
-    --button-hov: rgb(40, 40, 40)!important;
-    --title-coinverse: #ffffff!important;
+
+    --light-shades: rgb(249, 249, 249);
+    --light-accent: rgb(96, 148, 197);
+    --main-color: rgb(95, 101, 240);
+    --dark-accent: rgb(48, 74, 94);
+    --dark-shades: rgb(18, 24, 47);
+    --darker-shades: rgb(14, 20, 35);
+
+    --darkr-shades: rgb(29, 30, 32);
+    --darke-shades: rgb(23, 24, 25);
+
+    --sidebar-color: var(--darker-shades)!important;
+    --sidebar-text: var(--light-shades)!important;
+    --sidebar-hov-color: var(--light-accent)!important;
+    --sidebar-select-hov-color: var(--light-accent)!important;
+    --sidebar-select-text-color: var(--light-accent)!important;
+    --sidebar-select-color: var(--darkr-shades)!important;
+    --crypto-detail-bold-text: var(--light-accent);
+    --crypto-detail-text: var(--light-shades);
+
+    --nav-color:  var(--darke-shades)!important;
+    --back-color: var(--darkr-shades) !important;
+    --text-color: var(--light-shades)!important;
+    --text-color-1: var(--dark-shades) !important;
+    --hov-color: var(--light-accent) !important;
+    --hov-color-2: var(--light-accent)!important;
+    --button-hov: rgb(96, 148, 197, 0.1)!important;
+
+    --title-coinverse: var(--light-shades)!important;
+    --title-coinverse1: var(--dark-shades)!important;
+    --title-coinverse2: var(--light-shades)!important;
+    --footer-back-color: var(--dark-shades)!important;
+    --footer-text: var(--light-accent)!important;
+    --footer-line: var(--darker-shades)!important;
+    --footer-hov: #fff!important;
     --show-more-color: #ffffff!important;
     --show-more-color-2: #0071bd!important;
     --bulb-color:rgb(251, 255, 0) !important;
+    --stats-card-bg-color: rgba(0, 0, 0, 0.861) !important;
+    --graph-line-color:white !important;
+    --crpto-stats-color:rgb(0, 0, 0) !important;
 }
 
 a:hover{
-    color: var(--hov-color) !important;
+    color: var(--hov-color) !important; 
 }
 
 .app{
@@ -54,10 +114,14 @@ a:hover{
     background-color: rgb(0, 21, 41);
 }
 
+.site-layout {
+    background-color: var(--back-color);
+}
+
 .main{
-    flex: 0.8;
-    width: 100%;
-    
+    position: relative;
+    margin-top: 63px;
+    transition: all 0.2s;
 }
 .routes{
     padding: 20px;
@@ -74,6 +138,21 @@ a:hover{
     background-color: rgb(0, 21, 41);
 }
 
+.ant-card-body{
+    background-color: var(--nav-color) !important;
+    transition: 0.6s;
+    border-radius: 10px !important;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+h4{
+    color: var(--text-color) !important;
+}
+
+.ant-typography{
+    color: var(--text-color) !important;
+}
+
 .logo-container{
     background-color: #002547;
     display: flex;
@@ -83,7 +162,18 @@ a:hover{
 }
 
 .logo a{
-   color: white;
+   color: var(--title-coinverse);
+}
+.logo a:hover {
+    color: var(--sidebar-hov-color) !important;
+}
+
+.logo a:active {
+    color: var(--sidebar-hov-color);
+}
+
+.logo a:visited {
+    color: var(--title-coinverse);
 }
 
 .menu-control-container{
@@ -126,10 +216,6 @@ a:hover{
         display: block !important;
     }
 
-    .ant-menu{
-        position: relative;
-        right: 0px;
-    }
     .home-title{
         font-size: 1.4rem !important;
     }
@@ -140,6 +226,9 @@ a:hover{
 
 .coin-detail-container{
     margin: 30px;
+    margin-top: 10px;
+    padding-top:0px;
+    color: var(--light-accent) !important;
 }
 
 .coin-heading-container{
@@ -148,7 +237,6 @@ a:hover{
     align-items: center;
     flex-direction: column;
     border-bottom: 1px solid var(--text-color); /* change */
-    padding-top: 20px;
     padding-bottom: 20px;
     gap: 10px;
 }
@@ -181,7 +269,10 @@ a:hover{
 .coin-details-heading{
     font-weight: 700 !important;
     margin-top: 20px !important;
-    color: var(--pink) !important;
+    color: var(--crypto-detail-bold-text) !important;
+    margin-bottom: 10px !important;
+    padding: 10px;
+    padding-left: 0px;
 }
 
 .coin-stats{
@@ -192,7 +283,7 @@ a:hover{
     opacity: 0.9;
     padding: 20px;
 }
-
+.coin-stats
 .coin-stats-name{
     display: flex;
     gap: 10px;
@@ -200,12 +291,12 @@ a:hover{
 }
 
 .coin-stats-name-data{
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .stats{
     font-weight: 800;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-value-statistics-heading p{
@@ -228,6 +319,7 @@ a:hover{
 .coin-desc-link p{
     font-size: 1rem;
     opacity: 0.9;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-desc-link a{
@@ -239,7 +331,12 @@ a:hover{
 }
 
 .coin-desc{
+    color:var(--text-color-1);
     flex: 0.5;
+    align-content: flex-start;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 25px;
 }
 
 .coin-links{
@@ -258,13 +355,19 @@ a:hover{
 .link-name{
     text-transform: capitalize;
     font-size: 1rem;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 
 .coin-link a{
-    color: var(--pink);
+    color: var(--light-accent);
     font-weight: 700;
     font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.coin-link a:hover {
+    transform: translateX(5px);
+    color: var(--title-coinverse2) !important;
 }
 
 .coin-link:hover, .coin-stats:hover{
@@ -301,39 +404,53 @@ a:hover{
     width: 180px;
 }
 .news-card{
+    min-width: 270px;
     min-height: 300px !important;
+    background: rgba( 255, 255, 255, 0.1 );
+    padding:10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .news-image-container{
     display: flex !important;
     justify-content: space-between !important;
+    white-space: normal;
+}
+
+.news-image-container > img {
+    margin-bottom: 0.5rem;
 }
 
 .ant-card-head-title{
     color: var(--text-color);
     transition: 0.5s;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: #000;
 }
 
 .ant-statistic-content-value{
     color: var(--text-color) !important;
     transition: 0.5s;
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .ant-statistic-title{
     background: rgb(255, 255, 255) ;
-    border:1px solid rgb(156, 154, 154); 
     border-radius: 25px;
     color: var(--text-color-1) !important;
     transition: 0.5s;
-    transition: transform .2s; /* Animation */
+    transition: letter-spacing .2s; /* Animation */
+    font-weight: 700;
+    font-size: 25px !important;
+    padding: 5px;
 }
 
-.ant-statistic-title:hover {
-    transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    box-shadow: 1px 1px 3px rgba(40, 40, 40, 0.365);
+.ant-statistic-title:hover:not(.ag-courses-item_title .ant-statistic-title) {
+    letter-spacing: 1px;
 }
-
 
 @media screen and (max-width: 500px){
     .ant-statistic-title{
@@ -345,6 +462,7 @@ a:hover{
     width:100px;
     height:100px;
 }
+
 .news-card p{
     color: black;
     margin: 10px 0px !important;
@@ -361,10 +479,9 @@ a:hover{
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    color: #0071bd;
 }
 .chart-title{
-    color: #0071bd !important;
+    color: var(--crypto-detail-bold-text) !important;
 }
 .price-container{
     display: flex !important;
@@ -374,12 +491,12 @@ a:hover{
 }
 .price-change{
     font-weight: 900 !important;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
-    color: var(--text-color) !important;
+    color: var(--crypto-detail-text) !important;
 }
 .home-heading-container{
     display: flex;
@@ -398,28 +515,38 @@ a:hover{
 
 .show-more Button{
     background-color: var(--back-color) !important;
-}
-
-#show-more-text{
     color: var(--show-more-color) !important;
 }
 
-#show-more-text:hover{
-    color: var(--show-more-color-2) !important;
+.show-more Button:hover,
+.show-more Button:hover a p {
+    color: var(--hov-color) !important;
+    border-color: var(--hov-color) !important;
 }
 
 .exchange-image{
     margin: 0px 10px !important;
 }
 .search-crypto{
-    margin: 20px auto 30px auto;
-    width: 250px;
-    
+    margin: 30px auto 30px auto;
+    max-width: 350px; 
 }
 
 .search-crypto Input{
+    padding: 10px 20px;
+    border-radius: 18px;
+
     background-color: var(--nav-color) !important;
     transition: 0.6s;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.search-crypto Input:focus{
+    border-color: darkgrey;
 }
 
 .search-crypto Input::placeholder{
@@ -429,42 +556,137 @@ a:hover{
 
 .crypto-card-container{
     min-height: 65vh !important;
+    display: flex;
 }
 
-@media screen and (min-width:992px) and (max-width:1224px){
-    .crypto-card-container {
-        display: flex;
-        justify-content: center;
-        min-height: 65vh !important;
-    }
-
-    .home-heading-container{
-        display: flex;  
-        justify-content: space-around;
-    }
-    
-}
-
-@media screen and (min-width:576px) and (max-width:724px){
-    .crypto-card-container {
-        display: flex;
-        justify-content: center;
-        min-height: 65vh !important;
-    }
+.stats-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .crypto-card{
-    min-width: 250px;
+    min-width: 256px;
     float: left;
-    transition: transform .2s; /* Animation */
+    padding-right: 0px;
 }
 
-.crypto-card:hover {
-    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.container-card {
+    position: relative;
+    background-color: transparent;
+}
+
+.card{
+    padding:10px;
+    padding-top: 20px;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card p{
+    border-radius: 10px;
+    font-weight: 450;
+    margin-left: 4px;  
 }
 
 .crypto-card .crypto-image{
     width:35px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: [col1] 36px [col2] calc(25% - 9px) [col3] calc(25% - 9px) [col4] calc(25% - 9px) [col5] calc(25% - 9px) [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+}
+
+.card-bm {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 10px;
+}
+
+.card-details {
+    transition: transform .3s; /* Animation */
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.card-bg {
+    transition: transform .3s; /* Animation */
+    background: rgba( 255, 255, 255, 0.1 );
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.card-details:hover {
+    z-index: 100;
+    transform: scale(1.1);
+    box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+}
+
+.card-details:hover + .card-bg {
+    z-index: 99;
+    transform: scale(1.1);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20% [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+}
+
+.news-card-grid{
+    transition: transform .3s; /* Animation */
+    box-shadow:3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    z-index: 2;
+}
+
+.news-bg {
+    transition: transform .3s; /* Animation */
+    background: rgba( 255, 255, 255, 0.1 );
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    z-index: 1;
+}
+
+.news-card-grid:hover {
+    z-index: 100;
+    transform: scale(1.1);
+
+}
+
+.news-card-grid:hover + .news-bg {
+    z-index: 99;
+    transform: scale(1.1);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+}
+
+.ant-card-head {
+    border-bottom: none !important;
 }
 
 .select-timeperiod{
@@ -501,6 +723,11 @@ a:hover{
 
 p{
     color: var(--text-color) !important;
+    transition: 0.5s;
+}
+
+.stats-container p{
+    color: var(--crypto-detail-text) !important;
     transition: 0.5s;
 }
 
@@ -541,7 +768,7 @@ background-color: white;
 .details-bookmark-button {
 width: 100%;
 display: grid;
-grid-template-columns: [col1] 7% [col-space] 3% [col2] 30% [col3] 30% [col4] 30% [end];
+grid-template-columns: [col1] 16px [col-space] calc(10% - 16px) [col2] 30% [col3] 30% [col4] 30% [end];
 grid-template-rows: [row1] 50% [row2] 50% [last-line];
 padding-right: 10%;
 }
@@ -572,12 +799,16 @@ grid-column-end: 6;
 text-align: center;
 }
 
+.crypto-details p {
+    color: var(--crypto-detail-text) !important;
+}
+
 .not-bookmarked {
 background-color: #ffffff;
 }
 
 .bookmarked {
-background-color: goldenrod;
+    background:  goldenrod;
 }
 
 .bookmark-details {
@@ -592,8 +823,67 @@ color: rgb(116, 113, 113) !important;
 height: 25px
 }
 
+.bookmark-button .ant-btn,
+.card-bm .ant-btn {
+    border-color: transparent;
+}
+
+.bookmark-button .ant-btn:hover:not(.not-bookmarked),
+.card-bm .ant-btn:hover:not(.not-bookmarked) {
+    border-color: white;
+    color: white;
+}
+
+.bookmark-button .ant-btn:hover:not(.bookmarked),
+.card-bm .ant-btn:hover:not(.bookmarked) {
+    border-color: goldenrod;
+    color: goldenrod;
+}
+
 .ant-menu-submenu-title {
 padding-left: 24px !important;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+    background: none !important;
+}
+
+.ant-menu-submenu-popup .ant-menu-sub,
+.ant-menu-submenu-popup .ant-menu-item:not(.ant-menu-item-selected) {
+    background-color: var(--sidebar-color) !important;
+}
+
+.ant-menu-item-selected {
+    background-color: var(--sidebar-select-color) !important;
+    color: var(--sidebar-select-text-color) !important;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active,
+.ant-menu-submenu-popup .ant-menu-item:active {
+    background: var(--sidebar-select-color) !important;
+    color: var(--sidebar-select-text-color) !important;
+}
+
+.ant-menu-item:active a {
+    color: var(--sidebar-select-text-color) !important;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected), 
+.ant-menu-submenu-title:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+    color: var(--sidebar-text);
+}
+.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active),
+.ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active) a, 
+.ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):not(.ant-menu-item:active){
+    color: var(--sidebar-hov-color) !important;
+}
+
+.ant-menu-item-selected:hover,
+.ant-menu-item-selected:hover a,
+.ant-menu-submenu-title:hover,
+.ant-menu-submenu-title:hover a {
+    color: var(--sidebar-select-hov-color) !important;
 }
 
 .ant-menu-submenu > ul > li.ant-menu-item {
@@ -622,6 +912,10 @@ position: relative;
 min-width: 220px !important;
 }
 
+.ant-menu-submenu-popup {
+    position: fixed !important;
+}
+
 .icon-logo{
 transition: transform .2s;
 }
@@ -629,3 +923,245 @@ transition: transform .2s;
 .icon-logo:hover{
 transform: scale(1.2);
 }
+
+@media screen and (max-width:400px){
+    .routes{
+        padding: 0 12px !important;
+    }
+    
+}
+
+.ag-courses_item {
+    width: 450px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 28px;
+    box-shadow: 3px 3px 6px 1px rgba( 31, 38, 135, 0.2 );
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    display: grid;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20% [end];
+    grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [last-line];
+    position: relative;
+    z-index: 2;
+}
+
+.ag-courses_item:hover{
+    transform: scale(1.1);
+}
+
+.ag-courses-item_link {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background: transparent;
+}
+
+.ag-courses-item_bg-container {
+    padding: 30px 20px;
+    background-color: transparent;
+    overflow: hidden;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+}
+
+.ag-courses_item:hover {
+    position: relative;
+    z-index: 100;
+}
+
+.ag-courses-item_title {
+    padding: 30px 20px;
+    min-height: 5px;
+    overflow: hidden;
+    color: #FFF ;
+    z-index: 2;
+    position: relative;
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background: linear-gradient(90deg, var(--title-coinverse1), var(--title-coinverse2));
+
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+
+    border-radius: 50%;
+
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.graph{
+    background-color: var(--graph-line-color);
+    border-radius: 25px;
+    padding: 5px;
+    margin: 2px;
+    box-shadow:4px 4px 5px 1px rgba( 31, 38, 135, 0.37 );
+}
+
+
+.line-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.coin-details-heading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1.2em;
+    width: 300px;
+    border-bottom: 2px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+  
+  .coin-details-heading:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .coin-links{
+    padding-left: 0px;
+  }
+
+  .coin-name{
+    font-weight: 700 !important;
+    transition: letter-spacing 200ms;
+    color: var(--crypto-detail-text) !important;
+  }
+
+  .coin-name:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 58%;
+    left: 21%;
+    border-bottom: 2px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+
+  .coin-name:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .coin-name:hover{
+    letter-spacing: 1px !important;
+  }
+
+.top-heading{
+    padding-bottom: 20px;
+}
+
+.mySwiper{
+    width: 1400px;
+    height: 270px;
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-next{
+    right:350px;
+    transition: color 0.3s ease;
+    color: var(--light-shades);
+    -webkit-text-stroke: 0.1px var(--hov-color);
+    user-select: none;
+}
+
+.swiper-button-prev{
+    left: 350px;
+    transition: color 0.3s ease;
+    color: var(--light-shades);
+    -webkit-text-stroke: 0.1px var(--hov-color);
+    user-select: none;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    color:var(--hov-color);
+}
+
+.swiper-pagination-bullet{
+    background-color: #e1e0e0f0;
+    opacity:1;
+    user-select: none;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--hov-color);
+}
+
+
+.top-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: #121916;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.3rem;
+    z-index: 999;
+}
+
+@media screen and (max-width:700px){
+    .top-btn{
+        display: none;
+    }
+} 
+
+/* @media screen and (max-width:px) {
+    .swiper{
+        width: %;
+    }
+} */

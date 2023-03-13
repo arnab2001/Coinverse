@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Select,Typography, Row, Col, Avatar, Card } from 'antd'
 import moment from 'moment/moment'
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Loader from './loader'
+import { FaArrowUp } from "react-icons/fa";
+
 const { Text, Title } = Typography
 const { Option } = Select
 const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg'
@@ -12,12 +14,34 @@ const News = ({simplified}) => {
 
   const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
   const { data } = useGetCryptosQuery(100);
-  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
+  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 8: 16 });
 
+  const [isVisible, setIsVisible] = useState(false);
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const listentoScroll = () => {
+    let heightToHidden = 25;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listentoScroll);
+    return () => window.removeEventListener("scroll", listentoScroll);
+  }, []);
+
+  
   if(!cryptoNews?.value) return <Loader />
   return (
     <>
-      <Row gutter={[24, 24]}>
+      <Row gutter={[8, 16]} className="news-card-container">
       {!simplified && (
         <Col span={24}>
           <Select
@@ -28,38 +52,50 @@ const News = ({simplified}) => {
             onChange={(value) => setNewsCategory(value)}
             filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
-            <Option value="Cryptocurency">Cryptocurrency</Option>
-            {data?.data?.coins?.map((currency) => <Option value={currency.name}>{currency.name}</Option>)}
+            <Option value="Cryptocurency" key="Cryptocurrency">Cryptocurrency</Option>
+            {data?.data?.coins?.map((currency) => <Option value={currency.name} key={currency.name}>{currency.name}</Option>)}
           </Select>
         </Col>
       )}
         {cryptoNews.value.map((news, i) => (
-          <Col xs={24} sm={12} lg={8} key={i}>
-            <Card hoverable className="news-card">
+          <Col xs={24} lg={12} xl={8} xxl={6} key={i}>
+            <div className="news-grid">
+              <div className="news-card-grid">
                 <a href={news.url} target="_blank" rel="noreferrer">
-                  <div className="news-image-container"  >
-                    <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+" ...":news.name}</Title>
-                    <img style={{maxWidth: '200px' , maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news"/>
-                  </div>
-                  <p>
-                    {news.description.length > 100 
-                    ? `${news.description.substring(0, 100)}...` 
-                    : news.description}
-                  </p>
-                  <div className="provider-container">
-                    <div>
-                       <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="news" size={20} />
-                        <Text className="provider-name">{news.provider[0]?.name}</Text>
+                  <Card
+                    title={
+                      <div className="news-image-container"  >
+                      <Title className="news-title" level={4}>{news.name.length>75?news.name.substr(0,75)+"...":news.name}</Title>
+                      <img style={{maxWidth: '80px' , maxHeight: '80px', marginLeft: '0.5rem'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news"/>
                     </div>
-                      <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
-                    
-                  </div>
+                    }
+                    hoverable 
+                    className="news-card">
+                    <p>
+                      {news.description.length > 100 
+                      ? `${news.description.substring(0, 100)}...` 
+                      : news.description}
+                    </p>
+                    <div className="provider-container">
+                      <div>
+                        <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="news" size={20} />
+                          <Text className="provider-name">{news.provider[0]?.name}</Text>
+                      </div>
+                        <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                    </div>
+                  </Card>
                 </a>
-            </Card>
+              </div>
+              <div className="news-bg"></div>
+            </div>
           </Col>
         ))}
       </Row>
-        
+      {isVisible && (
+      <div className="top-btn" onClick={goToBtn}>
+        <FaArrowUp className="uparrow"></FaArrowUp>
+      </div>
+      )}
     </>
   )
 }
