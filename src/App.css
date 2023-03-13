@@ -173,7 +173,7 @@ h4{
 }
 
 .logo a:visited {
-    color: var(--title-coinverse);
+    color: var(--light-shades);
 }
 
 .menu-control-container{
