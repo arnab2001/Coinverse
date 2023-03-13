@@ -40,9 +40,9 @@
 
 ## Screenshots
 
- ![image](https://user-images.githubusercontent.com/63441472/216686705-2b7bf6e7-87ba-4e60-9e51-147b7af6340c.png) 
- ![image](https://user-images.githubusercontent.com/63441472/216687746-e88fb7b7-2199-4078-bb72-96b15bfebf38.png)
-![image](https://user-images.githubusercontent.com/63441472/216687966-b76c340b-3719-4a28-ac4e-6c9cd9e4990e.png)
+ ![home-page](https://github.com/Awesomeasma/Coinverse/blob/main/src/images/homepage-screenshot.png) 
+ ![price-chart](https://github.com/Awesomeasma/Coinverse/blob/main/src/images/price-chart-screenshot.png)
+<!-- ![image](https://user-images.githubusercontent.com/63441472/216687966-b76c340b-3719-4a28-ac4e-6c9cd9e4990e.png) -->
 
 
 <h2>Getting Involved</h2>
