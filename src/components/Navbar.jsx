@@ -12,7 +12,8 @@ import {
  
     HomeOutlined,
     SlidersOutlined,
-    BulbOutlined
+    BulbOutlined,
+    BookOutlined
 
 } from '@ant-design/icons';
 import {Row,Col, Image,Layout, Menu, Typography} from 'antd';
@@ -23,6 +24,7 @@ import Exchanges from './Exchanges';
 import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetailes from './CryptoDetailes';
 import News from './News';
+import AboutUs from './AboutUs';
 import iconM from '../images/coinverse-logo-m.png';
 import './nav.css';
 import ToggleMode from './ToggleMode';
@@ -99,6 +101,11 @@ const Navbar = () => {
                 icon: <BulbOutlined/>,
                 label: <Link to="/News">News</Link>,
               },
+              {
+                key: '/AboutUs',
+                icon: <BookOutlined/>,
+                label: <Link to="/AboutUs">About Us</Link>,
+              },
             ]}
           />
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
@@ -125,6 +132,7 @@ const Navbar = () => {
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick} update={reRender}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/News' element={<News update={reRender}/> }/>
+                    <Route path='/AboutUs' element={<AboutUs update={reRender}/> }/>
                     <Route path='*' element={<Error />}/>
                 </Routes>
               </div> 
