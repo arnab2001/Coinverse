@@ -10,14 +10,12 @@ import { Route, Routes } from 'react-router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <Router>
       <Provider store={store}>
         <App />
         {/* <Route path='*' element={<Error />}/> */}
      </Provider>
     </Router>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
