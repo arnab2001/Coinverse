@@ -14,7 +14,6 @@ const AboutUs = () => {
                 <div id="welcomeText">
                     Welcome to our Coinverse information website! We are a team of passionate individuals dedicated to providing you with the latest and most comprehensive information about the world of crypto-currencies.
                 </div>
-                <Image className='icon-logo' src={image} preview={false} />
             </div>
             <div className="heading">
 

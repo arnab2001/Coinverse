@@ -101,11 +101,6 @@ const Navbar = () => {
                 icon: <BulbOutlined/>,
                 label: <Link to="/News">News</Link>,
               },
-              {
-                key: '/AboutUs',
-                icon: <BookOutlined/>,
-                label: <Link to="/AboutUs">About Us</Link>,
-              },
             ]}
           />
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
@@ -178,6 +173,7 @@ const Navbar = () => {
                   <br/>
                   <div className="link-links">
                     <div id="home"><a className="link-link" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
+                    <div id="aboutus"><a className="link-link" href="/AboutUs" target="_blank" rel="noreferrer" style={{color: 'grey'}}>About Us<br/></a></div>
                     <div id="crypto-currencies"><a className="link-link" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
                     <div id="crypto-news"><a className="link-link" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
                   </div>
