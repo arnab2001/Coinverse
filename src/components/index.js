@@ -5,3 +5,4 @@ export {default as Exchanges} from './Exchanges';
 export {default as Homepage} from './Homepage';
 export {default as News} from './News';
 export {default as Bookmarks} from './Bookmarks';
+export {default as ContactUs} from './ContactUs';

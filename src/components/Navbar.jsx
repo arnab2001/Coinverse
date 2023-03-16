@@ -9,10 +9,11 @@ import React, { useState, useEffect } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
- 
+  
     HomeOutlined,
     SlidersOutlined,
-    BulbOutlined
+    BulbOutlined,
+    ContactsOutlined
 
 } from '@ant-design/icons';
 import {Row,Col, Image,Layout, Menu, Typography} from 'antd';
@@ -29,6 +30,7 @@ import ToggleMode from './ToggleMode';
 import Bookmarks from './Bookmarks';
 import BookmarkService from '../services/bookmarkService';
 import Error from './Error';
+import ContactUs from './ContactUs';
 
 // import BackupNews from './BackupNews';
 
@@ -99,6 +101,11 @@ const Navbar = () => {
                 icon: <BulbOutlined/>,
                 label: <Link to="/News">News</Link>,
               },
+              {
+                key: '/ContactUs',
+                icon: <ContactsOutlined />,
+                label: <Link to="/ContactUs">Contact Us</Link>,
+              },
             ]}
           />
           <Bookmarks sendCoins={sendCoins} handleClick={handleClick}/>
@@ -125,6 +132,7 @@ const Navbar = () => {
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick} update={reRender}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/News' element={<News update={reRender}/> }/>
+                    <Route path='/ContactUs' element={<ContactUs update={reRender}/>} />
                     <Route path='*' element={<Error />}/>
                 </Routes>
               </div> 

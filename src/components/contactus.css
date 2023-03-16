@@ -1,0 +1,71 @@
+.light-mode{
+    --text-color: black;
+}
+.dark-mode{
+    --text-color: white;
+}
+
+.contact-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contact-main h1{
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.contact-main form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.contact-main .set-1{
+    width: 40vw;
+    height: 6vh;
+    padding: 1.5rem;
+    border-radius: 30px;
+    border: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.contact-main .set-2{
+    width: 40vw;
+    height: 20vh !important;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: none;
+    border: 2px solid var(--text-color);;
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.contact-main .set-3{
+    width: 30vw;
+    height: 7vh;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    background-color: rgba(128, 128, 128, 0.516);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.contact-main .set-3:hover{
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-main img{
+    width: 320px !important;
+    height: 300px !important;
+}
+
