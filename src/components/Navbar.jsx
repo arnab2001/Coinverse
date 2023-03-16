@@ -53,9 +53,29 @@ const Navbar = () => {
     setCoins(callback());
   }
 
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        autoDisplay: false
+      },
+      "google_translate_element"
+    );
+  };
+
   const sendCoins = () => {
     return coins;
   };
+
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
 
   useEffect(() => {
     if(selectedMenuItem !== window.location.pathname)
@@ -176,6 +196,7 @@ const Navbar = () => {
                     <div id="aboutus"><a className="link-link" href="/AboutUs" target="_blank" rel="noreferrer" style={{color: 'grey'}}>About Us<br/></a></div>
                     <div id="crypto-currencies"><a className="link-link" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
                     <div id="crypto-news"><a className="link-link" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
+                    <div id="google_translate_element"/>
                   </div>
                   <br/>
                 </Col>
