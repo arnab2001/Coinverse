@@ -284,6 +284,14 @@
   transform: translateX(3px);
 }
 
+#google_translate_element select {
+  background: #f6edfd;
+  color: #383ffa;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 8px
+}
+
 @media (max-width:500px) {
 
   .row{
