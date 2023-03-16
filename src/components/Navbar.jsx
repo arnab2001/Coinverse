@@ -12,7 +12,8 @@ import {
  
     HomeOutlined,
     SlidersOutlined,
-    BulbOutlined
+    BulbOutlined,
+    BookOutlined
 
 } from '@ant-design/icons';
 import {Row,Col, Image,Layout, Menu, Typography} from 'antd';
@@ -23,6 +24,7 @@ import Exchanges from './Exchanges';
 import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetailes from './CryptoDetailes';
 import News from './News';
+import AboutUs from './AboutUs';
 import iconM from '../images/coinverse-logo-m.png';
 import './nav.css';
 import ToggleMode from './ToggleMode';
@@ -125,6 +127,7 @@ const Navbar = () => {
                     <Route path='/Cryptocurrencies' element={<Cryptocurrencies onClick={handleClick} update={reRender}/>}/>
                     <Route path='/crypto/:coinId' element={<CryptoDetailes update={reRender}/>}/>
                     <Route path='/News' element={<News update={reRender}/> }/>
+                    <Route path='/AboutUs' element={<AboutUs update={reRender}/> }/>
                     <Route path='*' element={<Error />}/>
                 </Routes>
               </div> 
@@ -170,6 +173,7 @@ const Navbar = () => {
                   <br/>
                   <div className="link-links">
                     <div id="home"><a className="link-link" href="/" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Home<br/></a></div>
+                    <div id="aboutus"><a className="link-link" href="/AboutUs" target="_blank" rel="noreferrer" style={{color: 'grey'}}>About Us<br/></a></div>
                     <div id="crypto-currencies"><a className="link-link" href="/Cryptocurrencies" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Cryptocurrencies<br/></a></div>
                     <div id="crypto-news"><a className="link-link" href="/News" target="_blank" rel="noreferrer" style={{color: 'grey'}}>Crypto News<br/></a></div>
                   </div>

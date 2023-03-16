@@ -13,6 +13,7 @@ import {
   Homepage,
   Cryptocurrencies,
   News,
+  AboutUs,
   CryptoDetailes,
 } from "./components/index";
 import "./App.css";

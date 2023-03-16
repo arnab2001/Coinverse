@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+#welcomeText{
+    margin: 0 5rem 0 5rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    line-height: 2rem;
+}
+
+.welcomeText2{
+    margin: 0 5rem 0 5rem;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    font-size: large!important;
+    
+}
+
+#gradient{
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, rgb(29, 39, 224),
+    rgb(45, 194, 214), #cf23cf, #f311e4);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
