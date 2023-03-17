@@ -26,9 +26,11 @@
 - All crypto prices at a glance in the home page
 - Crypto News
 - Current prices of coins  
+- Bookmark your favourite coins
 - Historical price data with charts  
 - Search and get latest news on any specefic coin 
 - Origin , facts and other stuffs
+- 100+ language support
 
 
 ## 💻Tech Stacks used :- 
