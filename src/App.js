@@ -19,8 +19,10 @@ import {
 import "./App.css";
 import Sider from "antd/es/layout/Sider";
 import { Content } from "antd/es/layout/layout";
+// Layout 
 const App = () => {
   return (
+
     <div className="app">
       <Layout>
         <Navbar/>
